@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import NavigationBar from '../components/NavigationBar'
 import HomeColumnOne from '../components/HomeColumnOne'
+import HomeColumnTwo from '../components/HomeColumnTwo'
 
 
 const HomePage= () => {
@@ -11,6 +12,7 @@ const HomePage= () => {
         
             <NavigationBar />
             <HomeColumnOne/>
+            <HomeColumnTwo />
         
         
     </div>
