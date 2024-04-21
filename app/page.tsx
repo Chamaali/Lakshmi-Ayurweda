@@ -1,14 +1,23 @@
-// import { 0_HomePage } from '@/pages'
-// import { HomePage } from '@/app/pages'
+import HomeColumnTwo from './components/home/HomeColumnTwo'
+import HomeColumnThree from './components/home/HomeColumnThree'
+import HomeColumnFour from './components/home/HomeColumnFour'
+import HomeColumnFive from './components/home/HomeColumnFive'
+import HomeColumnSix from './components/home/HomeColumnSix'
+import HomeColumnSeven from './components/home/HomeColumnSeven'
+import HomeColumnOne from './components/home/HomeColumnOne'
 
-import Image from 'next/image'
-import Main from './Main'
-
-
-export default function Home() {
+const HomePage= () => {
   return (
-    <main className=''>
-        <Main  />
-    </main>
+    <div>    
+        <HomeColumnOne/>
+        <HomeColumnTwo />
+        <HomeColumnThree />
+        <HomeColumnFour />
+        <HomeColumnFive />
+        <HomeColumnSix />
+        <HomeColumnSeven />    
+    </div>
   )
 }
+
+export default HomePage
