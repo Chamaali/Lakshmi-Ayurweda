@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -107,11 +108,12 @@ const services = [
 
 export default function page() {
   return (
-    <div className='p-3'>
+    <div className='m-2  text-green-700'>
       {['md'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3">
+        <Navbar key={expand} expand={expand} className="bg-body-tertiary">
           <Container fluid>
-            <Navbar.Brand href="#">Navbar Offcanvas</Navbar.Brand>
+            <Navbar.Brand href="./" className='pl-3'>
+                <Image src={require('../../public/images/LogoForNavigationBar.png')} alt=""  width={100} /></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -119,7 +121,7 @@ export default function page() {
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} style={{ color: '#FF0000' }}>
                   Offcanvas
                 </Offcanvas.Title>
               </Offcanvas.Header>
@@ -128,19 +130,19 @@ export default function page() {
 
                     <NavDropdown title="Diseases" id={`offcanvasNavbarDropdown-expand-${expand}`}>
                         {diseases.map((disease) => (
-                        <NavDropdown.Item key={disease.id} href={disease.href} className='no-underline hover:underline text-gray-100'>{disease.name}</NavDropdown.Item>
+                        <NavDropdown.Item key={disease.id} href={disease.href} className='no-underline hover:underline text-green-700'>{disease.name}</NavDropdown.Item>
                         ))}
                     </NavDropdown>
 
                     <Nav.Link href="./whyLakshmiAyurweda">Why Lakshmi Ayurweda</Nav.Link>
 
-                    <NavDropdown title="Diseases" id={`offcanvasNavbarDropdown-expand-${expand}`}>
+                    <NavDropdown title="Our Services" id={`offcanvasNavbarDropdown-expand-${expand}`}>
                         {services.map((service) => (
-                        <NavDropdown.Item key={service.id} href={service.href} className='no-underline hover:underline text-gray-100'>{service.name}</NavDropdown.Item>
+                        <NavDropdown.Item key={service.id} href={service.href} className='no-underline hover:underline text-green-700'>{service.name}</NavDropdown.Item>
                         ))}
                     </NavDropdown>
 
-                    <Nav.Link href="./contactUs">Contact Us</Nav.Link>
+                    <Nav.Link href="./contactUs" className=' '>Contact Us</Nav.Link>
                 </Nav>
                 <Form className="d-flex">
                   <Button variant="outline-success" href='./bookAppointment'>Book Appointment</Button>
@@ -155,3 +157,4 @@ export default function page() {
 }
 
 
+//change color of the nav items

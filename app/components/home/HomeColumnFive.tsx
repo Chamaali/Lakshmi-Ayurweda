@@ -1,54 +1,40 @@
-"use client"
+import Image from "next/image";
+import React from "react";
 
-import React from 'react';
-import Image from 'next/image';
+const getProducts = async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/products", {
+      cache: "no-store",
+    });
 
-const imageData = [
-  {
-    id: 1,
-    imageUrl: require('/public/images/Shilajeet.png'),
-    title: 'Image 1 Title',
-    discription:"-Sleep Well"
+    if (!res.ok) {
+      throw new Error("Failed to fetch topics");
+    }
 
-  },
-  {
-    id: 2,
-    imageUrl: require('/public/images/Sleepwell.png'),
-    title: 'Image 2 Title',
-    discription:"-Sugar Free"
-  },
-  {
-    id: 3,
-    imageUrl: require('/public/images/jivabrandstore-img01.png'),
-    title: 'Image 3 Title',
-    discription:"-Honey"
-  },
-  {
-    id: 4,
-    imageUrl: require('/public/images/Ashwagandha.png'),
-    title: 'Image 3 Title',
-    discription:"-Sleep Well"
-  },
-];
+    return res.json();
+  } catch (error) {
+    console.log("Error loading topics: ", error);
+  }
+};
 
-const ImageWithTitle = ({ id, imageUrl, title, discription }) => (
-  <div key={id} className='flex-col m-2 bg-white shadow-2xl rounded-md p-4'>
-    <div className='p-2 '><Image src={imageUrl} alt={title} width={200} height={200} /></div>
-    <div className=' bg-gray-200 rounded-md '>
-        <h3 className="image-title text-black p-2 text-center font-medium">{title}</h3>
-        <p className="image-title text-black px-3 pb-3  text-sm">{discription}</p>
+export default async function TopicsList() {
+  const { products } = await getProducts();
+
+  return (
+    <div className="flex flex-row p-8 bg-gray-200">
+      {products.map((t) => (
+       <div>
+        <div className='p-2 '><Image src={t.image} alt={t.name} width={200} height={200} /></div>
+        <div className=" bg-gray-200 rounded-md ">
+          <h3 className="image-title text-black p-2 text-center font-medium">
+            {t.name}
+          </h3>
+          <p className="image-title text-black px-3 pb-3  text-sm">
+            {t.description}
+          </p>
+        </div>
+     </div>
+      ))}
     </div>
-  </div>
-);
-
-const HomeColumnFive = () => (
-    <div className='flex flex-row p-8 bg-gray-200'>
-        
-        {imageData.map((imageData) => (
-            <ImageWithTitle key={imageData.id} {...imageData} />
-            ))}
-        
-    </div>
-);
-
-export default HomeColumnFive;
+  );
+}
