@@ -20,10 +20,24 @@ const getProducts = async () => {
 
 const AddToCartButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const data = await getProducts();
+      setProducts(data.products);
+
+      // Calculate total price when products change
+      const totalPrice = data.products.reduce((acc, curr) => acc + curr.price, 0);
+      setTotalPrice(totalPrice);
+    };
+    fetchProducts();
+  }, []);
 
   return (
     <>
@@ -38,31 +52,42 @@ const AddToCartButton = () => {
         <div className="fixed top-0 right-0 w-1/3 h-screen flex  flex-col justify-start items-start bg-gray-500 bg-opacity-100 bg-white p-4  shadow-lg ">
           <div className="basis-1/16 pt-4">
             <p className="font-bold text-md">Cart</p>
-            <hr className="w-screen" />
+            <hr className="w-max" />
           </div>
-          <div className="basis-1/4 pt-4">
-            <p>Productadded to cart!</p>
-            <button
-              onClick={togglePopup}
-              className=" bg-green-700 text-white px-4 py-2 rounded-md"
-            >
-              Close
-            </button>
+          {products.map((product) => (
+          <div
+            className="p-2  place-content-around  flex flex-row"
+            key={product.id}
+          >
+            <div className="p-2 w-1/4 h-1/4">
+              <img
+                src={product.image}
+                alt={product.name}
+                
+              />
+            </div>
+            <div className="">
+              <p className="image-title text-black p-2 text-center font-medium">
+                {product.name}
+              </p>
+              <p className="image-title text-black px-3 pb-3  text-sm">
+                {product.description}
+              </p>
+              <div className="flex flex-row place-content-around">
+                
+                <p>{product.size}</p>
+                <p className="text-right">Rs. {product.price}</p>
+              </div>
+              
+            </div>
           </div>
-          <div className="basis-1/4 pt-4 ">
-            <p>Productadded to cart!</p>
-            <button
-              onClick={togglePopup}
-              className=" bg-green-700 text-white px-4 py-2 rounded-md"
-            >
-              C
-            </button>
-          </div>
+        ))}
           <div className="">
-<hr className="w-screen"/>
+          <hr className="w-full"/>
+
             <div className="basis-2/16 pt-4 grid grid-cols-2 gap-4 place-content-around">
                 <p>Total</p>
-                <p>Rs. 1920</p>
+                <p>{totalPrice}</p>
             </div>
             <div className="basis-2/16 pt-4 grid grid-cols-2 gap-4 place-content-around">
               <button
@@ -120,8 +145,8 @@ const ProductsPage = () => {
                 {product.description}
               </p>
               <div className="flex flex-row place-content-around">
-                <p>{product.price}</p>
                 <p>{product.size}</p>
+                <p>Rs. {product.price}</p>
               </div>
               <AddToCartButton />
             </div>

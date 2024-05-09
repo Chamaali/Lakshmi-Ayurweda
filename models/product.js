@@ -3,9 +3,9 @@ import mongoose, {Schema} from "mongoose";
 const productSchema = new Schema(
     {
         name: String,
-        description :   String,
+        description: String,
         image: String,
-        price: String,
+        price: Number,
         size: String,
     },
     {

@@ -10,6 +10,7 @@ const patientSchema = new Schema(
         phone: String,
         email: String,
         note: String,
+        registered: Boolean
     },
     {
         timestamps: true,
