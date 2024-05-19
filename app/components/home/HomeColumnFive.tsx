@@ -23,17 +23,19 @@ export default async function TopicsList() {
   return (
     <div className="flex flex-row p-8 bg-gray-200">
       {products.map((t) => (
-       <div>
-        <div className='p-2 '><Image src={t.image} alt={t.name} width={200} height={200} /></div>
-        <div className=" bg-gray-200 rounded-md ">
-          <h3 className="image-title text-black p-2 text-center font-medium">
-            {t.name}
-          </h3>
-          <p className="image-title text-black px-3 pb-3  text-sm">
-            {t.description}
-          </p>
+        <div>
+          <div className="p-2 ">
+            <Image src={t.image} alt={t.name} width={200} height={200} />
+          </div>
+          <div className=" bg-gray-200 rounded-md ">
+            <h3 className="image-title text-black p-2 text-center font-medium">
+              {t.name}
+            </h3>
+            <p className="image-title text-black px-3 pb-3  text-sm">
+              {t.description}
+            </p>
+          </div>
         </div>
-     </div>
       ))}
     </div>
   );

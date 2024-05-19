@@ -109,12 +109,11 @@ const services = [
 ];
 
 export default function page() {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const togglePopup = () => {
-      setIsOpen(!isOpen);
-    };
-
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <div className="text-white !important">
@@ -123,9 +122,8 @@ export default function page() {
           key={expand}
           expand={expand}
           className=" text-white !important bg-green-900  px-2 "
-          
         >
-          <Container fluid  className="text-white !important">
+          <Container fluid className="text-white !important">
             <Navbar.Brand href="./" className="pl-3 text-white !important">
               <Image
                 src={require("../../public/images/LogoForNavigationBar.png")}
@@ -133,43 +131,44 @@ export default function page() {
                 width={100}
               />
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="text-white !important" />
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-${expand}`}
+              className="text-white !important"
+            />
             <Navbar.Offcanvas
-             className="text-white !important"
+              className="text-white !important"
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title
-                  id={`offcanvasNavbarLabel-expand-${expand}`}
-                  
-                >
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   Offcanvas
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body  className="text-white !important">
+              <Offcanvas.Body className="text-white !important">
                 <Nav className="justify-content-end flex-grow-1 pe-3 text-white !important">
-                 <div  className="text-white !important">
-                 <NavDropdown
-                  
-                    title="Diseases"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
-                    {diseases.map((disease) => (
-                      <NavDropdown.Item
-                        key={disease.id}
-                        href={disease.href}
-                        className="no-underline hover:underline "
-                        
-                      >
-                        {disease.name}
-                      </NavDropdown.Item>
-                    ))}
-                  </NavDropdown>
-                 </div>
+                  <div className="text-white !important">
+                    <NavDropdown
+                      title="Diseases"
+                      id={`offcanvasNavbarDropdown-expand-${expand}`}
+                    >
+                      {diseases.map((disease) => (
+                        <NavDropdown.Item
+                          key={disease.id}
+                          href={disease.href}
+                          className="no-underline hover:underline "
+                        >
+                          {disease.name}
+                        </NavDropdown.Item>
+                      ))}
+                    </NavDropdown>
+                  </div>
 
-                  <Nav.Link href="./whyLakshmiAyurweda" className="text-white  text-lg font-bold !important">
+                  <Nav.Link
+                    href="./whyLakshmiAyurweda"
+                    className="text-white  text-lg font-bold !important"
+                  >
                     Why Lakshmi Ayurweda
                   </Nav.Link>
 
@@ -203,9 +202,7 @@ export default function page() {
                     <button type="button" onClick={togglePopup}>
                       <FaUser className=" self-end" size={23} />
                     </button>
-                    {isOpen && (
-                      <SignInForm />
-                    )}
+                    {isOpen && <SignInForm />}
                   </div>
                 </Form>
               </Offcanvas.Body>
