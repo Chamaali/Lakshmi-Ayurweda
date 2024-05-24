@@ -6,7 +6,7 @@ export const metadata = {
 
 const AdminLayout = ({children}: {children: React.ReactNode }) => {
   return (
-    <div>
+    <div  className='bg-green-100'>
         <AdminNav />
         {children}
     </div>

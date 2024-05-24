@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export async function PUT(request, { params }) {
     try {
       const { id } = params;
-      const {newName: name, newTitle: title, newDescription: description, newImage: image, newPhone: phone, newClinicName: clinicName, newClinicLocation: clinicLocation, newClinicPhone: clinicPhone} = await request.json();
+      const {newName: name, newTitle: title, newDescription: description, newImage: image, newPhone: phone, newEmail: email, newClinicNumber: clinicNumber} = await request.json();
       await connectMongoDB();
       await Doctor.findByIdAndUpdate(id, {
         name,
@@ -14,9 +14,8 @@ export async function PUT(request, { params }) {
         description,
         image,
         phone,
-        clinicName,
-        clinicLocation,
-        clinicPhone
+        email,
+        clinicNumber
       });
       return NextResponse.json(
         { message: "Doctor was Updated" },

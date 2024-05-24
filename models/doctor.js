@@ -6,10 +6,9 @@ const doctorSchema = new Schema(
         title: String,
         description: String,
         image: String,
-        phone: String,
-        clinicName: String,
-        clinicLocation: String,
-        clinicPhone: String,
+        phone: String, 
+        email: String,
+        clinicNumber: String,
     }
 );
 

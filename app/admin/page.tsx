@@ -1,9 +1,19 @@
 import React from 'react'
+import AdminNav from "../components/admin/AdminNav"
+import { Container } from 'react-bootstrap'
+
 
  const Admin = () => {
   return (
     <div>
-        Admin Page
+        <Container >
+<p>
+
+Instructions for data enter
+
+</p>
+        </Container>
+
     </div>
   )
 }

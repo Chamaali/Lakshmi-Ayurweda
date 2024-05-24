@@ -109,7 +109,7 @@ const services = [
 
 export default function page(){
   return (
-    <div className='bg-gray-700 text-gray-100 py-8 px-8 font-mono hover:bg-gray-800'>
+    <div className='bg-green-900 text-gray-100 pt-8 pb-2 px-8 font-mono hover:bg-green-900 text-xs'>
         <div className="flex flex-row ">
             <div className="basis-1/4">
                 <ul>
@@ -134,8 +134,8 @@ export default function page(){
             </div>
             <div className="basis-1/4">
                 <ul>
-                    <li><a className='no-underline text-white hover:underline leading-loose' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
-                    <li><a className='no-underline text-white hover:underline leading-loose' href='./bookAppointment'>Book Appointment</a></li>
+                    <li className=' my-4'><a className='no-underline hover:underline text-gray-100' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
+                    <li className=' my-4'><a className='no-underline text-white hover:underline leading-loose' href='./bookAppointment'>Book Appointment</a></li>
                 </ul>
             </div>
             <div className="basis-1/4">
@@ -164,6 +164,9 @@ export default function page(){
 
                 
             </div>
+        </div>
+        <div className='flex  justify-center pt-5'>
+            <p>Copyright © 2024 Lakshmi Ayurweda</p>
         </div>
     </div>
   )

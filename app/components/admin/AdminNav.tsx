@@ -1,39 +1,47 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { Container } from 'react-bootstrap'
-import AdminNavItem from "./AdminNavItem"
-import { usePathname } from 'next/navigation'
-import {MdDashboard} from "react-icons/md"
+import Link from "next/link";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import AdminNavItem from "./AdminNavItem";
+import { usePathname } from "next/navigation";
+import { MdDashboard } from "react-icons/md";
 
 const adminNav = () => {
-
-    const pathname = usePathname ()
-
+  const pathname = usePathname();
+  // const isSelected = true;
   return (
-    
-    <div className='w-full shadow-sm top-20 border-b-[1px] pt-4'>
-        <Container>
-            <div className='flex flex-row items-center justify-between md:justify-center gap-8 md:gap-12 overflow-x-auto flex-nowrap'>
-                <Link href="/admin">
-                    <AdminNavItem label="Products" icon={MdDashboard} selected={pathname === '/admin'} />
-                </Link>
-                <Link href="/admin">
-                    <AdminNavItem label="Clinics" icon={MdDashboard} selected={pathname === '/admin'} />
-                </Link>
-                <Link href="/admin">
-                    <AdminNavItem label="Doctors" icon={MdDashboard} selected={pathname === '/admin'} />
-                </Link>
-                <Link href="/admin">
-                    <AdminNavItem label="Orders" icon={MdDashboard} selected={pathname === '/admin'} />
-                </Link>
-                <Link href="/admin">
-                    <AdminNavItem label="Appointments" icon={MdDashboard} selected={pathname === '/admin'} />
-                </Link>
-            </div>
-        </Container>
-    </div>
-  )
-}
+    <div className="shadow-lg p-3">
+      <Container className="">
+        <div className="flex justify-between ">
+          <div className="bg-red-100">
+            <Nav.Link href="./../../admin/products" className="bg-red-100">
+              Products
+            </Nav.Link>
+          </div>
 
-export default adminNav
+          <div className="text-black text-lg">
+            <Nav.Link href="./../../admin/clinics">Clinics</Nav.Link>
+          </div>
+
+          <div>
+            <Nav.Link
+              href="./../../admin/doctors"
+              className='@GetActive("./../../admin/doctors")'
+            >
+              Doctors
+            </Nav.Link>
+          </div>
+
+          <div>
+            <Nav.Link href="./../../admin/doctors">Doctors</Nav.Link>
+          </div>
+          <div>
+            <Nav.Link href="./../../admin/doctors">Doctors</Nav.Link>
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+};
+
+export default adminNav;

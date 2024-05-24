@@ -204,6 +204,12 @@ export default function page() {
                     </button>
                     {isOpen && <SignInForm />}
                   </div>
+
+                  <div>
+                    <Button variant="outline-success" href="./admin">
+                      Admin
+                    </Button>
+                  </div>
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

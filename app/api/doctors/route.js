@@ -4,14 +4,15 @@ import { NextResponse } from "next/server";
 
 //post doctors
 export async function POST(request) {
-    const { name, title, description, image, phone, clinicName, clinicLocation, clinicPhone } = await request.json();
+    const { name, title, description, image, phone, email, clinicNumber } = await request.json();
   
     try {
       await connectMongoDB();
-      await Doctor.create({ name, title, description, image, phone, clinicName, clinicLocation, clinicPhone });
+      const res = await Doctor.create({ name, title, description, image, phone,  email, clinicNumber});
       return NextResponse.json(
-        { message: "Doctor was created successfully" },
+        { message: "Doctor was created successfully", res },
         { status: 201 }
+
       );
     } catch (error) {
       return NextResponse.json({ error, message: "Something went wrong" });
