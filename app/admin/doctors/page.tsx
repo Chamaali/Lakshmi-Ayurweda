@@ -2,6 +2,9 @@
 
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
+import RemoveDoctorButton from "../component/RemoveDoctorButton";
+import { HiPencilAlt } from "react-icons/hi";
+
 
 const getDoctors = async () => {
   try {
@@ -32,20 +35,26 @@ export default function page() {
 
   return (
     <Container className="py-8">
-      <div className="flex justify-between">
-        <h2>Doctors</h2>
-        <a href="./../../admin/addDoctor">Add New Doctor</a>
+      <div className="flex flex-row pb-4 ">
+        <div className="grid  basis-3/4">
+            
+        <h4 className="justify-self-center font-bold" >Details of Doctors</h4>
+        </div>
+        <div className="grid  basis-1/4">
+        <a href="./../../admin/addDoctor" className="justify-self-end py-2 px-3 font-medium bg-green-800 no-underline rounded shadow-sm text-white hover:bg-green-900">Add New Doctor</a>
+            
+        </div>
       </div>
 
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
+          <thead className="text-xs text-gray-700  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr className="bg-white border-b">
               <th scope="col" className="px-6 py-3">
                 No.
               </th>
               <th scope="col" className="px-6 py-3">
-                Doctor name
+                Name
               </th>
               <th scope="col" className="px-6 py-3">
                 Status
@@ -57,16 +66,16 @@ export default function page() {
                 Email
               </th>
               <th scope="col" className="px-6 py-3">
-                Photo Link
+                Photo
               </th>
               <th scope="col" className="px-6 py-3">
                 Description
               </th>
               <th scope="col" className="px-6 py-3">
-                Clinic Number
+                Clinic No.
               </th>
               <th scope="col" className="px-6 py-3">
-                Action
+                
               </th>
             </tr>
           </thead>
@@ -85,16 +94,12 @@ export default function page() {
                 <td className="flex items-center px-6 py-4">
                   <a
                     href={`./../../admin/editDoctor/${d._id}`}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline px-3"
                   >
-                    Edit
+                                 <HiPencilAlt size={24} />
+
                   </a>
-                  <a
-                    href="#"
-                    className="font-medium text-red-600 dark:text-red-500 hover:underline ms-3"
-                  >
-                    Remove
-                  </a>
+                  <RemoveDoctorButton id={d._id}/>
                 </td>
               </tr>
             ))}

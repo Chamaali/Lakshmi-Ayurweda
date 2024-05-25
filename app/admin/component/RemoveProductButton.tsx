@@ -4,20 +4,20 @@ import React from "react";
 import { HiOutlineTrash } from "react-icons/hi";
 import { useRouter } from "next/navigation";
 
-export default function RemoveDoctorButton({ id }) {
+export default function RemoveProductButton({ id }) {
     
   const router = useRouter();
 
-  const removeDoctor = async () => {
-    const confirmed = confirm("Are you sure you want to delete this topic?");
+  const removeProduct = async () => {
+    const confirmed = confirm("Are you sure you want to delete this product?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/doctors?id=${id}`, {
+      const res = await fetch(`http://localhost:3000/api/products?id=${id}`, {
         method: "DELETE",
       });
 
       if (res.ok) {
-        alert("Doctor deleted successfully");
+        alert("Product deleted successfully");
         router.refresh();
        
       }
@@ -25,7 +25,7 @@ export default function RemoveDoctorButton({ id }) {
   };
 
   return (
-    <button onClick={removeDoctor} className="text-red-400 px-3">
+    <button onClick={removeProduct} className="text-red-400 px-3">
       <HiOutlineTrash size={24} />
     </button>
   );

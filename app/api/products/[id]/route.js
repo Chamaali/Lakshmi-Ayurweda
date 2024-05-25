@@ -6,7 +6,7 @@ import { NextResponse } from "next/server";
 export async function PUT(request, { params }) {
     try {
       const { id } = params;
-      const {newName: name, newDescription: description, newImage: image, newPrize: price, newSize: size} = await request.json();
+      const {newName: name, newDescription: description, newImage: image, newPrice: price, newSize: size} = await request.json();
       await connectMongoDB();
       await Product.findByIdAndUpdate(id, {
         name,

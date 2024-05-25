@@ -19,24 +19,23 @@ const adminNav = () => {
             </Nav.Link>
           </div>
 
-          <div className="text-black text-lg">
+          <div className="text-red-800 text-lg active:text-green-500">
             <Nav.Link href="./../../admin/clinics">Clinics</Nav.Link>
           </div>
 
           <div>
             <Nav.Link
               href="./../../admin/doctors"
-              className='@GetActive("./../../admin/doctors")'
             >
               Doctors
             </Nav.Link>
           </div>
 
           <div>
-            <Nav.Link href="./../../admin/doctors">Doctors</Nav.Link>
+            <Nav.Link href="./../../admin/appointments">Appointments</Nav.Link>
           </div>
           <div>
-            <Nav.Link href="./../../admin/doctors">Doctors</Nav.Link>
+            <Nav.Link href="./../../admin/users">Users</Nav.Link>
           </div>
         </div>
       </Container>
