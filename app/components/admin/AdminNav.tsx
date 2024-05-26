@@ -12,23 +12,17 @@ const adminNav = () => {
   return (
     <div className="shadow-lg p-3">
       <Container className="">
-        <div className="flex justify-between ">
-          <div className="bg-red-100">
-            <Nav.Link href="./../../admin/products" className="bg-red-100">
-              Products
-            </Nav.Link>
+        <div className="flex justify-between text-lg font-bold text-green-700">
+          <div className="">
+            <Nav.Link href="./../../admin/products">Products</Nav.Link>
           </div>
 
-          <div className="text-red-800 text-lg active:text-green-500">
+          <div className="">
             <Nav.Link href="./../../admin/clinics">Clinics</Nav.Link>
           </div>
 
           <div>
-            <Nav.Link
-              href="./../../admin/doctors"
-            >
-              Doctors
-            </Nav.Link>
+            <Nav.Link href="./../../admin/doctors">Doctors</Nav.Link>
           </div>
 
           <div>
