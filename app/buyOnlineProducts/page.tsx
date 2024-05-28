@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const getProducts = async () => {
@@ -60,7 +61,7 @@ const AddToCartButton = () => {
             key={product.id}
           >
             <div className="p-2 w-1/4 h-1/4">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 
@@ -130,7 +131,7 @@ const ProductsPage = () => {
             key={product.id}
           >
             <div className="p-2">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
                 height={100}

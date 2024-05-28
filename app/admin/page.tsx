@@ -1,21 +1,15 @@
-import React from 'react'
-import AdminNav from "../components/admin/AdminNav"
-import { Container } from 'react-bootstrap'
+import React from "react";
+import AdminNav from "../components/admin/AdminNav";
+import { Container } from "react-bootstrap";
 
-
- const Admin = () => {
+const Admin = () => {
   return (
     <div>
-        <Container >
-<p>
-
-Instructions for data enter
-
-</p>
-        </Container>
-
+      <Container>
+        <p>Instructions for data enter</p>
+      </Container>
     </div>
-  )
-}
+  );
+};
 
-export default Admin
+export default Admin;

@@ -1,16 +1,14 @@
-import AdminNav from "../components/admin/AdminNav"
+"use client";
 
-export const metadata = {
-    title: "Admin Dashboard"
-}
+import AdminNav from "../components/admin/AdminNav";
 
-const AdminLayout = ({children}: {children: React.ReactNode }) => {
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div  className='bg-green-100'>
-        <AdminNav />
-        {children}
+    <div className="bg-green-100">
+      <AdminNav />
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default AdminLayout
+export default AdminLayout;

@@ -96,7 +96,7 @@ export default function DropdownSelect() {
               className="bg-white shadow-md rounded-xl place-content-around"
             >
               <div className="">
-                <img src={c.image} alt={c.name} className="rounded-t-xl" />
+                <Image src={c.image} alt={c.name} className="rounded-t-xl" />
               </div>
               <div className="px-3 pb-3">
                 <p className="text-green-700 text-2xl font-bold pt-2 ">

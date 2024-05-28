@@ -15,13 +15,13 @@ import SignInForm from "../components/SignInForm";
 const diseases = [
   {
     id: 1,
-    name: "Digestive system",
-    href: "./digestiveSystem",
+    name: "Back Pain",
+    href: "./../diseases/BackPain",
   },
   {
     id: 2,
-    name: "Muscular skeletal system",
-    href: "./muscularSkeletalSystem",
+    name: "Bulging of Rectum",
+    href: "./../diseases/BulgingOfRectum",
   },
   {
     id: 3,
@@ -108,7 +108,7 @@ const services = [
   },
 ];
 
-export default function page() {
+export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {

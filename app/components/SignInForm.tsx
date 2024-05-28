@@ -59,7 +59,7 @@ export default function SignInForm() {
             </button>
 
             <p className="text-gray-500 self-center mb-1">
-              You haven't an Account:{" "}
+              You haven&apos;t an Account:{" "}
               <a onClick={togglePopupSignUpFrom} className="text-gray-500 no-underline hover:underline">
                 SignUp
               </a>

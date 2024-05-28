@@ -8,7 +8,7 @@ import { Button, Container, Form } from "react-bootstrap";
 
 
 
-export default function page() {
+export default function Page() {
 
 const [name, setName] = useState("");
 const [title, setTitle] = useState("");

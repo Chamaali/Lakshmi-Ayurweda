@@ -23,7 +23,7 @@ export default async function TopicsList() {
   return (
     <div className="flex flex-row p-8 bg-gray-200">
       {products.map((t) => (
-        <div>
+        <div key={t._id}>
           <div className="p-2 ">
             <Image src={t.image} alt={t.name} width={200} height={200} />
           </div>

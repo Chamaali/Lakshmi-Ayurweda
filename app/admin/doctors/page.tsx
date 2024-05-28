@@ -22,7 +22,7 @@ const getDoctors = async () => {
   }
 };
 
-export default function page() {
+export default function Page() {
   const [doctors, setDoctors] = useState([]);
 
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function page() {
           </thead>
           <tbody>
             {doctors.map((d) => (
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <tr key={d._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td className="px-6 py-4">{d._id}</td>
                 <td className="px-6 py-4">{d.name}</td>
                 <td className="px-6 py-4">{d.title}</td>

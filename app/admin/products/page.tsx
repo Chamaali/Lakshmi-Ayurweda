@@ -22,7 +22,7 @@ const getProduct = async () => {
   }
 };
 
-export default function page() {
+export default function Page() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export default function page() {
           </thead>
           <tbody>
             {products.map((p) => (
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+              <tr key={p._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                 <td className="px-6 py-4">{p._id}</td>
                 <td className="px-6 py-4">{p.name}</td>
                 <td className="px-6 py-4">{p.description}</td>
