@@ -12,7 +12,7 @@ export default function RemoveDoctorButton({ id }) {
     const confirmed = confirm("Are you sure you want to delete this topic?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/doctors?id=${id}`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/doctors?id=${id}`, {
         method: "DELETE",
       });
 

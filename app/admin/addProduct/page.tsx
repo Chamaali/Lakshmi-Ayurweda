@@ -28,7 +28,7 @@ const router = useRouter();
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/products",{
+            const res = await fetch(`${process.env.BASE_URL}/api/products`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

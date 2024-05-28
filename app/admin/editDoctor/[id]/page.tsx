@@ -3,7 +3,7 @@ import EditDoctorForm from "../../component/EditDoctorForm";
 
 const getDoctorById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/doctors/${id}`, {
+    const res = await fetch(`${process.env.BASE_URL}/api/doctors/${id}`, {
       cache: "no-store",
     });
 

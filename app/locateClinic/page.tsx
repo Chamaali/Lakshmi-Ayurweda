@@ -4,11 +4,11 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Filter, MapPin } from "react-feather";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fas, far, fal } from '@awesome.me/kit-KIT_CODE/icons'
+// import { fas, far, fal } from '@awesome.me/kit-KIT_CODE/icons'
 
 const getClinics = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/clinics", {
+    const res = await fetch(`${process.env.BASE_URL}/api/clinics`, {
       cache: "no-store",
     });
 

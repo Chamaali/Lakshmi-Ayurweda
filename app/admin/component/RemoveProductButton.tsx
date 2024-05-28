@@ -12,7 +12,7 @@ export default function RemoveProductButton({ id }) {
     const confirmed = confirm("Are you sure you want to delete this product?");
 
     if (confirmed) {
-      const res = await fetch(`http://localhost:3000/api/products?id=${id}`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/products?id=${id}`, {
         method: "DELETE",
       });
 

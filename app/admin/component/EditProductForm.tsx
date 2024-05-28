@@ -23,7 +23,7 @@ const router = useRouter();
         e.preventDefault();
 
         try {
-            const res = await fetch(`http://localhost:3000/api/products/${id}`,{
+            const res = await fetch(`${process.env.BASE_URL}/api/products/${id}`,{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

@@ -8,7 +8,7 @@ import { HiPencilAlt } from "react-icons/hi";
 
 const getDoctors = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/doctors", {
+    const res = await fetch(`${process.env.BASE_URL}/api/doctors`, {
       cache: "no-store",
     });
 

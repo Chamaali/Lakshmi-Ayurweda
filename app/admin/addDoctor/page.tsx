@@ -30,7 +30,7 @@ const router = useRouter();
         }
 
         try {
-            const res = await fetch("http://localhost:3000/api/doctors",{
+            const res = await fetch(`${process.env.BASE_URL}/api/doctors`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

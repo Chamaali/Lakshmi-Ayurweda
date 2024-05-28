@@ -18,7 +18,7 @@ export default function EditDoctorForm({ id, name, title, image, phone, email, d
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:3000/api/doctors/${id}`, {
+      const res = await fetch(`${process.env.BASE_URL}/api/doctors/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
