@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Container } from "react-bootstrap";
-import { useRouter } from "next/navigation"; // Correct import for useRouter
+// import { useRouter } from "next/navigation"; // Correct import for useRouter
 
 const AdminNav = () => {
-  const router = useRouter();
-  const { pathname } = router;
+//   const router = useRouter();
+//   const { pathname } = router;
 
   const items = [
     {
