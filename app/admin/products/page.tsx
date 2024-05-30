@@ -1,9 +1,9 @@
 
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import RemoveProductButton from "../component/RemoveProductButton";
-import { HiPencilAlt } from "react-icons/hi";
+// import RemoveProductButton from "../component/RemoveProductButton";
+// import { HiPencilAlt } from "react-icons/hi";
 
 
 
@@ -94,15 +94,7 @@ export default async function Page() {
                 <td className="px-6 py-4">{p.price}</td>
                 <td className="px-6 py-4">{p.size}</td>
 
-                {/* <td className="flex items-center px-6 py-4">
-                  <a
-                    href={`./../../admin/editProduct/${p._id}`}
-                    className="font-medium text-blue-600 dark:text-blue-500 hover:underline px-3"
-                  >
-                    <HiPencilAlt size={24} />
-                  </a>
-                  <RemoveProductButton id={p._id} />
-                </td> */}
+                <td>actions</td>
               </tr>
             ))}
           </tbody>
@@ -111,3 +103,17 @@ export default async function Page() {
     </Container>
   );
 }
+
+
+
+
+
+//  <td className="flex items-center px-6 py-4">
+//                   <a
+//                     href={`./../../admin/editProduct/${p._id}`}
+//                     className="font-medium text-blue-600 dark:text-blue-500 hover:underline px-3"
+//                   >
+//                     <HiPencilAlt size={24} />
+//                   </a>
+//                   <RemoveProductButton id={p._id} />
+//                 </td> 

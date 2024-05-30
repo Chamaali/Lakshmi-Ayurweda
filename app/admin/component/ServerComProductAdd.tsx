@@ -166,7 +166,7 @@
 
 import React from 'react';
 
-async function ProductAdding(name, router) {
+async function ProductAdding(name:any, router:any) {
   try {
 const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, {
       method: 'POST',
@@ -186,11 +186,11 @@ const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, {
     }
   } catch (error) {
     console.error(error);
-    alert(error.message);
+  
   }
 }
 
-export default function ServerComProductAdd({ name, router }) {
+export default function ServerComProductAdd( name:any, router:any) {
   return (
     <button
       onClick={() => ProductAdding(name, router)}
