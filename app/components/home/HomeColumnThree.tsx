@@ -32,7 +32,7 @@ const imageData : ImageData [] = [
   },
 ];
 
-const ImageWithTitle = ({ id, imageUrl, title }) => (
+const ImageWithTitle = ( id:any, imageUrl:any, title:any ) => (
   <div key={id} className='flex-col m-2 bg-green-200 rounded-md'>
     <Image src={imageUrl} alt={title} width={300} height={300} />
     <h3 className="image-title text-black p-2 text-center font-medium">{title}</h3>
