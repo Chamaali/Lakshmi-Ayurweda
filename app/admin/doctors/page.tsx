@@ -1,14 +1,15 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 import RemoveDoctorButton from "../component/RemoveDoctorButton";
 import { HiPencilAlt } from "react-icons/hi";
 
+// `${process.env.BASE_URL}/api/doctors`
 
 const getDoctors = async () => {
   try {
     const res = await fetch(`${process.env.BASE_URL}/api/doctors`, {
+
+        
       cache: "no-store",
     });
 
@@ -22,16 +23,18 @@ const getDoctors = async () => {
   }
 };
 
-export default function Page() {
-  const [doctors, setDoctors] = useState([]);
+export default async function Page() {
 
-  useEffect(() => {
-    const fetchDoctors = async () => {
-      const data = await getDoctors();
-      setDoctors(data.doctors);
-    };
-    fetchDoctors();
-  }, []);
+const {doctors} = await getDoctors();
+//   const [doctors, setDoctors] = useState([]);
+
+//   useEffect(() => {
+//     const fetchDoctors = async () => {
+//       const data = await getDoctors();
+//       setDoctors(data.doctors);
+//     };
+//     fetchDoctors();
+//   }, []);
 
   return (
     <Container className="py-8">

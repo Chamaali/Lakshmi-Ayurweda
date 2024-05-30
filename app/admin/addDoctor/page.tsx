@@ -1,24 +1,13 @@
 'use client'
 
+
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
-
-
-
-
+import AddDoctorButton from "../component/AddDoctorButton";
+// import {handleSubmit} from "./../component/handleSubmit"
 
 export default function Page() {
-
-const [name, setName] = useState("");
-const [title, setTitle] = useState("");
-const [phone, setPhone] = useState("");
-const [image, setImage] = useState("");
-const [email, setEmail] = useState("");
-const [description, setDescription] = useState("");
-const [clinicNumber, setClinicNumber] = useState("");
-
-const router = useRouter();
 
 
     const handleSubmit = async(e) =>{
@@ -43,7 +32,7 @@ const router = useRouter();
             if(res.ok){
                 alert("Success!");
                 router.push("./../../admin/doctors");
-                
+
             }else{
                 throw new Error("Failed to add topic");
             }
@@ -52,6 +41,18 @@ const router = useRouter();
             console.log(error);
         }
     }
+
+const [name, setName] = useState("");
+const [title, setTitle] = useState("");
+const [phone, setPhone] = useState("");
+const [image, setImage] = useState("");
+const [email, setEmail] = useState("");
+const [description, setDescription] = useState("");
+const [clinicNumber, setClinicNumber] = useState("");
+
+const router = useRouter();
+
+    
 
   return (
     <div onSubmit={handleSubmit}>
@@ -202,9 +203,13 @@ const router = useRouter();
             >
               Save
             </button>
+            {/* <AddDoctorButton   id={id} name={name} title={title} description={description} image={image} phone={phone} email={email} clinicNumber={clinicNumber}/> */}
           </div>
         </form>
       </Container>
     </div>
   );
 }
+
+
+

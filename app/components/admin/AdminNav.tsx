@@ -13,22 +13,22 @@ const AdminNav = () => {
       title: "Products",
       href: "/admin/products",
     },
-    {
-      title: "Clinics",
-      href: "/admin/clinics",
-    },
-    {
-      title: "Doctors",
-      href: "/admin/doctors",
-    },
-    {
-      title: "Appointments",
-      href: "/admin/appointments",
-    },
-    {
-      title: "Users",
-      href: "/admin/users",
-    },
+    // {
+    //   title: "Clinics",
+    //   href: "/admin/clinics",
+    // },
+    // {
+    //   title: "Doctors",
+    //   href: "/admin/doctors",
+    // },
+    // {
+    //   title: "Appointments",
+    //   href: "/admin/appointments",
+    // },
+    // {
+    //   title: "Users",
+    //   href: "/admin/users",
+    // },
   ];
 
   return (
