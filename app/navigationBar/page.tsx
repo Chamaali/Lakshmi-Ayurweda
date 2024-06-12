@@ -205,11 +205,11 @@ export default function Page() {
                     {isOpen && <SignInForm />}
                   </div>
 
-                  <div>
+                  {/* <div>
                     <Button variant="outline-success" href="./admin">
                       Admin
                     </Button>
-                  </div>
+                  </div> */}
                 </Form>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

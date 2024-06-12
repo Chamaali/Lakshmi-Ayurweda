@@ -12,7 +12,7 @@ export default function SignUpForm() {
       setIsOpen(!isOpen);
     };
   
-    const togglePopupSignUpFrom = () => {
+    const togglePopupSignInFrom = () => {
       setIsSignUp(!isSignUp);
       setIsOpen(!isOpen);	
     };
@@ -31,55 +31,55 @@ export default function SignUpForm() {
           <form className="flex flex-col">
           <input
               type="text"
-              placeholder="Full Name"
+              placeholder="First Name"
               width={100}
               className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
             />
             <input
               type="text"
-              placeholder="Address"
+              placeholder="Last Name"
               width={100}
               className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
             />
             
-            <input
+            {/* <input
               type="text"
               placeholder="Email"
               width={100}
               className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
-            />
+            /> */}
             <input
               type="text"
               placeholder="New Password"
               width={20}
               className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
             />
-            <input
+            {/* <input
               type="text"
               placeholder="Confirm Password"
               width={20}
               className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
-            />
-            <button className="text-white rounded-md bg-green-800  px-3 py-2 mb-4 w-96">
+            /> */}
+            <button className="text-white rounded-md bg-green-800  px-3 py-2 mb-1 w-96">
               Sign Up
             </button>
-            <hr className="text-black py-2" />
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-3 mb-4 w-96">
+            <hr className="text-black py-1" />
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
               <FaGoogle className="mr-2" size={23} />
               Continue with Google
             </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800 px-3 py-3 mb-4 w-96">
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800 px-3 py-2 mb-4 w-96">
               <FaFacebook className="mr-2" size={25} />
               Continue with Facebook
             </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-3 mb-4 w-96">
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
               <FaApple className="mr-2" size={25} />
               Continue with Apple
             </button>
 
             <p className="text-gray-500 self-center mb-1">
               You have an Account:{" "}
-              <a onClick={togglePopupSignUpFrom} className="text-gray-500 no-underline hover:underline">
+              <a onClick={togglePopupSignInFrom} className="text-gray-500 no-underline hover:underline">
                 SignIn
               </a>
             </p>

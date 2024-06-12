@@ -19,7 +19,7 @@ export default function SignInForm() {
 
   return (
     <div>
-      <div className="fixed bottom-0 left-0 w-full h-full  bg-opacity-20 flex justify-center items-center  shadow-lg">
+      <div className="fixed bottom-0 left-0 w-full h-full  bg-opacity-20 flex justify-center items-center  shadow-lg ">
         <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
           <div className="flex flex-row justify-between pb-3">
             <p className="text-green-800 text-2xl font-bold">Sign In</p>
@@ -45,15 +45,15 @@ export default function SignInForm() {
               Sign In
             </button>
             <hr className="text-black py-2" />
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-3 mb-4 w-96">
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
               <FaGoogle className="mr-2" size={23} />
               Continue with Google
             </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800 px-3 py-3 mb-4 w-96">
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800 px-3 py-2 mb-4 w-96">
               <FaFacebook className="mr-2" size={25} />
               Continue with Facebook
             </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-3 mb-4 w-96">
+            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
               <FaApple className="mr-2" size={25} />
               Continue with Apple
             </button>
