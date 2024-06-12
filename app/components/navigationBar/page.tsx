@@ -10,7 +10,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { FaUser } from "react-icons/fa";
-import SignInForm from "../components/SignInForm";
+import SignInForm from "../SignInForm";
 
 const diseases = [
   {
@@ -126,7 +126,7 @@ export default function Page() {
           <Container fluid className="text-white !important">
             <Navbar.Brand href="./" className="pl-3 text-white !important">
               <Image
-                src={require("../../public/images/LogoForNavigationBar.png")}
+                src={require("@/public/images/LogoForNavigationBar.png")}
                 alt=""
                 width={100}
               />
