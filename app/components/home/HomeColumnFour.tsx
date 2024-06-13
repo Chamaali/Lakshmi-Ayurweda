@@ -1,5 +1,6 @@
 import React from 'react'
 import wellnesses from "@/app/constants/wellnesses";
+import Image from 'next/image';
 
 export default function HomeColumnFour() {
   return (
@@ -14,7 +15,7 @@ export default function HomeColumnFour() {
             {wellnesses.map((wellness, index) => (
               <div key={index} className="p-2 hover:scale-105">
                 <div className="bg-white  rounded-xl shadow p-4 mx-2">
-                  <img src={wellness.image} alt={wellness.title} className="w-full h-40 object-cover rounded" />
+                  <Image src={wellness.image} alt={wellness.title} className="w-full h-40 object-cover rounded" />
                   <h3 className="mt-2 font-bold text-lg">{wellness.title}</h3>
                 </div>
               </div>

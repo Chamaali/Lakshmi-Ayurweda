@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import HomeColumnFive from "./../../components/home/HomeColumnFive";
+// import HomeColumnFive from "./../../components/home/HomeColumnFive";
 
 // `${process.env.BASE_URL}/api/products`
 
 const getProducts = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/products", {
+    const res = await fetch(`${process.env.BASE_URL}/api/products`, {
       cache: "no-store",
     });
     if (!res.ok) {
@@ -40,7 +40,7 @@ const GetAllProducts = () => {
     return <div>Loading...</div>;
   }
 
-  return <HomeColumnFive products={products} />;
+//   return <HomeColumnFive products={products} />;
 };
 
 export default GetAllProducts;

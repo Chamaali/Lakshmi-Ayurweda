@@ -5,6 +5,7 @@ import Slider from 'react-slick';
 import diseases from "@/app/constants/diseases";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
 
 const HomeColumnTwo = () => {
   const sliderRef = useRef(null);
@@ -37,15 +38,7 @@ const HomeColumnTwo = () => {
     ],
   };
 
-  const handleWheel = (e:any) => {
-    e.stopPropagation();
-    e.preventDefault();
-    if (e.deltaY < 0) {
-      sliderRef.current.slickPrev();
-    } else {
-      sliderRef.current.slickNext();
-    }
-  };
+ 
 
   return (
     <div>
@@ -61,7 +54,7 @@ const HomeColumnTwo = () => {
             {diseases.map((disease, index) => (
               <div key={index} className="p-2">
                 <div className="bg-white  rounded-xl shadow p-4 mx-2">
-                  <img src={disease.image} alt={disease.title} className="w-full h-40 object-cover rounded" />
+                  <Image src={disease.image} alt={disease.title} className="w-full h-40 object-cover rounded" />
                   <h3 className="mt-2 font-bold text-lg">{disease.title}</h3>
                 </div>
               </div>
