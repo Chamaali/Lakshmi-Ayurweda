@@ -121,7 +121,7 @@ export default function Page() {
 
  
   return (
-    <div className="text-white sticky top-0 right-0 left-0 bg-green-900 py-2 px-5 z-10">
+    <div className="text-white sticky top-0 right-0 left-0 bg-green-900  py-2 px-5 z-10">
       <nav className="flex items-center justify-between py-4 ">
         <div className="pl-3">
           <a href="/">

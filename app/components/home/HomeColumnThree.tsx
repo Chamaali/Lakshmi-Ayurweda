@@ -1,113 +1,41 @@
-// "use client"
+"use client"
+import React from 'react'
 
-// import React from 'react';
-// import Image from 'next/image';
-
-// interface ImageData {
-//     id: number;
-//     imageUrl: string;
-//     title: string;
-// }
-
-// const imageData : ImageData [] = [
-//   {
-//     id: 1,
-//     imageUrl: require('/public/images/1_Facial.jpg'),
-//     title: 'Ayurwedic Facial',
-//   },
-//   {
-//     id: 2,
-//     imageUrl: require('/public/images/2_Hair.jpg'),
-//     title: 'Ayurwedic Hair Treatment',
-//   },
-//   {
-//     id: 3,
-//     imageUrl: require('/public/images/3_Body.jpg'),
-//     title: 'Ayurwedic Body Massage',
-//   },
-//   {
-//     id: 4,
-//     imageUrl: require('/public/images/4_FootMassage.jpg'),
-//     title: 'Ayurwedic Foot Massage',
-//   },
-// ];
-
-// const ImageWithTitle = ( {id:any, imageUrl, title} ) => (
-//   <div key={id} className='flex-col m-2 bg-green-200 rounded-md'>
-//     <Image src={imageUrl} alt={title} width={300} height={300} />
-//     <h3 className="image-title text-black p-2 text-center font-medium">{title}</h3>
-//   </div>
-// );
-
-// const HomeColumnThree = () => (
-   
-//         <div className="flex flex-row p-8">
-//         {imageData.map((imageData) => (
-//             <ImageWithTitle key={imageData.id} {...imageData} />
-//             ))}
-
-//         </div>
-        
-        
-   
-// );
-
-// export default HomeColumnThree;
+const HomeColumnThree = () => {
+  return (
+    <div className=' p-8'>
+        <div className='px-8'>
+            <p className='text-Black text-center font-sans text-xl font-semibold py-3'>Why Laksmi Ayurweda</p>
+            
+            <div className='p-3 shadow-lg rounded-lg bg-white'>
+            <ul className='text-Black font-sans text-lg list-disc text-justify space-y-6 mx-10'>
+                <li>
+                    Lakshmi ayurveda enable true deliveru of ayirveda with personalised tx for each individual at all touch-point.
+                </li>
+                <li>
+                    Personlized the root cause
+                </li>
+                <li>
+                    Combine tx...etc
+                </li>
+                <li>
+                    Used mordern technology
+                </li>
+                <li>
+                    Coleberate with sri lankan traditional practitioners
+                </li>
+                <li>
+                    Well qualified (BAMS)doctors,specialist doctors,surgeon s etc
+                </li>
+                
+            </ul>
+            </div>
+           
 
 
-"use client";
-
-import React from 'react';
-import Image from 'next/image';
-
-interface ImageData {
-    id: number;
-    imageUrl: string;
-    title: string;
+        </div>
+    </div>
+  )
 }
 
-const imageData: ImageData[] = [
-  {
-    id: 1,
-    imageUrl: require('/public/images/1_Facial.jpg'),
-    title: 'Ayurvedic Facial',
-  },
-  {
-    id: 2,
-    imageUrl: require('/public/images/2_Hair.jpg'),
-    title: 'Ayurvedic Hair Treatment',
-  },
-  {
-    id: 3,
-    imageUrl: require('/public/images/3_Body.jpg'),
-    title: 'Ayurvedic Body Massage',
-  },
-  {
-    id: 4,
-    imageUrl: require('/public/images/4_FootMassage.jpg'),
-    title: 'Ayurvedic Foot Massage',
-  },
-];
-
-interface ImageWithTitleProps {
-  id: number;
-  imageUrl: string;
-  title: string;
-}
-
-const ImageWithTitle: React.FC<ImageWithTitleProps> = ({ imageUrl, title }) => (
-  <div className='flex-col m-2 bg-green-200 rounded-md'>
-    <Image src={imageUrl} alt={title} width={300} height={300} />
-    <h3 className="image-title text-black p-2 text-center font-medium">{title}</h3>
-  </div>
-);
-
-const HomeColumnThree: React.FC = () => (
-  <div className="flex flex-row p-8">
-    {imageData.map((data) => (
-      <ImageWithTitle key={data.id} {...data} />
-    ))}
-  </div>
-);
-
-export default HomeColumnThree;
+export default HomeColumnThree

@@ -1,38 +1,26 @@
-"use client"
 import React from 'react'
+import wellnesses from "@/app/constants/wellnesses";
 
-const HomeColumnFour = () => {
+export default function HomeColumnFour() {
   return (
-    <div className='bg-emerald-700 p-8'>
-        <div className='px-8'>
-            <p className='text-white text-center font-serif text-4xl pb-8'>Why Laksmi Ayurweda</p>
-            <ul className='text-white font-serif text-2xl list-disc '>
-                <li>
-                    Lakshmi ayurveda enable true deliveru of ayirveda with personalised tx for each individual at all touch-point.
-                </li>
-                <li>
-                    Personlized the root cause
-                </li>
-                <li>
-                    Combine tx...etc
-                </li>
-                <li>
-                    Used mordern technology
-                </li>
-                <li>
-                    Coleberate with sri lankan traditional practitioners
-                </li>
-                <li>
-                    Well qualified (BAMS)doctors,specialist doctors,surgeon s etc
-                </li>
-                
-            </ul>
-           
-
-
+    <div className="bg-green-900 p-8">
+        <div className="">
+          <p className="text-white text-center font-sans font-semibold text-xl">
+            Ayurvedic for Wellness
+          </p>
+        </div>
+      <div>
+          <div className='grid grid-cols-4 my-5'>
+            {wellnesses.map((wellness, index) => (
+              <div key={index} className="p-2 hover:scale-105">
+                <div className="bg-white  rounded-xl shadow p-4 mx-2">
+                  <img src={wellness.image} alt={wellness.title} className="w-full h-40 object-cover rounded" />
+                  <h3 className="mt-2 font-bold text-lg">{wellness.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
     </div>
   )
 }
-
-export default HomeColumnFour

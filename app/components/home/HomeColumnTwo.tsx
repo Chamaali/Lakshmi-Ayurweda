@@ -1,28 +1,72 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import Dig from "/public/images/7.png";
+import React, { useRef } from 'react';
+import Slider from 'react-slick';
+import diseases from "@/app/constants/diseases";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const HomeColumnTwo = () => {
+  const sliderRef = useRef(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const handleWheel = (e:any) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      sliderRef.current.slickPrev();
+    } else {
+      sliderRef.current.slickNext();
+    }
+  };
+
   return (
     <div>
-      <div className="bg-green-100 p-8">
-        <div className="pb-5">
-          <p className="text-green-700 text-center font-serif text-xl">
+      <div className="bg-green-900 p-8">
+        <div className="">
+          <p className="text-white text-center font-sans font-semibold text-xl">
             Ayurvedic Diseases & Conditions We Treat
           </p>
         </div>
 
-        <div className="flex flex-row  my-3">
-          <div className="flex-column bg-white  rounded-xl mx-3">
-            <div className="p-3">
-              <Image className="" alt="" src={Dig} width={200} />
-              <p className="text-green-700 text-xs font-serif text-center pb-2 pt-4 text-base">
-                Book an Appointment
-              </p>
-            </div>
-          </div>
+        <div className='m-5 ' >
+          <Slider {...settings} ref={sliderRef}>
+            {diseases.map((disease, index) => (
+              <div key={index} className="p-2">
+                <div className="bg-white  rounded-xl shadow p-4 mx-2">
+                  <img src={disease.image} alt={disease.title} className="w-full h-40 object-cover rounded" />
+                  <h3 className="mt-2 font-bold text-lg">{disease.title}</h3>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>

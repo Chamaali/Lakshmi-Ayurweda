@@ -11,3 +11,5 @@ npm run dev
 ```bash
 npm run build
 ```
+
+### Font used font-sans
