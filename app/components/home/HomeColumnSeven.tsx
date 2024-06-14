@@ -2,35 +2,9 @@
 import Image from 'next/image'
 import React from 'react'
 import { Card, CardBody, CardFooter, CardGroup } from 'react-bootstrap'
+import doctors from "@/app/constants/doctors";
 
 
-const doctors =[
-    {
-        name: "Dr.S. Priyantha",
-        id: 1,
-        photo: require('/public/images/call.png')
-    },
-    {
-        name: "Dr. N. Kamal",
-        id: 2,
-        photo: require('/public/images/call.png')
-    },
-    {
-        name: "Dr. R. Saman",
-        id: 3,
-        photo: require('/public/images/call.png')
-    },
-    {
-        name: "Dr.S. Priyantha",
-        id: 4,
-        photo: require('/public/images/call.png')
-    },
-    {
-        name: "Dr.S. Priyantha",
-        id: 4,
-        photo: require('/public/images/call.png')
-    },
-]
 
 
 const HomeColumnSeven = () => {
@@ -43,9 +17,9 @@ const HomeColumnSeven = () => {
             <CardGroup className=' border-none'>
                 {doctors.map((doctor, index) =>(
                     // eslint-disable-next-line react/jsx-key
-                    <Card className='p-2' key={doctor.id}>
+                    <Card className='mx-3' key={doctor.id}>
                         <CardBody>
-                            <Image src={doctor.photo} alt=""/>
+                            <Image src={doctor.photo} alt="ss" width={200} height={200}/>
                         </CardBody>
                         <CardFooter>
                             <p>{doctor.name}</p>

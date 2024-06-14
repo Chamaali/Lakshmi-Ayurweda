@@ -12,7 +12,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ['asset.cloudinary.com', 'res.cloudinary.com'
+      domains: ['asset.cloudinary.com', 'res.cloudinary.com', 'via.placeholder.com'
       ],
     },
   };

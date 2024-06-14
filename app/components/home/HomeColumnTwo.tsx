@@ -54,7 +54,7 @@ const HomeColumnTwo = () => {
             {diseases.map((disease, index) => (
               <div key={index} className="p-2">
                 <div className="bg-white  rounded-xl shadow p-4 mx-2">
-                  <Image src={disease.image} alt={disease.title} className="w-full h-40 object-cover rounded" />
+                  <Image src={disease.image} alt={disease.title} className=" object-cover rounded"  width={30} height={30} />
                   <h3 className="mt-2 font-bold text-lg">{disease.title}</h3>
                 </div>
               </div>
