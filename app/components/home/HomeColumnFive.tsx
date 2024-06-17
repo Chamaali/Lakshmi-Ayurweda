@@ -1,75 +1,29 @@
-// import React, { useEffect, useState } from "react";
-// import HomeColumnFive from "../../components/home/HomeColumnFive";
+import Image from 'next/image';
+import { getProducts } from '../../serverComponents/products/getProducts';
 
-// // `${process.env.BASE_URL}/api/products`
+export const HomeColumnFive = async () =>{
 
-// const getProducts = async () => {
-//   try {
-//     const res = await fetch("http://localhost:3000/api/products", {
-//       cache: "no-store",
-//     });
+    const products = await getProducts();
 
-//     if (!res.ok) {
-//       throw new Error("Failed to fetch products");
-//     }
-
-//     const data = await res.json();
-//     console.log(data); // Log the data to check the response structure
-//     return data;
-//   } catch (error) {
-//     console.error("Error loading products", error);
-//     throw error; // Re-throw the error so it can be caught in the component
-//   }
-// };
-
-// const GetAllProducts = () => {
-
-//     console.log("Initiated GetAllProducts");
-
-//   const [products, setProducts] = useState([]);
-
-//   console.log("Getting all products");
-
-//   useEffect(() => {
-//     const fetchProducts = async () => {
-//       try {
-//         const data = await getProducts();
-//         console.log(data);
-//         setProducts(data.products); // Assuming 'products' is the correct key in the response
-//       } catch (error) {
-//         console.log("Couldn't fetch products", error);
-//       }
-//     };
-
-//     fetchProducts();
-//   }, []);
-
-//   if (products.length === 0) {
-//     // Loading or empty state
-//     return <div>Loading...</div>;
-//   }
-
-//   return <HomeColumnFive products={products} />;
-// };
-
-// export default GetAllProducts;
-
-
-
-
-// import React from 'react';
-
-// const HomeColumnFive = (props) => {
-//   const { name, price, size } = props.product;
-//   return <h1>Hello, {name} {price} {size}!</h1>;
-// };
-
-// export default HomeColumnFive;
-
-// import React from 'react'
-
-// const HomeColumnFive = (props) => {
-//     return <h1>Hello, {props.name}!</h1>;
-//   };
-  
-//   export default HomeColumnFive;
+  return (
+    <div className="bg-green-900 p-8">
+        <div className="">
+          <p className="text-white text-center font-sans font-semibold text-xl">
+            Ayurvedic for Wellness
+          </p>
+        </div>
+      <div>
+          <div className='grid grid-cols-4 my-5'>
+            {products.map((product:any, index:any) => (
+              <div key={index} className="p-2 hover:scale-105">
+                <div className="bg-white  rounded-xl shadow p-4 mx-2">
+                  <Image src={product.image} alt={product.title} className="object-cover rounded"  width={30} height={30}/>
+                  <h3 className="mt-2 font-bold text-lg">{product.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+    </div>
+  )
+}

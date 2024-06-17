@@ -5,6 +5,7 @@ import HomeColumnThree from './components/home/HomeColumnThree'
 // import HomeColumnSix from './components/home/HomeColumnSix'
 import HomeColumnSeven from './components/home/HomeColumnSeven'
 import HomeColumnOne from './components/home/HomeColumnOne'
+import { HomeColumnFive } from './components/home/HomeColumnFive'
 // import HomeColumnFive from './components/home/HomeColumnFive'
 // import { GetAllProducts } from './serverComponents/products/GetAllProducts'
 // import { GetAllDoctors } from './serverComponents/products/GetAllDoctors'
@@ -24,7 +25,7 @@ const HomePage= () => {
         <HomeColumnTwo />
         <HomeColumnThree />
         <HomeColumnFour />
-        {/* <HomeColumnFive /> */}
+        <HomeColumnFive />
         {/* <HomeColumnFive /> */}
         {/* <GetAllProducts/> */}
         {/* <GetAllDoctors /> */}
