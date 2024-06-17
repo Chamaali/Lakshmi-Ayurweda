@@ -118,7 +118,7 @@ export default function Page() {
   };
 
   
-
+//   g-gradient-to-b from-yellow-300 to-yellow-900 bg-clip-text text-transparent
  
   return (
     <div className="text-white sticky top-0 right-0 left-0 bg-green-900  py-2 px-5 z-10">

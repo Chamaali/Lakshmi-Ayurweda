@@ -1,32 +1,75 @@
-import Image from "next/image";
-import React from "react";
+// import React, { useEffect, useState } from "react";
+// import HomeColumnFive from "../../components/home/HomeColumnFive";
 
-import products from "@/app/constants/products"
+// // `${process.env.BASE_URL}/api/products`
 
-const HomeColumnFive = () => {
+// const getProducts = async () => {
+//   try {
+//     const res = await fetch("http://localhost:3000/api/products", {
+//       cache: "no-store",
+//     });
+
+//     if (!res.ok) {
+//       throw new Error("Failed to fetch products");
+//     }
+
+//     const data = await res.json();
+//     console.log(data); // Log the data to check the response structure
+//     return data;
+//   } catch (error) {
+//     console.error("Error loading products", error);
+//     throw error; // Re-throw the error so it can be caught in the component
+//   }
+// };
+
+// const GetAllProducts = () => {
+
+//     console.log("Initiated GetAllProducts");
+
+//   const [products, setProducts] = useState([]);
+
+//   console.log("Getting all products");
+
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       try {
+//         const data = await getProducts();
+//         console.log(data);
+//         setProducts(data.products); // Assuming 'products' is the correct key in the response
+//       } catch (error) {
+//         console.log("Couldn't fetch products", error);
+//       }
+//     };
+
+//     fetchProducts();
+//   }, []);
+
+//   if (products.length === 0) {
+//     // Loading or empty state
+//     return <div>Loading...</div>;
+//   }
+
+//   return <HomeColumnFive products={products} />;
+// };
+
+// export default GetAllProducts;
 
 
 
-  return (
-    <div className="flex flex-row p-8 bg-gray-200">
-        <p>Our Products</p>
-        {products.map((product, index) => (
-        <div key={product.title}>
-          <div className="p-2">
-            <Image src={product.image} alt={product.title} width={200} height={200} />
-          </div>
-          <div className="bg-gray-200 rounded-md">
-            <h3 className="image-title text-black p-2 text-center font-medium">
-              {product.title}
-            </h3>
-            <p className="image-title text-black px-3 pb-3 text-sm">
-              {product.description}
-            </p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
 
-export default HomeColumnFive;
+// import React from 'react';
+
+// const HomeColumnFive = (props) => {
+//   const { name, price, size } = props.product;
+//   return <h1>Hello, {name} {price} {size}!</h1>;
+// };
+
+// export default HomeColumnFive;
+
+// import React from 'react'
+
+// const HomeColumnFive = (props) => {
+//     return <h1>Hello, {props.name}!</h1>;
+//   };
+  
+//   export default HomeColumnFive;

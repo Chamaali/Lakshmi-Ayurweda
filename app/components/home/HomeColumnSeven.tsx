@@ -1,35 +1,77 @@
-"use client"
-import Image from 'next/image'
-import React from 'react'
-import { Card, CardBody, CardFooter, CardGroup } from 'react-bootstrap'
-import doctors from "@/app/constants/doctors";
+// type infoType = {
+//   name: string;
+//   id: number;
+//   photo: string;
+// };
+
+// type propType = {
+//   doctors: infoType[];
+// };
+
+// const HomeColumnSeven = (props: propType) => {
+//   const { doctors } = props;
+
+//   return (
+//     <div className="p-4">
+//       {doctors.map((doctor)=>(
+//         <div>
+//             <h1>
+//         Displaying {doctor.name} {doctor.id}
+//       </h1>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default HomeColumnSeven;
+
+// type infoType = {
+//     name: string;
+//     id: number;
+//     photo: string;
+//   };
+
+//   type propType = {
+//     quotes: infoType[];
+//   };
 
 
+//`${process.env.NEXT_PUBLIC_BASE_URL}/api/doctors`
+//'http://localhost:3000/api/doctors'
 
+export const getDoctors = async () => {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/doctors`, {
+      cache: "force-cache",
+    });
 
-const HomeColumnSeven = () => {
+    if (!res.ok) {
+      throw new Error("Failed to fetch doctors");
+    }
+
+    const data = await res.json();
+
+    return data.doctors;
+  } catch (error) {
+    console.error("Error loading doctors", error);
+  }
+};
+
+const HomeColumnSeven = async () => {
+  const doctors = await getDoctors();
+
   return (
-    <div className='bg-gray-100'>
-        <div>
-            <p className='text-green-700 font-bold text-xl text-center font-serif p-4'>Our Doctors</p>
+    <div className="p-4">
+      {doctors.map((doctor:any, index:any) => (
+        <div key={index}>
+          <h1>
+            Displaying {doctor.name} 
+          </h1>
         </div>
-        <div className='p-2'>
-            <CardGroup className=' border-none'>
-                {doctors.map((doctor, index) =>(
-                    // eslint-disable-next-line react/jsx-key
-                    <Card className='mx-3' key={doctor.id}>
-                        <CardBody>
-                            <Image src={doctor.photo} alt="ss" width={200} height={200}/>
-                        </CardBody>
-                        <CardFooter>
-                            <p>{doctor.name}</p>
-                        </CardFooter>
-                    </Card>
-                    ))}
-            </CardGroup>
-        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default HomeColumnSeven
+export default HomeColumnSeven;
