@@ -5,6 +5,11 @@ export const HomeColumnFive = async () =>{
 
     const products = await getProducts();
 
+    if (!products) {
+        console.error('No products data fetched');
+        return <div>Error loading products</div>;
+      }
+
   return (
     <div className="bg-green-900 p-8">
         <div className="">

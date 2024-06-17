@@ -16,7 +16,7 @@ const HomePage= () => {
         <HomeColumnFour />
         <HomeColumnFive />
        
-        <HomeColumnSeven />    
+        {/* <HomeColumnSeven />     */}
     </div>
   )
 }
