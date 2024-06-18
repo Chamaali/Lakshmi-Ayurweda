@@ -6,6 +6,7 @@ import { FaUser } from "react-icons/fa";
 import SignInForm from "../SignInForm";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SignUpForm from "../SignUpForm";
 
 const diseases = [
   {
