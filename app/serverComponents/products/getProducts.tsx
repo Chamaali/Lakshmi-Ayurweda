@@ -14,7 +14,7 @@ export const getProducts = async () => {
     return data.products;
   } catch (error) {
     console.error("Error loading products", error);
-    // throw error; 
+    // throw error;
   }
 };
 
@@ -27,6 +27,6 @@ export const getProducts = async () => {
 //         await connectMongoDB();
 //         const products = await Product.find();
 //     } catch (error) {
-        
+
 //     }
 // }
