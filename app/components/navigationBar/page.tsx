@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import SignInForm from "../SignInForm";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SignUpForm from "../SignUpForm";
+import { getUserRole } from "@/app/serverComponents/users/getUserRole";
 
 const diseases = [
   {
@@ -107,9 +108,28 @@ const services = [
 export default function Page() {
 
     const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-//   const [userRole, setUserRole] = useState(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [userRole, setUserRole] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [userEmail, setUserEmail] = useState(null);
+
+    useEffect(() => {
+        async function fetchUserRole() {
+          setIsLoading(true);
+          if (userEmail) {
+            try {
+              const role = await getUserRole(userEmail);
+              setUserRole(role);
+            } catch (error) {
+              console.error("Failed to fetch user role:", error);
+            }
+          }
+          setIsLoading(false);
+        }
+    
+        fetchUserRole();
+      }, [userEmail]);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -118,24 +138,11 @@ export default function Page() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const handleLogin = (email:any) => {
+    setUserEmail(email);
+  };
 
 
-//   useEffect(() => {
-//     async function fetchUserRole() {
-//       try {
-//         const role = await getUserRole();
-//         setUserRole(role);
-//       } catch (error) {
-//         console.error("Failed to fetch user role:", error);
-//       } finally {
-//         setIsLoading(false);
-//       }
-//     }
-
-//     fetchUserRole();
-//   }, []);
-
-  
 //   g-gradient-to-b from-yellow-300 to-yellow-900 bg-clip-text text-transparent
  
   return (
@@ -195,28 +202,38 @@ export default function Page() {
         </button>
      
     </Link>
-    {/* {!userRole && (
-            <button type="button" onClick={togglePopup}>
-              <FaUser size={23} />
-            </button>
-          )}
+    
+              {!userRole && (
+                <button type="button" onClick={togglePopup}>
+                  <FaUser size={23} />
+                </button>
+              )}
 
-          {userRole === 'patient' && (
-            <Link href="/profile" className='bg-white text-black px-3 py-2 font-bold rounded'>
-              Hi, Patient
-            </Link>
-          )}
+              {userRole === 'patient' && (
+                <Link href="/profile" className='bg-white text-black px-3 py-2 font-bold rounded'>
+                  Hi, Patient
+                </Link>
+              )}
 
-          {userRole === 'admin' && (
-            <Link href="/admin" className='bg-white text-black px-3 py-2 font-bold rounded'>
-              Dashboard
-            </Link>
-          )} */}
+              {userRole === 'admin' && (
+                <Link href="/admin" className='bg-white text-black px-3 py-2 font-bold rounded'>
+                  Dashboard
+                </Link>
+              )}
+          
 
 
+          {isOpen && (
+  <SignInForm 
+    onLogin={(email:any) => {
+      handleLogin(email);
+      setIsOpen(false);
+    }} 
+    onClose={() => setIsOpen(false)}
+  />
+)}
 
 
-          {isOpen && <SignInForm />}
           <button className="md:hidden text-white" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
