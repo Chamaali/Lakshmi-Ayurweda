@@ -1,76 +1,87 @@
 "use client"
 
 import React, { useState } from 'react'
-import { FaApple, FaFacebook, FaGoogle, FaRegWindowClose } from 'react-icons/fa';
+import { FaRegWindowClose } from 'react-icons/fa';
 import SignInForm from './SignInForm';
 import { useRouter } from 'next/navigation';
 
 export default function SignUpForm() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSignUp, setIsSignUp] = useState(false);
-  
-    
-
-
+    const [isOpen, setIsOpen] = useState(true);
+    const [showSignIn, setShowSignIn] = useState(false);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
+    const role="patient";
+    const router = useRouter();
 
-  const router = useRouter();
+    const handleSubmit = async (e:any) => {
+        e.preventDefault();
+    
+        if (!role || !firstName || !email || !password) {
+          alert("Please fill in all required fields");
+          return;
+        }
+    
+        try {
+          // First, check if the email already exists
+          const checkRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users/${email}`);
+          const checkData = await checkRes.json();
 
-  const handleSubmit = async (e:any) => {
-    e.preventDefault();
+          if (checkData.user) {
+            alert("An account with this email already exists. Please use a different email or sign in.");
+            return;
+          }
 
-    if (!firstName || !lastName || !email || !phone || !password) {
-      alert("Please enter a title and description");
-      return;
+          // If email doesn't exist, proceed with user creation
+          const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/users`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ role, firstName, lastName, email, phone, password }),
+          });
+    
+          if (res.ok) {
+            alert("User added successfully");
+            router.push("/");
+            router.refresh();
+          } else {
+            throw new Error("Failed to add user");
+          }
+        } catch (error) {
+          console.log(error);
+          alert("An error occurred while creating the account. Please try again.");
+        }
+      };
+
+
+    const togglePopup = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const switchToSignIn = () => {
+        setShowSignIn(true);
+    };
+
+    if (showSignIn) {
+        return <SignInForm />;
     }
 
-    try {
-      const res = await fetch("http://localhost:3000/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ firstName, lastName, email, phone, password }),
-      });
+    return (
+        isOpen && (
+            <div className="fixed bottom-0 left-0 w-full h-full bg-opacity-20 flex justify-center items-center shadow-lg">
+                <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
+                    <div className="flex flex-row justify-between pb-3">
+                        <p className="text-green-800 text-2xl font-bold">Create an Account</p>
+                        <button className="text-gray-400 self-auto" onClick={togglePopup}>
+                            <FaRegWindowClose size={30} className="text-gray-400" />
+                        </button>
+                    </div>
 
-      if (res.ok) {
-        alert("User added successfully");
-        router.push("/");
-        router.refresh();
-      } else {
-        throw new Error("Failed to add user");
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const togglePopupSignInFrom = () => {
-   
-    setIsOpen(!isOpen);	
-  };
-
-  return (
-   
-      <div   className="fixed bottom-0 left-0 w-full h-full  bg-opacity-20 flex justify-center items-center  shadow-lg">
-        <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
-          <div className="flex flex-row justify-between pb-3">
-            <p className="text-green-800 text-2xl font-bold">Create an Account</p>
-            <button className="text-gray-400 self-auto" onClick={togglePopup}>
-              <FaRegWindowClose size={30} className="text-gray-400" />
-            </button>
-          </div>
-
-          <form  onSubmit={handleSubmit}  className="flex flex-col">
-          <input
+                    <form onSubmit={handleSubmit} className="flex flex-col">
+                    <input
                 onChange={(e)=> setFirstName(e.target.value)}
                 value={firstName}
               type="text"
@@ -112,40 +123,32 @@ export default function SignUpForm() {
               className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
             />
             {/* <input
-              type="text"
+            onChange={(e)=> setPassword(e.target.value)}
+            value={password}
+              type="password"
               placeholder="Confirm Password"
               width={20}
-              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+              className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
             /> */}
-            <button type="submit" className="text-white rounded-md bg-green-800  px-3 py-2 mb-1 w-96">
-              Sign Up
-            </button>
-            {/* <hr className="text-black py-1" />
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
-              <FaGoogle className="mr-2" size={23} />
-              Continue with Google
-            </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800 px-3 py-2 mb-4 w-96">
-              <FaFacebook className="mr-2" size={25} />
-              Continue with Facebook
-            </button>
-            <button className="flex justify-center text-green-800 rounded-md bg-white border-2 border-green-800  px-3 py-2 mb-4 w-96">
-              <FaApple className="mr-2" size={25} />
-              Continue with Apple
-            </button> */}
-
-            <p className="text-gray-500 self-center mb-1">
-              You have an Account:{" "}
-              <a onClick={togglePopupSignInFrom} className="text-gray-500 no-underline hover:underline">
-                SignIn
-              </a>
-            </p>
-            {isOpen && (
-                      <SignInForm />
-                    )}
-          </form>
-        </div>
-      </div>
-  
-  )
+            
+                        
+                        <button type="submit" className="text-white rounded-md bg-green-800 px-3 py-2 mb-1 w-96">
+                            Sign Up
+                        </button>
+                        
+                        <p className="text-gray-500 self-center mt-4 mb-1">
+                            Already have an account?{" "}
+                            <button 
+                                type="button"
+                                onClick={switchToSignIn} 
+                                className="text-green-800 font-semibold no-underline hover:underline"
+                            >
+                                Sign In
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        )
+    )
 }

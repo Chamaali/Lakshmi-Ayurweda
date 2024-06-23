@@ -109,6 +109,7 @@ export default function Page() {
     const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+//   const [userRole, setUserRole] = useState(null);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -117,6 +118,22 @@ export default function Page() {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+
+//   useEffect(() => {
+//     async function fetchUserRole() {
+//       try {
+//         const role = await getUserRole();
+//         setUserRole(role);
+//       } catch (error) {
+//         console.error("Failed to fetch user role:", error);
+//       } finally {
+//         setIsLoading(false);
+//       }
+//     }
+
+//     fetchUserRole();
+//   }, []);
 
   
 //   g-gradient-to-b from-yellow-300 to-yellow-900 bg-clip-text text-transparent
@@ -178,9 +195,27 @@ export default function Page() {
         </button>
      
     </Link>
-          <button type="button" onClick={togglePopup}>
-            <FaUser size={23} />
-          </button>
+    {/* {!userRole && (
+            <button type="button" onClick={togglePopup}>
+              <FaUser size={23} />
+            </button>
+          )}
+
+          {userRole === 'patient' && (
+            <Link href="/profile" className='bg-white text-black px-3 py-2 font-bold rounded'>
+              Hi, Patient
+            </Link>
+          )}
+
+          {userRole === 'admin' && (
+            <Link href="/admin" className='bg-white text-black px-3 py-2 font-bold rounded'>
+              Dashboard
+            </Link>
+          )} */}
+
+
+
+
           {isOpen && <SignInForm />}
           <button className="md:hidden text-white" onClick={toggleMenu}>
             <svg

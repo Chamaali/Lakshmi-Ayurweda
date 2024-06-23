@@ -9,7 +9,7 @@ import Footer from './components/footer/page'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Lakshmi Ayurweda',
+  title: 'Lakshmi Ayurveda',
   description: '',
 }
 
