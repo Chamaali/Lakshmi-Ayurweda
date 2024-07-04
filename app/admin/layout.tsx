@@ -1,12 +1,16 @@
-import React from "react";
-import AdminNavigationBar from "./navigationBar/AdminNavigationBar";
+"use client";
 
-export default function layout({ children }: { children: React.ReactNode }) {
+import AdminNav from "./adminNavigationBar/AdminNav";
+
+// import AdminNav from "../components/admin/AdminNav";
+
+const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="container py-4 bg-slate-400">
-      All are in this Layout
-      <AdminNavigationBar />
+    <div className="bg-green-100">
+      <AdminNav />
       {children}
     </div>
   );
-}
+};
+
+export default AdminLayout;

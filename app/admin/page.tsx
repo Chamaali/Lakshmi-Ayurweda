@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+// import AdminNav from "../components/admin/AdminNav";
+import { Container } from "react-bootstrap";
 
-export default function page() {
+const Admin = () => {
   return (
     <div>
-      You are a Admin
+      <Container>
+        <p>Instructions for data enter</p>
+      </Container>
     </div>
-  )
-}
+  );
+};
+
+export default Admin;
