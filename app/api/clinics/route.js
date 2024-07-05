@@ -29,3 +29,20 @@ export async function GET(request) {
       return NextResponse.json({ error, message: "Something went wrong" });
     }
   }
+
+
+  //delete each clinic (check = http://localhost:3001/api/products?id=6625a74d63606ac8b4be654b, frontend=http://localhost:3001/api/products?id=${id})
+export async function DELETE(request) {
+    try {
+      const id = request.nextUrl.searchParams.get("id");
+      await connectMongoDB();
+      await Clinic.findByIdAndDelete(id);
+      return NextResponse.json(
+        { message: "Clinic was deleted successfully" },
+        { status: 200 }
+      );
+    } catch (error) {
+      return NextResponse.json({ message: "Clinic was not deleted." });
+    }
+  }
+  

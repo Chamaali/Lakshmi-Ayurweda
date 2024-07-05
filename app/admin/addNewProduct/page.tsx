@@ -43,59 +43,69 @@ export default function Page() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="name">Name</label>
+    <form onSubmit={handleSubmit} className='container py-3'>
+      
+      <div className=" my-4">
+          <h4 className="text-center font-bold">Add a Clinic</h4>
+        </div>
+
+
+        <div className='flex flex-wrap  gap-3'>
+        <div>
         <input 
+          className='p-2 m-2 rounded'
           type="text" 
           id="name" 
-          placeholder="name" 
+          placeholder="Name" 
           value={name} 
           onChange={(e) => setName(e.target.value)} 
         />
       </div>
       <div>
-        <label htmlFor="description">Description</label>
         <input 
+          className='p-2 m-2 rounded'
           type="text" 
           id="description" 
-          placeholder="description" 
+          placeholder="Description" 
           value={description} 
           onChange={(e) => setDescription(e.target.value)} 
         />
       </div>
       <div>
-        <label htmlFor="image">Image URL</label>
         <input 
+          className='p-2 m-2 rounded'
           type="text" 
           id="image" 
-          placeholder="image URL" 
+          placeholder="Image URL" 
           value={image} 
           onChange={(e) => setImage(e.target.value)} 
         />
       </div>
       <div>
-        <label htmlFor="price">Price</label>
         <input 
+          className='p-2 m-2 rounded'
           type="text" 
           id="price" 
-          placeholder="price" 
+          placeholder="Price" 
           value={price} 
           onChange={(e) => setPrice(e.target.value)} 
         />
       </div>
       <div>
-        <label htmlFor="size">Size</label>
         <input 
+          className='p-2 m-2 rounded'
           type="text" 
           id="size" 
-          placeholder="size" 
+          placeholder="Size" 
           value={size} 
           onChange={(e) => setSize(e.target.value)} 
         />
       </div>
+        </div>
+      
+      
       <div>
-        <button type="submit">Submit</button>
+        <button className=' my-4 bg-green-800 text-white py-2 px-3 rounded'  type="submit">Submit</button>
       </div>
     </form>
   );
