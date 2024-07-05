@@ -7,7 +7,8 @@ export const getProducts = async () => {
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/products`,
       {
         // cache: "force-cache",
-        cache: "no-store",
+        // cache: "no-store",
+        cache: "no-cache"
       }
     );
     if (!res.ok) {
@@ -19,19 +20,7 @@ export const getProducts = async () => {
     return data.products;
   } catch (error) {
     console.error("Error loading products", error);
-    // throw error;
+    
   }
 };
 
-// import connectMongoDB from "@/libs/mongodb";
-// import Product from "@/models/product";
-// import { NextResponse } from "next/server";
-
-// export async function GET(request){
-//     try {
-//         await connectMongoDB();
-//         const products = await Product.find();
-//     } catch (error) {
-
-//     }
-// }

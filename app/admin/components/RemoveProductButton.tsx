@@ -27,8 +27,9 @@ export default function RemoveProductButton({ id }: RemoveProductButtonProps) {
 
         if (res.ok) {
           window.alert("Product deleted successfully");
-          router.refresh();
+          
           router.push("/admin/products");
+          router.refresh();
         } else {
           throw new Error("Failed to delete product");
         }
