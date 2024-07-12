@@ -25,6 +25,10 @@ const AdminNav = () => {
         title: "Bookings",
         href: "/admin/bookings",
       },
+      {
+        title: "Diseases",
+        href: "/admin/diseases",
+      },
     
 
   ];

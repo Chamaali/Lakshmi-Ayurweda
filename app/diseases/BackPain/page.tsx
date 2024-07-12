@@ -31,52 +31,72 @@ export default function page() {
 <form action="" className="p-4 bg-gray-50 rounded border shadow">
     <div className="grid gap-y-4">
     <div className="form-group">
+        <label>Name</label>
+        <input placeholder="" type="" className="form-control"  />
+    </div>
+    <div className="form-group">
+        <label htmlFor="email">Age</label>
+        <input placeholder="" type="email" className="form-control" />
+    </div>
+    <div className="form-group">
+        <label htmlFor="email">Address</label>
+        <input placeholder="" type="email" className="form-control" />
+    </div>
+    <div className="form-group">
+        <label htmlFor="email">Phone</label>
+        <input placeholder="" type="email" className="form-control" />
+    </div>
+    <div className="form-group">
+        <label htmlFor="email">Email</label>
+        <input placeholder="" type="email" className="form-control" />
+    </div>
+    <div className="form-group">
         <label htmlFor="email">Where exactly is the pain located?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">How long have you been experiencing this pain?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Did it start suddenly or gradually?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">How would you describe the pain ( sharp, dull throbbing, burning)?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Is the pain constant or does it come and go?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">What is the severity of the pain on a scale of 1 to 10</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Does anything make the pain better or worse (e.g. certain movements, rest, medications)?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Does the pain interfere with your daily activities or sleep?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Have you experienced any limitations in movement or function due to the pain?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Do you have any numbness, tingling or weakness in your legs?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Have you noticed any changes in bowel or bladder function?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     <div className="form-group">
         <label htmlFor="email">Have you had any previous episodes of back pain or related issues?</label>
-        <input type="email" className="form-control" id="email" />
+        <input placeholder="" type="email" className="form-control" />
     </div>
     </div>
    <div className="gap-5 flex justify-end pt-5">
