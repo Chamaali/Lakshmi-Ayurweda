@@ -262,3 +262,6 @@ const ChectPainPage: React.FC = () => {
 };
 
 export default ChectPainPage;
+
+
+

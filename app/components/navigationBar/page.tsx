@@ -296,7 +296,7 @@ export default function Page() {
                               Chest Pain
                             </a>
                             <a
-                              href="#"
+                              href="./../../diseases/Cholesterol"
                               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                               role="menuitem"
                               id="submenu-item-2"
