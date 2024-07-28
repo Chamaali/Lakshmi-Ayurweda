@@ -39,12 +39,44 @@ export default function page() {
     const [qc30, setQC30] = useState('');
     const [qc31, setQC31] = useState('');
      
+    const handleSubmit= async(e: React.FormEvent) => {
+
+      try{
+        const res = await fetch (`${process.env.NEXT_PUBLIC_BASE_URL}/api/cholesterol)`, {
+                method: "POST",
+
+                headers:{
+                  "Content-Type":"application/json",
+                },
+                  body: JSON.stringify({
+                    qc1, qc2, qc3, qc4, qc5, qc6, qc7, qc8, qc9, qc10, qc11, qc12, qc13, qc14, qc15, qc16, qc17, qc18, qc19, qc20, qc21, qc22, qc23, qc24,qc25,qc26,qc27,qc28,qc29,qc30,qc31
+                  }),
+        });
+        if (res.ok) {
+          alert("Form was successfully submitted.");
+          console.log("Form was successfully submitted.")
+      } else {
+          throw new Error("Failed to submit form.");
+      }
+
+
+
+
+
+
+      } catch (error) {
+        console.error('Error submiting of chest pain form', error);
+        alert(`Error submitting form`);
+    }
+
+    }
+
 
 
 
 
     return (
-        <Container className="text-justify py-4">
+      <Container className="text-justify py-4"onSubmit={handleSubmit}>
         <h2 className="pb-3 font-bold"> Cholesterol</h2>
         
         <div className="flex flex-row place-content-around py-5">
