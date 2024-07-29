@@ -40,9 +40,9 @@ export default function page() {
     const [qc31, setQC31] = useState('');
      
     const handleSubmit= async(e: React.FormEvent) => {
-
+        e.preventDefault();
       try{
-        const res = await fetch (`${process.env.NEXT_PUBLIC_BASE_URL}/api/cholesterol)`, {
+        const res = await fetch (`${process.env.NEXT_PUBLIC_BASE_URL}/api/cholesterols`, {
                 method: "POST",
 
                 headers:{

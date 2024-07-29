@@ -1,9 +1,6 @@
 import connectMongoDB from "@/libs/mongodb";
 import Cholesterol from "@/models/cholesterol";
-
-
-
-
+import { NextResponse } from "next/server";
 
 //post cholesterol
 export async function POST(request) {

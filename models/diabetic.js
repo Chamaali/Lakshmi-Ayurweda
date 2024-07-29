@@ -1,9 +1,9 @@
-import mongoose, { Mongoose } from "mongoose";
-import monoose,{Schema} from "mongoose";
+// import mongoose, { Mongoose } from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
-const diabeticSchema= new Schema(
-    {
-        qd1: String,
+const diabeticSchema = new Schema(
+  {
+    qd1: String,
     qd2: String,
     qd3: String,
     qd4: String,
@@ -24,14 +24,15 @@ const diabeticSchema= new Schema(
     qd19: String,
     qd20: String,
     qd21: String,
-    qd22: String, 
-    },
+    qd22: String,
+  },
 
-    {
-        timestamps:true,
-    }
+  {
+    timestamps: true,
+  }
 );
 
-const Cholesterol = mongoose.models.Diabetic || mongoose.model("Diabetic", DiabeticSchema);
+const Diabetic =
+  mongoose.models.Diabetic || mongoose.model("Diabetic", diabeticSchema);
 
 export default Diabetic;
