@@ -1,9 +1,33 @@
-
+'use client'
 import Image from "next/image";
 import React, { useState } from 'react';
 import { Container } from "react-bootstrap";
 
 export default function page (){
+
+  const [qd1, setQD1] = useState('');
+  const [qd2, setQD2] = useState('');
+  const [qd3, setQD3] = useState('');
+  const [qd4, setQD4] = useState('');
+  const [qd5, setQD5] = useState('');
+  const [qd6, setQD6] = useState('');
+  const [qd7, setQD7] = useState('');
+  const [qd8, setQD8] = useState('');
+  const [qd9, setQD9] = useState('');
+  const [qd10, setQD10] = useState('');
+  const [qd11, setQD11] = useState('');
+  const [qd12, setQD12] = useState('');
+  const [qd13, setQD13] = useState('');
+  const [qd14, setQD14] = useState('');
+  const [qd15, setQD15] = useState('');
+  const [qd16, setQD16] = useState('');
+  const [qd17, setQD17] = useState('');
+  const [qd18, setQD18] = useState('');
+  const [qd19, setQD19] = useState('');
+  const [qd20, setQD20] = useState('');
+  const [qd21, setQD21] = useState('');
+  const [qd22, setQD22] = useState('');
+  
 
     return(
 
@@ -116,6 +140,109 @@ export default function page (){
                 From the Ayurvedic viewpoint, the causes of diabetes are rooted in dietary habits, lifestyle choices, emotional well-being, genetic predispositions, and environmental exposures, all contributing to the imbalance of doshas and the accumulation of toxins. Addressing these causes holistically through diet, lifestyle modifications, stress management, and detoxification can help in managing and preventing diabetes effectively
 
               </p>
+
+
+                {/*form */}
+
+             <form action="" className="p-4 bg-gray-50 rounded border shadow">
+  <div className="grid gap-y-4">
+    <div className="form-group list-decimal">
+      <label>Name</label>
+      <input placeholder="" value={qd1} onChange={(e) => setQD1(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Gender</label>
+      <input placeholder="" value={qd2} onChange={(e) => setQD2(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Address</label>
+      <input placeholder="" value={qd3} onChange={(e) => setQD3(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Contact Number</label>
+      <input placeholder="" value={qd4} onChange={(e) => setQD4(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Occupation</label>
+      <input placeholder="" value={qd5} onChange={(e) => setQD5(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Do you have a family history of diabetes or other metabolic disorders?</label>
+      <input placeholder="" value={qd6} onChange={(e) => setQD6(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	Have  you  been diagnosed with high blood pressure or high cholesterol?</label>
+      <input placeholder="" value={qd7} onChange={(e) => setQD7(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Are you experiencing increased, thirst, frequent urination, fatigue, or blurred vision?</label>
+      <input placeholder="" value={qd8} onChange={(e) => setQD8(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Have you noticed any unexplained weight loss or gain?</label>
+      <input placeholder="" value={qd9} onChange={(e) => setQD9(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>What does you typical diet look like? How often do you consume sugary or high- carbohydrate  foods?</label>
+      <input placeholder="" value={qd10} onChange={(e) => setQD10(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>How often do you exercise, and what type of physical activities do you engage in?</label>
+      <input placeholder="" value={qd11} onChange={(e) => setQD11(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Do you smoke or use tobacco products?</label>
+      <input placeholder="" value={qd12} onChange={(e) => setQD12(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>How much alcohol do you consume?</label>
+      <input placeholder="" value={qd13} onChange={(e) => setQD13(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	Have you noticed any recent changes in your weight</label>
+      <input placeholder="" value={qd14} onChange={(e) => setQD14(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	How activity are you on a daily basis? Do you have a sedentary job or lifestyle?</label>
+      <input placeholder="" value={qd15} onChange={(e) => setQD15(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	Have you had your blood, glucose levels tested before?  If so, when and what were the results?</label>
+      <input placeholder="" value={qd16} onChange={(e) => setQD16(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Have you had any recent blood tests or health screenings?</label>
+      <input placeholder="" value={qd17} onChange={(e) => setQD17(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	Are you taking any medications that might affect your blood sugar levels, such as steroids or antipsychotics?</label>
+      <input placeholder="" value={qd18} onChange={(e) => setQD18(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Do you have any other health conditions, such as polycystic ovary syndrome ( PCOS) or thyroid issues?</label>
+      <input placeholder="" value={qd19} onChange={(e) => setQD19(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	How many hours of sleep do you typically get each night? Do you experience any sleep disorders like sleep apnea?</label>
+      <input placeholder="" value={qd20} onChange={(e) => setQD20(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>	How do you manage stress? Have you been under significant stress recently?</label>
+
+      <input placeholder="" value={qd21} onChange={(e) => setQD21(e.target.value)} className="form-control" />
+    </div>
+    <div className="form-group">
+      <label>Have you noticed any darkened areas, of skin particularly around your neck or armpits ( acanthosis nigricans )n ?</label>
+      <input placeholder="" value={qd22} onChange={(e) => setQD22(e.target.value)} className="form-control" />
+    </div>
+    </div>
+
+  <div className="gap-5 flex justify-end pt-5">
+    <button type="submit" className="bg-blue-600 py-2 px-3 rounded text-white">
+      Submit
+    </button>
+  </div>
+</form>
               </Container>
     )
 
