@@ -305,7 +305,7 @@ export default function Page() {
                             </a>
                             <div className="relative">
                               <a
-                                href="#"
+                                href="./../../diseases/Diabetic"
                                 className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                                 role="menuitem"
                                 id="submenu-item-3"
@@ -315,7 +315,7 @@ export default function Page() {
                               </a>
                             </div>
                             <a
-                              href="#"
+                              href="./../../diseases/Hypertension"
                               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                               role="menuitem"
                               id="submenu-item-4"
