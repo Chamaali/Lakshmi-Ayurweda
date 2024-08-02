@@ -1,5 +1,4 @@
-import mongoose, { Mongoose } from "mongoose";
-import monoose,{Schema} from "mongoose";
+import mongoose, { Schema } from "mongoose";
 
 
 const hypertensionSchema=new Schema(
@@ -31,6 +30,6 @@ const hypertensionSchema=new Schema(
     } 
 );
 
-const Hypertension = mongoose.models.Hypertension||mongoose.model("Hypertension",HypertensionSchema);
+const Hypertension = mongoose.models.Hypertension||mongoose.model("Hypertension",hypertensionSchema);
 
 export default Hypertension;
