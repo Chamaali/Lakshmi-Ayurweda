@@ -26,9 +26,59 @@ export default function page() {
     const [qh18, setQH18] = useState('');
     const [qh19, setQH19] = useState('');
     const [qh20, setQH20] = useState('');
+
+  
+    const handleSubmit = async(e: React.FormEvent) => {
+      e.preventDefault();
+      try {
+          const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/hypertensions`, {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                  qh1, qh2, qh3, qh4, qh5, qh6, qh7, qh8, qh9, qh10, qh11, qh12, qh13, qh14, qh15, qh16, qh17, qh18, qh19, qh20
+              }),
+          });
+
+          // alert("Form was successfully submitted.");
+  
+          // console.log("Form was successfully submitted.")
+          if (res.ok) {
+              alert("Form was successfully submitted.");
+              console.log("Form was successfully submitted.")
+          } else {
+              throw new Error("Failed to submit form.");
+          }
+  
+      } catch (error) {
+          console.error('Error submiting of hypertension form', error);
+          alert(`Error submitting form`);
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
 
-    <Container className="text-justify py-4" > 
+    <Container className="text-justify py-4" onSubmit={handleSubmit} > 
     <h2 className="pb-3 font-bold"> Hypertension</h2>
 
     {/* images*/}
