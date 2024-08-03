@@ -21,3 +21,17 @@ export async function POST(request) {
       }
 
 }
+
+
+//  get all hypertensions
+
+export async function GET(request){
+  try{
+    await connectMongoDB();
+    const hypertensions= await Hypertension.find();
+    return NextResponse.json({hypertensions});
+
+  }catch (error) {
+    return NextResponse.json({message : "Hypertension was not found"});
+  }
+}
