@@ -1,9 +1,5 @@
 import type { Config } from 'tailwindcss'
 
-const fontFamily = {
-  sans: ['var(--font-inter)'],
-};
-
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -12,9 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-inter)', ...fontFamily.sans],
-      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
