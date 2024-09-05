@@ -7,14 +7,13 @@ const HomeColumnOne = () => {
   return (
     <>
       <div
-        className="bg-[length:1920px]  bg-opacity-10"
+        className="bg-[length:1920px] bg-cover bg-no-repeat bg-opacity-10"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dmwk6ybet/image/upload/v1714157388/Lakshmi%20Ayurweda/Background%20Images/bg-1_qlqfua.jpg')",
         }}
       >
-        <div className="container">
-          <div className="flex flex-row py-4">
+        <div className="container justify-center justify-items-center py-4 grid grid-cols-2  lg:grid-cols-4 gap-4 sm:gap-2">
             <a href=""  className="no-underline ">
               <div className="flex-column bg-white  rounded-xl  w-48 h-48 mx-3 p-3 content-center hover:scale-105 hover:bg-gray-100 transition duration-300 ease-in-out">
                 <div className="grid justify-items-center gap-4 ">
@@ -45,8 +44,6 @@ const HomeColumnOne = () => {
                 </div>
               </div>
             </a>
-          </div>
-          <div className="flex flex-row py-4">
             <a href=""  className="no-underline ">
               <div className="flex-column bg-white  rounded-xl  w-48 h-48 mx-3 p-3 content-center hover:scale-105 hover:bg-gray-100 transition duration-300 ease-in-out">
                 <div className="grid justify-items-center gap-4 ">
@@ -77,7 +74,6 @@ const HomeColumnOne = () => {
                 </div>
               </div>
             </a>
-          </div>
         </div>
       </div>
     </>
