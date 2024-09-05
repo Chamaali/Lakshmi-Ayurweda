@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useRef } from 'react';
 import Slider from 'react-slick';
@@ -24,7 +24,7 @@ const HomeColumnTwo = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
         },
@@ -38,24 +38,30 @@ const HomeColumnTwo = () => {
     ],
   };
 
- 
-
   return (
     <div>
-      <div className="bg-green-900 p-8">
-        <div className="">
-          <p className="text-white text-center font-sans font-semibold text-xl">
+      <div className="bg-green-900 p-4 sm:p-6 md:p-8">
+        <div className="text-center">
+          <h2 className="text-white font-sans font-semibold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6">
             Ayurvedic Diseases & Conditions We Treat
-          </p>
+          </h2>
         </div>
 
-        <div className='m-5 ' >
+        <div className='slider-container'>
           <Slider {...settings} ref={sliderRef}>
             {diseases.map((disease, index) => (
-              <div key={index} className="p-2">
-                <div className="bg-white  rounded-xl shadow p-4 mx-2">
-                  <Image src={disease.image} alt={disease.title} className=" object-cover rounded"  width={30} height={30} />
-                  <h3 className="mt-2 font-bold text-lg">{disease.title}</h3>
+              <div key={index} className="transform transition duration-300 hover:scale-105 px-2">
+                <div className="bg-white rounded-xl shadow p-4">
+                  <div className="relative w-full h-40 mb-2">
+                    <Image
+                      src={disease.image}
+                      alt={disease.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded"
+                    />
+                  </div>
+                  <h3 className="font-bold text-lg text-center">{disease.title}</h3>
                 </div>
               </div>
             ))}
