@@ -34,12 +34,39 @@ const [qp26, setQP26] = useState('');
 const [qp27, setQP27] = useState('');
 const [qp28, setQP28] = useState('');
 
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/hypertensions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        qp1, qp2, qp3, qp4, qp5, qp6, qp7, qp8, qp9, qp10,
+        qp11, qp12, qp13, qp14, qp15, qp16, qp17, qp18, qp19, qp20,
+        qp21, qp22, qp23, qp24, qp25, qp26, qp27, qp28
+      }),
+    });
+
+    if (res.ok) {
+      alert("Form was successfully submitted.");
+      console.log("Form was successfully submitted.");
+    } else {
+      throw new Error("Failed to submit form.");
+    }
+
+  } catch (error) {
+    console.error('Error submitting hypertension form', error);
+    alert(`Error submitting form`);
+  }
+}
 
     return (
 
       
 
-        <Container  > 
+        <Container className="text-justify py-4" onSubmit={handleSubmit}  > 
 
 <h2 className="pb-3 font-bold"> Palpitation</h2> 
 
@@ -49,19 +76,15 @@ const [qp28, setQP28] = useState('');
 <div className="flex flex-row place-content-around py-5">
 <Image
   alt="Hypertension"
-  src={require("./../../../public/images/hyper_1.jpg")}
+  src={require("./../../../public/images/pal_1.jpeg")}
   className=" h-60"
 />
 <Image
   alt="Hypertension"
-  src={require("./../../../public/images/hyper_2.jpg")}
+  src={require("./../../../public/images/pal_2.jpg")}
   className="h-60"
 />
-<Image
-  alt="Hypertension"
-  src={require("./../../../public/images/hyper_3.jpg")}
-  className="h-60"
-/>
+
 
 </div>
 {/*Introduction*/}
