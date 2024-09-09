@@ -5,108 +5,20 @@ import React from 'react'
 import Link from 'next/link';
 import { FaFacebook, FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
 
-const diseases = [
-    {
-        id:1,
-        name: 'Digestive system',
-        href: "./digestiveSystem"
-    },
-    {
-        id:2,
-        name: 'Muscular skeletal system',
-        href: "./muscularSkeletalSystem"
-    },
-    {
-        id:3,
-        name: 'Endocrine',
-        href: "./endrocrine"
-    },
-    {
-        id:4,
-        name: 'Central nerves system',
-        href: "./centralNervesSystem"
-    },
-    {
-        id:5,
-        name: 'Blood circulatory system',
-        href: "./bloodCirculatorySystem"
-    },
-    {
-        id:6,
-        name: 'Urinary system',
-        href: "./urinarySystem"
-    },
-    {
-        id:7,
-        name: 'Hair & skin',
-        href: "./hairSkin"
-    },
-    {
-        id:8,
-        name: 'Reproductive system',
-        href: "./reproductiveSystem"
-    },
-    {
-        id:9,
-        name: 'Liver disease',
-        href: "./liverDisease"
-    }
-];
+import diseases from '../../../constants/footer';
+import services  from '../../../constants/footer';
 
-const services = [
+interface Disease {
+    id: number; 
+    name: string;
+    href: string;
+}
 
-    {
-        id:1,
-        name: 'Phone Consultation',
-        href: "./phoneConsultation"
-    },
-    {
-        id:2,
-        name: 'Video Consultation',
-        href: "./videoConsultation"
-    },
-    {
-        id:3,
-        name: 'Clinic Consultation',
-        href: "./clinicConsultation"
-    },
-    {
-        id:4,
-        name: 'Buy Online Products',
-        href: "./buyOnlineProducts"
-    },
-    {
-        id:5,
-        name: 'Ayurweda for Wellness',
-        href: "./ayurwedaForWellness"
-    },
-    {
-        id:6,
-        name: 'Find prakurthi and Body Constitution',
-        href: "./findPrakurthiAndBodyConsultation" 
-    },
-    {
-        id:7,
-        name: 'Yoga Meditation',
-        href: "./yogaMeditation"
-    },
-    {
-        id:8,
-        name: 'Ayurweda Beauticulture',
-        href: "./ayurwedaBeauticulture"
-    },
-    {
-        id:9,
-        name: 'Acupuncture and Cupping',
-        href: "./acupunctureAndCupping"
-    },
-];
-
-
-
-
-
-
+interface Service {
+    id: number; 
+    name: string;
+    href: string;
+}
 
 export default function page(){
   return (
@@ -114,7 +26,7 @@ export default function page(){
         <div className="grid grid-cols-1 px-4 justify-center md:grid-cols-2 lg:grid-cols-4 ">
             <div className="basis-1/4">
                 <ul>
-                    {diseases.map((disease) => (
+                    {diseases.diseases.map((disease:Disease) => (
                         <li key={disease.id} className=' my-4'>
                             <Link href={disease.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{disease.name}</Link>
                         </li>
@@ -125,7 +37,7 @@ export default function page(){
 
             <div className="basis-1/4">
                 <ul>
-                    {services.map((service) => (
+                    {services.services.map((service:Service) => (
                         <li key={service.id} className=' my-4'>
                         <Link href={service.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{service.name}</Link>
                         </li>
