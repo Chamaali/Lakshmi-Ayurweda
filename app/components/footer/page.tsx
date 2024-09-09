@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link';
+import { FaFacebook, FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
 
 const diseases = [
     {
@@ -109,13 +110,13 @@ const services = [
 
 export default function page(){
   return (
-    <div className='bg-green-900 text-gray-100 pt-8 pb-2 px-8 font-mono hover:bg-green-900 text-xs'>
-        <div className="flex flex-row ">
+    <div className='bg-green-900 text-gray-100 text-base pt-8 pb-2 px-8 font-sans hover:bg-green-900 justify-center items-center'>
+        <div className="grid grid-cols-1 px-4 justify-center md:grid-cols-2 lg:grid-cols-4 ">
             <div className="basis-1/4">
                 <ul>
                     {diseases.map((disease) => (
                         <li key={disease.id} className=' my-4'>
-                        <Link href={disease.href} className='no-underline hover:underline text-gray-100'>{disease.name}</Link>
+                            <Link href={disease.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{disease.name}</Link>
                         </li>
                         
                     ))}
@@ -126,7 +127,7 @@ export default function page(){
                 <ul>
                     {services.map((service) => (
                         <li key={service.id} className=' my-4'>
-                        <Link href={service.href} className='no-underline hover:underline text-gray-100'>{service.name}</Link>
+                        <Link href={service.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{service.name}</Link>
                         </li>
                         
                     ))}
@@ -134,33 +135,25 @@ export default function page(){
             </div>
             <div className="basis-1/4">
                 <ul>
-                    <li className=' my-4'><a className='no-underline hover:underline text-gray-100' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
-                    <li className=' my-4'><a className='no-underline text-white hover:underline leading-loose' href='./bookAppointment'>Book Appointment</a></li>
+                    <li className=' my-4'><a className=' no-underline text-gray-400 hover:text-white hover:font-semibold' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
+                    <li className=' my-4'><a className=' no-underline text-gray-400 hover:text-white hover:font-semibold' href='./bookAppointment'>Book Appointment</a></li>
                 </ul>
             </div>
             <div className="basis-1/4">
                 <ul>
-                    <li className='leading-[5rem]'>Contact Us:</li>
+                    <li className='my-4 no-underline text-gray-400 font-semibold'>Contact Us:</li>
 
-                    <li><a href="#" className='no-underline text-white hover:underline  leading-loose whitespace-break-spaces '>011-22222222</a></li>
-                    <li><a href="#" className='no-underline text-white hover:underline leading-loose whitespace-break-spaces'>lakshmi@gmail.com</a></li>
-                    <li className='leading-[5rem]'>Follow us:</li>
+                    <li className=' my-4'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>011-22222222</a></li>
+                    <li className=' my-4'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>lakshmi@gmail.com</a></li>
+                    <li className=' my-4 no-underline text-gray-400 hover:text-white hover:font-semibold'>Follow us:</li>
                 </ul>
-                    <div className='flex whitespace-break-spaces'>  
-                    
-                            {/* <a href="#"  className=''>
-                                <Image src={require('/public/images/1.png')} width={50} height={50} className=''/>    
-                            </a>
-                            <a href="#"  className=''>
-                                <Image  src={require('/public/images/jivabrandstore-img01.png')} width={50} height={50}/>
-                            </a>
-                            <a href="#" className=''>
-                                <Image  src={require('/public/images/jivabrandstore-img01.png')} width={50} height={50}/>
-                            </a> */}
-                            
-                            
-                       
-                    </div>
+                <div className='flex'>  
+                    <ul className='flex  flex-row'>
+                        <li className='ml-0 mr-2 no-underline text-gray-400  hover:text-white hover:font-semibold'><FaFacebook /></li>
+                        <li className=' ml-0 mr-2'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'><FaYoutube/></a></li>
+                        <li className=' ml-0 mr-2' ><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'><FaLinkedin/></a></li>
+                    </ul>
+                </div>
 
                 
             </div>
