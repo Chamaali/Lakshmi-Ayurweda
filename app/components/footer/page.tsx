@@ -22,7 +22,7 @@ interface Service {
 
 export default function page(){
   return (
-    <div className='bg-green-900 text-gray-100 text-base pt-8 pb-2 px-8 font-sans hover:bg-green-900 justify-center items-center'>
+    <div className='bg-green-900 text-gray-100 text-lg pt-8 pb-2 px-8 font-sans justify-center items-center'>
         <div className="grid grid-cols-1 px-4 justify-center md:grid-cols-2 lg:grid-cols-4 ">
             <div className="basis-1/4">
                 <ul>

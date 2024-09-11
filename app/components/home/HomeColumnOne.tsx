@@ -7,7 +7,7 @@ const HomeColumnOne = () => {
   return (
     <>
       <div
-        className="bg-[length:1920px] bg-cover bg-no-repeat bg-opacity-10"
+        className="bg-[length:1920px] bg-cover bg-no-repeat bg-opacity-10 lg:py-12 lg:px-12"
         style={{
           backgroundImage:
             "url('https://res.cloudinary.com/dmwk6ybet/image/upload/v1714157388/Lakshmi%20Ayurweda/Background%20Images/bg-1_qlqfua.jpg')",

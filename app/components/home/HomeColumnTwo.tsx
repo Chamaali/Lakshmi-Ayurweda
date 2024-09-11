@@ -40,14 +40,14 @@ const HomeColumnTwo = () => {
 
   return (
     <div>
-      <div className="bg-green-900 p-4 sm:p-6 md:p-8">
+      <div className="bg-green-900 mb-12 p-4 sm:p-6 md:p-8">
         <div className="text-center">
-          <h2 className="text-white font-sans font-semibold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6">
+          <p className="text-white font-sans font-bold text-xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 antialiased">
             Ayurvedic Diseases & Conditions We Treat
-          </h2>
+          </p>
         </div>
 
-        <div className='slider-container'>
+        <div className='slider-container my-8 mx-6'>
           <Slider {...settings} ref={sliderRef}>
             {diseases.map((disease, index) => (
               <div key={index} className="transform transition duration-300 hover:scale-105 px-2">
