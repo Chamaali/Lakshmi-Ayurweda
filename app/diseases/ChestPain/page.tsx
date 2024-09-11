@@ -61,20 +61,28 @@ export default function Page() {
     }
 
   return (
-    <Container className="text-justify py-4" onSubmit={handleSubmit}>
-      <h2 className="pb-3 font-bold">Chest Pain</h2>
+    <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased" onSubmit={handleSubmit}>
+      <h2 className="font-bold text-2xl sm:text-2xl">Chest Pain</h2>
 
-      <div className="flex flex-row place-content-around py-5">
-        <Image
-          alt="back-pain"
-          src={require("./../../../public/images/ChestPain_1.png")}
-          className=" h-60"
-        />
-        <Image
-          alt="back-pain"
-          src={require("./../../../public/images/ChestPain_2.png")}
-          className="h-60"
-        />
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 my-4 mx-4">
+        <div className="relative w-full sm:w-1/2 aspect-video overflow-hidden rounded-lg shadow-sm transition-transform duration-300 ease-in-out my-4 hover:scale-105">
+          <Image
+            alt="back-pain"
+            src={require("./../../../public/images/ChestPain_1.png")}
+            className="transition-opacity duration-300 ease-in-out hover:opacity-90"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className="relative w-full sm:w-1/2 aspect-video overflow-hidden rounded-lg shadow-sm transition-transform duration-300 ease-in-out my-4 hover:scale-105">
+          <Image
+            alt="back-pain"
+            src={require("./../../../public/images/ChestPain_2.png")}
+            className="transition-opacity duration-300 ease-in-out hover:opacity-90"
+            width={500}
+            height={500}
+          />
+        </div>
       </div>
 
       <p>
@@ -83,9 +91,6 @@ export default function Page() {
         products). While chest pain can have multiple causes, Ayurveda considers
         the following factors from its perspective:
       </p>
-      {/* <ol>
-
-    </ol> */}
       <ol className="list-decimal">
         <li className="pb-3">
           <b>Imbalance of Doshas:</b> Ayurveda identifies three primary doshas—Vata, Pitta, and Kapha—and chest pain can result from disturbances in any of these doshas. For example:
@@ -120,180 +125,294 @@ export default function Page() {
 
       <p>Ayurvedic management of chest pain involves identifying the underlying doshic imbalance and addressing it through a combination of dietary modifications, lifestyle adjustments, herbal remedies, detoxification therapies, stress management techniques, and supportive therapies tailored to the individual&apos;s constitution and specific imbalances. It&apos;s essential for individuals experiencing chest pain to seek medical evaluation to rule out serious medical conditions and to integrate Ayurvedic approaches as part of a comprehensive treatment plan under the guidance of qualified healthcare practitioners.</p>
 
-      <h6>Treatments</h6>
+      <p className="text-2xl font-semibold ">Treatments</p>
 
       <p>Ayurveda offers a holistic approach to managing chest pain by addressing the underlying imbalances in the body&apos;s doshas (biological energies), promoting digestive health, and supporting overall well-being. The treatment of chest pain in Ayurveda typically involves a combination of dietary modifications, lifestyle adjustments, herbal remedies, and supportive therapies. Here are some Ayurvedic treatments and recommendations for chest pain:</p>
 
       <ol  className="list-decimal">
-        <li>Dietary Modifications:</li>
-        <ul>
-            <li>Follow a balanced diet that includes fresh, whole foods and avoids processed, heavy, or difficult-to-digest foods.</li>
-            <li>Include warm, cooked meals that are easy on the digestive system, such as soups, steamed vegetables, whole grains, and herbal teas.</li>
-            <li>Reduce intake of spicy, oily, and fried foods, as well as excessive caffeine and alcohol, which can aggravate Pitta dosha and contribute to chest discomfort.</li>
+        <li className="text-xl font-bold pb-3">Dietary Modifications:</li>
+        <ul className="list-disc">
+            <li className="pb-3">Follow a balanced diet that includes fresh, whole foods and avoids processed, heavy, or difficult-to-digest foods.</li>
+            <li className="pb-3">Include warm, cooked meals that are easy on the digestive system, such as soups, steamed vegetables, whole grains, and herbal teas.</li>
+            <li className="pb-3">Reduce intake of spicy, oily, and fried foods, as well as excessive caffeine and alcohol, which can aggravate Pitta dosha and contribute to chest discomfort.</li>
         </ul>
-        <li>Herbal Remedies:</li>
-        <ul>
-            <li>Ayurvedic herbs with digestive and carminative properties can help alleviate chest pain associated with digestive disturbances. Examples include ginger, fennel, cumin, coriander, and cardamom.</li>
-            <li>Herbal formulations may be prescribed for cardiovascular support and to maintain heart health.</li>
+        <li className="text-xl font-bold pb-3">Herbal Remedies:</li>
+        <ul className="list-disc">
+            <li className="pb-3">Ayurvedic herbs with digestive and carminative properties can help alleviate chest pain associated with digestive disturbances. Examples include ginger, fennel, cumin, coriander, and cardamom.</li>
+            <li className="pb-3">Herbal formulations may be prescribed for cardiovascular support and to maintain heart health.</li>
         </ul>
-        <li>Lifestyle Adjustments:</li>
-        <ul>
-            <li>Practice regular physical activity, such as walking, yoga, or gentle exercises, to improve circulation, digestion, and overall health.</li>
-            <li>Incorporate stress-reducing practices like meditation, deep breathing exercises (pranayama), or aromatherapy to promote relaxation and emotional well-being.</li>
-            <li>Maintain a regular daily routine with adequate rest and sleep to support the body&apos;s natural rhythms and balance the doshas.</li>
+        <li className="text-xl font-bold pb-3">Lifestyle Adjustments:</li>
+        <ul className="list-disc">
+            <li className="pb-3">Practice regular physical activity, such as walking, yoga, or gentle exercises, to improve circulation, digestion, and overall health.</li>
+            <li className="pb-3">Incorporate stress-reducing practices like meditation, deep breathing exercises (pranayama), or aromatherapy to promote relaxation and emotional well-being.</li>
+            <li className="pb-3">Maintain a regular daily routine with adequate rest and sleep to support the body&apos;s natural rhythms and balance the doshas.</li>
         </ul>
-        <li>Detoxification Therapies:</li>
-        <ul>
-            <li>Panchakarma therapies, including Virechana (therapeutic purgation) or Basti (medicated enema), may be recommended to eliminate toxins (ama) from the body and restore doshic balance.</li>
-            <li>External therapies such as herbal oil massage (Abhyanga) or herbal steam therapy (Swedana) can help improve circulation, relieve muscle tension, and promote relaxation.</li>
+        <li className="text-xl font-bold pb-3">Detoxification Therapies:</li>
+        <ul className="list-disc">
+            <li className="pb-3">Panchakarma therapies, including Virechana (therapeutic purgation) or Basti (medicated enema), may be recommended to eliminate toxins (ama) from the body and restore doshic balance.</li>
+            <li className="pb-3">External therapies such as herbal oil massage (Abhyanga) or herbal steam therapy (Swedana) can help improve circulation, relieve muscle tension, and promote relaxation.</li>
         </ul>
-        <li>Consultation with an Ayurvedic Practitioner:</li>
-        <ul>
-            <li>Since Ayurveda is highly individualized, it&apos;s important to consult with a qualified Ayurvedic practitioner who can assess your unique constitution, doshic imbalances, and specific symptoms of chest pain.</li>
-            <li>The practitioner can then create a personalized treatment plan incorporating dietary recommendations, herbal remedies, lifestyle adjustments, and supportive therapies tailored to your needs and imbalances.</li>
+        <li className="text-xl font-bold pb-3">Consultation with an Ayurvedic Practitioner:</li>
+        <ul className="list-disc">
+            <li className="pb-3">Since Ayurveda is highly individualized, it&apos;s important to consult with a qualified Ayurvedic practitioner who can assess your unique constitution, doshic imbalances, and specific symptoms of chest pain.</li>
+            <li className="pb-3">The practitioner can then create a personalized treatment plan incorporating dietary recommendations, herbal remedies, lifestyle adjustments, and supportive therapies tailored to your needs and imbalances.</li>
         </ul>
       </ol>
       <p>It&apos;s important to note that while Ayurvedic approaches can be beneficial for managing mild to moderate chest pain associated with digestive disturbances or stress, individuals experiencing severe or persistent chest pain should seek immediate medical attention to rule out serious medical conditions such as heart disease or other cardiac issues. Ayurvedic treatments can complement conventional medical care as part of a comprehensive approach to chest pain management.</p>
 
-      <form action="" className="p-4 bg-gray-50 rounded border shadow">
-        <div className="grid gap-y-4">
-          <div className="form-group list-decimal" >
-            <label>Name</label>
-            <input placeholder="" value={q1} onChange={(e)=> setQ1(e.target.value)}  className="form-control" />
+      <div className="max-w-4xl mx-auto p-4">
+        <h1 className="text-2xl font-bold mb-4">Chest Pain Assessment Form</h1>
+        <form action="" className="p-4 bg-gray-50 rounded border shadow">
+        <div className="grid gap-y-4 px-4 sm:px-6 lg:px-8">
+            <div className="form-group list-decimal">
+              <label className="block text-lg font-medium text-gray-700">Name</label>
+              <input
+                placeholder=""
+                value={q1}
+                onChange={(e) => setQ1(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">Age</label>
+              <input
+                placeholder=""
+                value={q2}
+                onChange={(e) => setQ2(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">Address</label>
+              <input
+                placeholder=""
+                value={q3}
+                onChange={(e) => setQ3(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">Contact Number</label>
+              <input
+                placeholder=""
+                value={q4}
+                onChange={(e) => setQ4(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">Gender</label>
+              <input
+                placeholder=""
+                value={q5}
+                onChange={(e) => setQ5(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">Occupation</label>
+              <input
+                placeholder=""
+                value={q6}
+                onChange={(e) => setQ6(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Medical and Family History
+              </label>
+              <input
+                placeholder=""
+                value={q7}
+                onChange={(e) => setQ7(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Where exactly is the pain located?
+              </label>
+              <input
+                placeholder=""
+                value={q8}
+                onChange={(e) => setQ8(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Does the pain radiate to other parts of the body, such as the arm, neck, back or abdomen?
+              </label>
+              <input
+                placeholder=""
+                value={q9}
+                onChange={(e) => setQ9(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                How would you describe the pain (e.g. sharp, dull, crushing, burning, tightness)?
+              </label>
+              <input
+                placeholder=""
+                value={q10}
+                onChange={(e) => setQ10(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Is it constant or intermittent?
+              </label>
+              <input
+                placeholder=""
+                value={q11}
+                onChange={(e) => setQ11(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                On a scale of 1 to 10, how severe is the pain?
+              </label>
+              <input
+                placeholder=""
+                value={q12}
+                onChange={(e) => setQ12(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                How long does the pain last?
+              </label>
+              <input
+                placeholder=""
+                value={q13}
+                onChange={(e) => setQ13(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Is it continuous or does it come and go?
+              </label>
+              <input
+                placeholder=""
+                value={q14}
+                onChange={(e) => setQ14(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                What were you doing when the pain started?
+              </label>
+              <input
+                placeholder=""
+                value={q15}
+                onChange={(e) => setQ15(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Does anything make the pain better or worse (e.g. rest, movement, deep breathing, eating)?
+              </label>
+              <input
+                placeholder=""
+                value={q16}
+                onChange={(e) => setQ16(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Do you have any other symptoms, such as shortness of breath, sweating, nausea, vomiting, dizziness or palpitations?
+              </label>
+              <input
+                placeholder=""
+                value={q17}
+                onChange={(e) => setQ17(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Do you have a history of heart disease, hypertension, diabetes, or high cholesterol?
+              </label>
+              <input
+                placeholder=""
+                value={q18}
+                onChange={(e) => setQ18(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
+              />
+            </div>
+
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+                Have you experienced similar pain before?
+              </label>
+              <input
+                placeholder=""
+                value={q19}
+                onChange={(e) => setQ19(e.target.value)}
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus"
+              />
+            </div>
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+              Are you taking any medications, including over- the- counter drugs and supplements?
+              </label>
+              <input 
+                placeholder="" 
+                value={q23} 
+                onChange={(e)=> setQ23(e.target.value)} 
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus"
+                />
+            </div>
+            <div className="form-group">
+              <label className="block text-lg font-medium text-gray-700">
+              Do you have any known allergies, especially to medications?
+              </label>
+              <input 
+                placeholder="" 
+                value={q24} 
+                onChange={(e)=> setQ24(e.target.value)} 
+                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus" 
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Age</label>
-            <input placeholder="" value={q2} onChange={(e)=> setQ2(e.target.value)} className="form-control" />
+          <div className="gap-5 flex justify-end pt-5">
+            {/* <button className="bg-gray-200 py-2 px-3   rounded">Cansel</button> */}
+            <button
+              type="submit"
+              className="bg-blue-600 py-2 px-3  rounded text-white"
+            >
+              Submit
+            </button>
           </div>
-          <div className="form-group">
-            <label>Address</label>
-            <input placeholder="" value={q3} onChange={(e)=> setQ3(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>Contact Number</label>
-            <input placeholder="" value={q4} onChange={(e)=> setQ4(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>Gender</label>
-            <input placeholder="" value={q5} onChange={(e)=> setQ5(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>Occupation</label>
-            <input placeholder="" value={q6} onChange={(e)=> setQ6(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>Medical and family history</label>
-            <input placeholder="" value={q7} onChange={(e)=> setQ7(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>Where exactly is the pain located?</label>
-            <input placeholder="" value={q8} onChange={(e)=> setQ8(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Does the pain radiate to other parts of the body, such as the arm, neck, back or abdomen?
-            </label>
-            <input placeholder="" value={q9} onChange={(e)=> setQ9(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>How would you describe the pain (e.g. sharp, dull, crushing, burning, tightness)</label>
-            <input placeholder="" value={q10} onChange={(e)=> setQ10(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Is it constant or intermittent?
-            </label>
-            <input placeholder="" value={q11} onChange={(e)=> setQ11(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            On a scale of 1 to 10, how severe is the pain?
-            </label>
-            <input placeholder="" value={q12} onChange={(e)=> setQ12(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            How long does the pain last?
-            </label>
-            <input placeholder="" value={q13} onChange={(e)=> setQ13(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Is it continuous or does it come and go?
-            </label>
-            <input placeholder="" value={q14} onChange={(e)=> setQ14(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            What were you doing when the pain started?
-            </label>
-            <input placeholder="" value={q15} onChange={(e)=> setQ15(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Does anything make the pain better or worse ( e. g. rest, movement, deep breathing, eating)?
-            </label>
-            <input placeholder="" value={q16} onChange={(e)=> setQ16(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Do you have any other symptoms, such as shortness of breath, sweating, nausea, vomiting, dizziness or palpitations?
-            </label>
-            <input placeholder="" value={q17} onChange={(e)=> setQ17(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Do you have any history of heart disease, hypertension, diabetes, or high cholesterol?
-            </label>
-            <input placeholder="" value={q18} onChange={(e)=> setQ18(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Have you experienced similar pain before?
-            </label>
-            <input placeholder="" value={q19} onChange={(e)=> setQ19(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Do you smoke or have a history of smoking?
-            </label>
-            <input placeholder="" value={q20} onChange={(e)=> setQ20(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Do you have a family history of heart disease or other cardiovascular conditions?
-            </label>
-            <input placeholder="" value={q21} onChange={(e)=> setQ21(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            What is your diet and exercise routine like?
-            </label>
-            <input placeholder="" value={q22} onChange={(e)=> setQ22(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Are you taking any medications, including over- the- counter drugs and supplements?
-            </label>
-            <input placeholder="" value={q23} onChange={(e)=> setQ23(e.target.value)} className="form-control" />
-          </div>
-          <div className="form-group">
-            <label>
-            Do you have any known allergies, especially to medications?
-            </label>
-            <input placeholder="" value={q24} onChange={(e)=> setQ24(e.target.value)} className="form-control" />
-          </div>
-        </div>
-        <div className="gap-5 flex justify-end pt-5">
-          {/* <button className="bg-gray-200 py-2 px-3   rounded">Cansel</button> */}
-          <button
-            type="submit"
-            className="bg-blue-600 py-2 px-3  rounded text-white"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+        </form>
+      </div>
     </Container>
   );
 }
