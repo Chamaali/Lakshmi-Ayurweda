@@ -32,3 +32,5 @@ const Palitation =
   mongoose.models.Palitation || mongoose.model("Palitation", palitationSchema);
 
 export default Palitation;
+
+
