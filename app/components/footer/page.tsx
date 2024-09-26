@@ -3,119 +3,32 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link';
+import { FaFacebook, FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
 
-const diseases = [
-    {
-        id:1,
-        name: 'Digestive system',
-        href: "./digestiveSystem"
-    },
-    {
-        id:2,
-        name: 'Muscular skeletal system',
-        href: "./muscularSkeletalSystem"
-    },
-    {
-        id:3,
-        name: 'Endocrine',
-        href: "./endrocrine"
-    },
-    {
-        id:4,
-        name: 'Central nerves system',
-        href: "./centralNervesSystem"
-    },
-    {
-        id:5,
-        name: 'Blood circulatory system',
-        href: "./bloodCirculatorySystem"
-    },
-    {
-        id:6,
-        name: 'Urinary system',
-        href: "./urinarySystem"
-    },
-    {
-        id:7,
-        name: 'Hair & skin',
-        href: "./hairSkin"
-    },
-    {
-        id:8,
-        name: 'Reproductive system',
-        href: "./reproductiveSystem"
-    },
-    {
-        id:9,
-        name: 'Liver disease',
-        href: "./liverDisease"
-    }
-];
+import diseases from '../../../constants/footer';
+import services  from '../../../constants/footer';
 
-const services = [
+interface Disease {
+    id: number; 
+    name: string;
+    href: string;
+}
 
-    {
-        id:1,
-        name: 'Phone Consultation',
-        href: "./phoneConsultation"
-    },
-    {
-        id:2,
-        name: 'Video Consultation',
-        href: "./videoConsultation"
-    },
-    {
-        id:3,
-        name: 'Clinic Consultation',
-        href: "./clinicConsultation"
-    },
-    {
-        id:4,
-        name: 'Buy Online Products',
-        href: "./buyOnlineProducts"
-    },
-    {
-        id:5,
-        name: 'Ayurweda for Wellness',
-        href: "./ayurwedaForWellness"
-    },
-    {
-        id:6,
-        name: 'Find prakurthi and Body Constitution',
-        href: "./findPrakurthiAndBodyConsultation" 
-    },
-    {
-        id:7,
-        name: 'Yoga Meditation',
-        href: "./yogaMeditation"
-    },
-    {
-        id:8,
-        name: 'Ayurweda Beauticulture',
-        href: "./ayurwedaBeauticulture"
-    },
-    {
-        id:9,
-        name: 'Acupuncture and Cupping',
-        href: "./acupunctureAndCupping"
-    },
-];
-
-
-
-
-
-
+interface Service {
+    id: number; 
+    name: string;
+    href: string;
+}
 
 export default function page(){
   return (
-    <div className='bg-green-900 text-gray-100 pt-8 pb-2 px-8 font-mono hover:bg-green-900 text-xs'>
-        <div className="flex flex-row ">
+    <div className='bg-green-900 text-gray-100 text-lg pt-8 pb-2 px-8 font-sans justify-center items-center'>
+        <div className="grid grid-cols-1 px-4 justify-center md:grid-cols-2 lg:grid-cols-4 ">
             <div className="basis-1/4">
                 <ul>
-                    {diseases.map((disease) => (
+                    {diseases.diseases.map((disease:Disease) => (
                         <li key={disease.id} className=' my-4'>
-                        <Link href={disease.href} className='no-underline hover:underline text-gray-100'>{disease.name}</Link>
+                            <Link href={disease.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{disease.name}</Link>
                         </li>
                         
                     ))}
@@ -124,9 +37,9 @@ export default function page(){
 
             <div className="basis-1/4">
                 <ul>
-                    {services.map((service) => (
+                    {services.services.map((service:Service) => (
                         <li key={service.id} className=' my-4'>
-                        <Link href={service.href} className='no-underline hover:underline text-gray-100'>{service.name}</Link>
+                        <Link href={service.href} className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>{service.name}</Link>
                         </li>
                         
                     ))}
@@ -134,33 +47,25 @@ export default function page(){
             </div>
             <div className="basis-1/4">
                 <ul>
-                    <li className=' my-4'><a className='no-underline hover:underline text-gray-100' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
-                    <li className=' my-4'><a className='no-underline text-white hover:underline leading-loose' href='./bookAppointment'>Book Appointment</a></li>
+                    <li className=' my-4'><a className=' no-underline text-gray-400 hover:text-white hover:font-semibold' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
+                    <li className=' my-4'><a className=' no-underline text-gray-400 hover:text-white hover:font-semibold' href='./bookAppointment'>Book Appointment</a></li>
                 </ul>
             </div>
             <div className="basis-1/4">
                 <ul>
-                    <li className='leading-[5rem]'>Contact Us:</li>
+                    <li className='my-4 no-underline text-gray-400 font-semibold'>Contact Us:</li>
 
-                    <li><a href="#" className='no-underline text-white hover:underline  leading-loose whitespace-break-spaces '>011-22222222</a></li>
-                    <li><a href="#" className='no-underline text-white hover:underline leading-loose whitespace-break-spaces'>lakshmi@gmail.com</a></li>
-                    <li className='leading-[5rem]'>Follow us:</li>
+                    <li className=' my-4'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>011-22222222</a></li>
+                    <li className=' my-4'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'>lakshmi@gmail.com</a></li>
+                    <li className=' my-4 no-underline text-gray-400 hover:text-white hover:font-semibold'>Follow us:</li>
                 </ul>
-                    <div className='flex whitespace-break-spaces'>  
-                    
-                            {/* <a href="#"  className=''>
-                                <Image src={require('/public/images/1.png')} width={50} height={50} className=''/>    
-                            </a>
-                            <a href="#"  className=''>
-                                <Image  src={require('/public/images/jivabrandstore-img01.png')} width={50} height={50}/>
-                            </a>
-                            <a href="#" className=''>
-                                <Image  src={require('/public/images/jivabrandstore-img01.png')} width={50} height={50}/>
-                            </a> */}
-                            
-                            
-                       
-                    </div>
+                <div className='flex'>  
+                    <ul className='flex  flex-row'>
+                        <li className='ml-0 mr-2 no-underline text-gray-400  hover:text-white hover:font-semibold'><FaFacebook /></li>
+                        <li className=' ml-0 mr-2'><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'><FaYoutube/></a></li>
+                        <li className=' ml-0 mr-2' ><a href="#" className=' no-underline text-gray-400 hover:text-white hover:font-semibold'><FaLinkedin/></a></li>
+                    </ul>
+                </div>
 
                 
             </div>

@@ -1,41 +1,37 @@
-"use client"
-import React from 'react'
+import React from 'react';
 
 const HomeColumnThree = () => {
+  const reasons = [
+    "Lakshmi Ayurveda enables true delivery of Ayurveda with personalized treatment for each individual at all touchpoints.",
+    "Personalized treatment for each individual at all touchpoints",
+    "Focus on treating the root cause",
+    "Combination of various treatments for holistic care",
+    "Integration of modern technology with traditional practices",
+    "Collaboration with Sri Lankan traditional practitioners",
+    "Team of well-qualified (BAMS) doctors, specialists, and surgeons"
+  ];
+
   return (
-    <div className=' p-8'>
-        <div className='px-8'>
-            <p className='text-Black text-center font-sans text-xl font-semibold py-3'>Why Laksmi Ayurweda</p>
-            
-            <div className='p-3 shadow-lg rounded-lg bg-white'>
-            <ul className='text-Black font-sans text-lg list-disc text-justify space-y-6 mx-10'>
-                <li>
-                    Lakshmi ayurveda enable true deliveru of ayirveda with personalised tx for each individual at all touch-point.
-                </li>
-                <li>
-                    Personlized the root cause
-                </li>
-                <li>
-                    Combine tx...etc
-                </li>
-                <li>
-                    Used mordern technology
-                </li>
-                <li>
-                    Coleberate with sri lankan traditional practitioners
-                </li>
-                <li>
-                    Well qualified (BAMS)doctors,specialist doctors,surgeon s etc
-                </li>
-                
-            </ul>
-            </div>
-           
-
-
+    <section className="py-12 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <p className="text-center text-3xl md:text-4xl font-bold mb-8 text-gray-800 antialiased">
+          Why Choose Lakshmi Ayurveda?
+        </p>
+        <div className="bg-white shadow-lg rounded-lg p-6 md:p-8">
+          <ul className="space-y-4">
+            {reasons.map((reason, index) => (
+              <li key={index} className="flex items-start">
+                <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span className="text-gray-700 text-base md:text-lg lg:text-xl ">{reason}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-    </div>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default HomeColumnThree
+export default HomeColumnThree;
