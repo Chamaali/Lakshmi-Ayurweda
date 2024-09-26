@@ -3,65 +3,46 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
+import DiseasForm from "../diseases_components/DiseasForm";
+
+const labels: { [key: string]: string } = {
+  qh1: "Name",
+  qh2: "Age",
+  qh3: "Address",
+  qh4: "Contact Number",
+  qh5: "Gender",
+  qh6: "Occupation",
+  qh7: "Medical and Family History",
+  qh8: "Where exactly is the pain located?",
+  qh9: "Does the pain radiate to other parts of the body, such as the arm, neck, back or abdomen?",
+  qh10: "How would you describe the pain (e.g. sharp, dull, crushing, burning, tightness)?",
+  qh11: "Is it constant or intermittent?",
+  qh12: "On a scale of 1 to 10, how severe is the pain?",
+  qh13: "How long does the pain last?",
+  qh14: "Is it continuous or does it come and go?",
+  qh15: "What were you doing when the pain started?",
+  qh16: "Does anything make the pain better or worse (e.g. rest, movement, deep breathing, eating)?",
+  qh17: "Do you have any other symptoms, such as shortness of breath, sweating, nausea, vomiting, dizziness or palpitations?",
+  qh18: "Do you have a history of heart disease, hypertension, diabetes, or high cholesterol?",
+  qh19: "Have you experienced similar pain before?",
+  qh23: "Are you taking any medications, including over-the-counter drugs and supplements?",
+  qh24: "Do you have any known allergies, especially to medications?"
+};
+
+type DiseaseFormData = {
+  [key: string]: string;
+};
+
+const initialFormData: DiseaseFormData = {
+  qh1: '', qh2: '', qh3: '', qh4: '', qh5: '', qh6: '', qh7: '', qh8: '', qh9: '', qh10: '',
+  qh11: '', qh12: '', qh13: '', qh14: '', qh15: '', qh16: '', qh17: '', qh18: '', qh19: '', qh20: '',
+  qh21: '', qh22: '', qh23: '', qh24: ''
+};
 
 export default function Page() {
 
-    const [q1, setQ1] = useState('');
-    const [q2, setQ2] = useState('');
-    const [q3, setQ3] = useState('');
-    const [q4, setQ4] = useState('');
-    const [q5, setQ5] = useState('');
-    const [q6, setQ6] = useState('');
-    const [q7, setQ7] = useState('');
-    const [q8, setQ8] = useState('');
-    const [q9, setQ9] = useState('');
-    const [q10, setQ10] = useState('');
-    const [q11, setQ11] = useState('');
-    const [q12, setQ12] = useState('');
-    const [q13, setQ13] = useState('');
-    const [q14, setQ14] = useState('');
-    const [q15, setQ15] = useState('');
-    const [q16, setQ16] = useState('');
-    const [q17, setQ17] = useState('');
-    const [q18, setQ18] = useState('');
-    const [q19, setQ19] = useState('');
-    const [q20, setQ20] = useState('');
-    const [q21, setQ21] = useState('');
-    const [q22, setQ22] = useState('');
-    const [q23, setQ23] = useState('');
-    const [q24, setQ24] = useState('');
-
-    const handleSubmit = async(e: React.FormEvent) => {
-        e.preventDefault();
-        try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/chestpains`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24
-                }),
-            });
-
-            // alert("Form was successfully submitted.");
-    
-            // console.log("Form was successfully submitted.")
-            if (res.ok) {
-                alert("Form was successfully submitted.");
-                console.log("Form was successfully submitted.")
-            } else {
-                throw new Error("Failed to submit form.");
-            }
-    
-        } catch (error) {
-            console.error('Error submiting of chest pain form', error);
-            alert(`Error submitting form`);
-        }
-    }
-
   return (
-    <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased" onSubmit={handleSubmit}>
+    <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased">
       <h2 className="font-bold text-2xl sm:text-2xl">Chest Pain</h2>
 
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 my-4 mx-4">
@@ -162,256 +143,7 @@ export default function Page() {
 
       <div className="max-w-4xl mx-auto p-4">
         <h1 className="text-2xl font-bold mb-4">Chest Pain Assessment Form</h1>
-        <form action="" className="p-4 bg-gray-50 rounded border shadow">
-        <div className="grid gap-y-4 px-4 sm:px-6 lg:px-8">
-            <div className="form-group list-decimal">
-              <label className="block text-lg font-medium text-gray-700">Name</label>
-              <input
-                placeholder=""
-                value={q1}
-                onChange={(e) => setQ1(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">Age</label>
-              <input
-                placeholder=""
-                value={q2}
-                onChange={(e) => setQ2(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">Address</label>
-              <input
-                placeholder=""
-                value={q3}
-                onChange={(e) => setQ3(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">Contact Number</label>
-              <input
-                placeholder=""
-                value={q4}
-                onChange={(e) => setQ4(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">Gender</label>
-              <input
-                placeholder=""
-                value={q5}
-                onChange={(e) => setQ5(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">Occupation</label>
-              <input
-                placeholder=""
-                value={q6}
-                onChange={(e) => setQ6(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Medical and Family History
-              </label>
-              <input
-                placeholder=""
-                value={q7}
-                onChange={(e) => setQ7(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Where exactly is the pain located?
-              </label>
-              <input
-                placeholder=""
-                value={q8}
-                onChange={(e) => setQ8(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Does the pain radiate to other parts of the body, such as the arm, neck, back or abdomen?
-              </label>
-              <input
-                placeholder=""
-                value={q9}
-                onChange={(e) => setQ9(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                How would you describe the pain (e.g. sharp, dull, crushing, burning, tightness)?
-              </label>
-              <input
-                placeholder=""
-                value={q10}
-                onChange={(e) => setQ10(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Is it constant or intermittent?
-              </label>
-              <input
-                placeholder=""
-                value={q11}
-                onChange={(e) => setQ11(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                On a scale of 1 to 10, how severe is the pain?
-              </label>
-              <input
-                placeholder=""
-                value={q12}
-                onChange={(e) => setQ12(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                How long does the pain last?
-              </label>
-              <input
-                placeholder=""
-                value={q13}
-                onChange={(e) => setQ13(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Is it continuous or does it come and go?
-              </label>
-              <input
-                placeholder=""
-                value={q14}
-                onChange={(e) => setQ14(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                What were you doing when the pain started?
-              </label>
-              <input
-                placeholder=""
-                value={q15}
-                onChange={(e) => setQ15(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Does anything make the pain better or worse (e.g. rest, movement, deep breathing, eating)?
-              </label>
-              <input
-                placeholder=""
-                value={q16}
-                onChange={(e) => setQ16(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Do you have any other symptoms, such as shortness of breath, sweating, nausea, vomiting, dizziness or palpitations?
-              </label>
-              <input
-                placeholder=""
-                value={q17}
-                onChange={(e) => setQ17(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Do you have a history of heart disease, hypertension, diabetes, or high cholesterol?
-              </label>
-              <input
-                placeholder=""
-                value={q18}
-                onChange={(e) => setQ18(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-lg"
-              />
-            </div>
-
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-                Have you experienced similar pain before?
-              </label>
-              <input
-                placeholder=""
-                value={q19}
-                onChange={(e) => setQ19(e.target.value)}
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus"
-              />
-            </div>
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-              Are you taking any medications, including over- the- counter drugs and supplements?
-              </label>
-              <input 
-                placeholder="" 
-                value={q23} 
-                onChange={(e)=> setQ23(e.target.value)} 
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus"
-                />
-            </div>
-            <div className="form-group">
-              <label className="block text-lg font-medium text-gray-700">
-              Do you have any known allergies, especially to medications?
-              </label>
-              <input 
-                placeholder="" 
-                value={q24} 
-                onChange={(e)=> setQ24(e.target.value)} 
-                className="form-control mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus" 
-              />
-            </div>
-          </div>
-          <div className="gap-5 flex justify-end pt-5">
-            {/* <button className="bg-gray-200 py-2 px-3   rounded">Cansel</button> */}
-            <button
-              type="submit"
-              className="bg-blue-600 py-2 px-3  rounded text-white"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+        <DiseasForm initialFormData={initialFormData} labels={labels}/>
       </div>
     </Container>
   );
