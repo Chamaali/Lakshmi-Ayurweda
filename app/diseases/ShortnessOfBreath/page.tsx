@@ -46,7 +46,7 @@ export default function Page() {
       <div className="flex flex-row place-content-around py-5">
         <Image
           alt="Shortness of Breath"
-          src={require("./../../../public/images/SOB_1.png")}
+          src={require("./../../../public/images/SOB_1.jpeg")}
           className="h-60"
         />
         <Image
@@ -103,8 +103,37 @@ export default function Page() {
         <li>Stress management techniques, including meditation and mindfulness.</li>
       </ul>
 
-      <h5 className="pb-3 font-bold">Questions</h5>
+      
       <Form onSubmit={handleSubmit}>
+        <h5 className="pb-3 font-bold">PATIENT INFORMATION</h5>
+        <Form.Group controlId="name">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" name="name" value={formData.qsb22} onChange={handleChange} />
+        </Form.Group>
+        <Form.Group controlId="age">
+          <Form.Label>Age</Form.Label>
+          <Form.Control type="number" name="age" value={formData.qsb23} onChange={handleChange} />
+        </Form.Group>
+        <Form.Group controlId="sex">
+          <Form.Label>Sex</Form.Label>
+          <Form.Control type="text" name="sex" value={formData.qsb24} onChange={handleChange} />
+        </Form.Group>
+        <Form.Group controlId="address">
+          <Form.Label>Address</Form.Label>
+          <Form.Control type="text" name="address" value={formData.qsb24} onChange={handleChange} />
+        </Form.Group>
+        <Form.Group controlId="contactNumber">
+          <Form.Label>Contact Number</Form.Label>
+          <Form.Control type="text" name="contactNumber" value={formData.qsb25} onChange={handleChange} />
+        </Form.Group>
+        <Form.Group controlId="occupation">
+          <Form.Label>Occupation</Form.Label>
+          <Form.Control type="text" name="occupation" value={formData.qsb27} onChange={handleChange} />
+        </Form.Group>
+
+        <h5 className="pb-3 font-bold">1. MEDICAL AND FAMILY HISTORY</h5>
+
+        <h6>1. Onset and Duration:</h6>
         <Form.Group controlId="qsb1">
           <Form.Label>When did the shortness of breath start?</Form.Label>
           <Form.Control type="text" name="qsb1" value={formData.qsb1} onChange={handleChange} />
@@ -113,111 +142,110 @@ export default function Page() {
           <Form.Label>Is it sudden or gradual?</Form.Label>
           <Form.Control type="text" name="qsb2" value={formData.qsb2} onChange={handleChange} />
         </Form.Group>
+
+        <h6>2. Nature of Breathlessness:</h6>
         <Form.Group controlId="qsb3">
           <Form.Label>Is it constant or does it come and go?</Form.Label>
           <Form.Control type="text" name="qsb3" value={formData.qsb3} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb4">
-          <Form.Label>Are there specific triggers that make it worse?</Form.Label>
+          <Form.Label>Are there specific triggers or situations that make it worse (e.g., exercise, lying down, exposure to allergens)?</Form.Label>
           <Form.Control type="text" name="qsb4" value={formData.qsb4} onChange={handleChange} />
         </Form.Group>
+
+        <h6>3. Associated Symptoms:</h6>
         <Form.Group controlId="qsb5">
           <Form.Label>Are you experiencing chest pain or tightness?</Form.Label>
           <Form.Control type="text" name="qsb5" value={formData.qsb5} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb6">
-          <Form.Label>Do you have a history of respiratory issues?</Form.Label>
+          <Form.Label>Do you have a cough? If so, is it dry or productive (producing mucus)?</Form.Label>
           <Form.Control type="text" name="qsb6" value={formData.qsb6} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb7">
-          <Form.Label>Have you noticed any swelling in your legs or feet?</Form.Label>
+          <Form.Label>Do you have wheezing or a high-pitched sound when breathing?</Form.Label>
           <Form.Control type="text" name="qsb7" value={formData.qsb7} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb8">
-          <Form.Label>Are you currently taking any medications for respiratory conditions?</Form.Label>
+          <Form.Label>Are there any associated symptoms like fever, swelling in the legs, or weight loss?</Form.Label>
           <Form.Control type="text" name="qsb8" value={formData.qsb8} onChange={handleChange} />
         </Form.Group>
+
+        <h6>4. Severity:</h6>
         <Form.Group controlId="qsb9">
-          <Form.Label>Do you experience shortness of breath during physical activity?</Form.Label>
-          <Form.Control type="text" name="qsb9" value={formData.qsb9} onChange={handleChange} />
+          <Form.Label>How severe is the shortness of breath? Can you describe it on a scale from 1 to 10?</Form.Label>
+          <Form.Control type="number" name="qsb9" value={formData.qsb9} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb10">
-          <Form.Label>Do you have allergies that might affect your breathing?</Form.Label>
+          <Form.Label>How does it affect your daily activities?</Form.Label>
           <Form.Control type="text" name="qsb10" value={formData.qsb10} onChange={handleChange} />
         </Form.Group>
+
+        <h5 className="pb-3 font-bold">Medical History</h5>
+
+        <h6>5. Previous Medical Conditions:</h6>
         <Form.Group controlId="qsb11">
-          <Form.Label>Have you recently experienced a respiratory infection?</Form.Label>
+          <Form.Label>Do you have a history of respiratory conditions like asthma, chronic obstructive pulmonary disease (COPD), or bronchitis?</Form.Label>
           <Form.Control type="text" name="qsb11" value={formData.qsb11} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb12">
-          <Form.Label>Do you smoke or have you ever smoked?</Form.Label>
+          <Form.Label>Do you have a history of heart conditions, such as heart failure, coronary artery disease, or arrhythmias?</Form.Label>
           <Form.Control type="text" name="qsb12" value={formData.qsb12} onChange={handleChange} />
         </Form.Group>
+
+        <h6>6. Medications:</h6>
         <Form.Group controlId="qsb13">
-          <Form.Label>Is there a family history of respiratory problems?</Form.Label>
+          <Form.Label>Are you taking any medications, including over-the-counter drugs and supplements?</Form.Label>
           <Form.Control type="text" name="qsb13" value={formData.qsb13} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb14">
-          <Form.Label>Do you live in an area with high air pollution?</Form.Label>
+          <Form.Label>Have you recently started or stopped any medications?</Form.Label>
           <Form.Control type="text" name="qsb14" value={formData.qsb14} onChange={handleChange} />
         </Form.Group>
+
+        <h6>7. Allergies:</h6>
         <Form.Group controlId="qsb15">
-          <Form.Label>Are you experiencing anxiety or panic attacks?</Form.Label>
+          <Form.Label>Do you have any known allergies?</Form.Label>
           <Form.Control type="text" name="qsb15" value={formData.qsb15} onChange={handleChange} />
         </Form.Group>
+
+        <h5 className="pb-3 font-bold">Lifestyle and Social History</h5>
+
+        <h6>8. Smoking and Substance Use:</h6>
         <Form.Group controlId="qsb16">
-          <Form.Label>Have you recently traveled to a different altitude?</Form.Label>
+          <Form.Label>Do you smoke or have you ever smoked? If so, how much and for how long?</Form.Label>
           <Form.Control type="text" name="qsb16" value={formData.qsb16} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb17">
-          <Form.Label>Have you had any recent surgeries?</Form.Label>
+          <Form.Label>Do you use recreational drugs or alcohol?</Form.Label>
           <Form.Control type="text" name="qsb17" value={formData.qsb17} onChange={handleChange} />
         </Form.Group>
+
+        <h6>9. Occupational and Environmental Exposure:</h6>
         <Form.Group controlId="qsb18">
-          <Form.Label>Are you feeling more fatigued than usual?</Form.Label>
+          <Form.Label>Are you exposed to dust, chemicals, or pollutants at work or home?</Form.Label>
           <Form.Control type="text" name="qsb18" value={formData.qsb18} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb19">
-          <Form.Label>Do you experience any coughing or wheezing?</Form.Label>
+          <Form.Label>Do you have any pets?</Form.Label>
           <Form.Control type="text" name="qsb19" value={formData.qsb19} onChange={handleChange} />
         </Form.Group>
+
+        <h5 className="pb-3 font-bold">Recent Activities and Travel</h5>
+
+        <h6>10. Recent Illnesses or Infections:</h6>
         <Form.Group controlId="qsb20">
-          <Form.Label>Do you feel a sense of urgency to breathe?</Form.Label>
+          <Form.Label>Have you had any recent infections or illnesses?</Form.Label>
           <Form.Control type="text" name="qsb20" value={formData.qsb20} onChange={handleChange} />
         </Form.Group>
         <Form.Group controlId="qsb21">
-          <Form.Label>Are there specific positions that help ease your breath?</Form.Label>
+          <Form.Label>Have you traveled recently? If so, where?</Form.Label>
           <Form.Control type="text" name="qsb21" value={formData.qsb21} onChange={handleChange} />
         </Form.Group>
-        <Form.Group controlId="qsb22">
-          <Form.Label>Have you experienced recent weight changes?</Form.Label>
-          <Form.Control type="text" name="qsb22" value={formData.qsb22} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb23">
-          <Form.Label>Is there a history of asthma or allergies in your family?</Form.Label>
-          <Form.Control type="text" name="qsb23" value={formData.qsb23} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb24">
-          <Form.Label>Do you experience shortness of breath at night?</Form.Label>
-          <Form.Control type="text" name="qsb24" value={formData.qsb24} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb25">
-          <Form.Label>Do you have a history of cardiovascular diseases?</Form.Label>
-          <Form.Control type="text" name="qsb25" value={formData.qsb25} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb26">
-          <Form.Label>Have you recently experienced significant stress?</Form.Label>
-          <Form.Control type="text" name="qsb26" value={formData.qsb26} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb27">
-          <Form.Label>Are you currently under any medical treatment?</Form.Label>
-          <Form.Control type="text" name="qsb27" value={formData.qsb27} onChange={handleChange} />
-        </Form.Group>
-        <Form.Group controlId="qsb28">
-          <Form.Label>Are there any additional symptoms you would like to mention?</Form.Label>
-          <Form.Control type="text" name="qsb28" value={formData.qsb28} onChange={handleChange} />
-        </Form.Group>
-        <Button type="submit" variant="primary" className="mt-3">Submit</Button>
+
+        <Button className="mt-3" variant="primary" type="submit">
+          Submit
+        </Button>
       </Form>
     </Container>
   );
