@@ -331,7 +331,7 @@ export default function Page() {
                               Palpitation
                             </a>
                             <a
-                              href="#"
+                              href="./../../diseases/ShortnessOfBreath"
                               className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
                               role="menuitem"
                               id="submenu-item-5"
