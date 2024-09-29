@@ -330,7 +330,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubmenu}
@@ -342,7 +342,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="./../../diseases/ChestPain"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -350,26 +350,16 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/Cholesterol"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
                               Cholesterol
                             </a>
-                            <div className="relative">
-                              <a
-                                href="./../../diseases/Diabetic"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Diabetic
-                              </a>
-                            </div>
+                            
                             <a
                               href="./../../diseases/Hypertension"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -377,7 +367,7 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/Palpitation"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -385,7 +375,7 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/ShortnessOfBreath"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -393,7 +383,7 @@ export default function Page() {
                             </a>
                             <a
                               href="Swelling"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -409,7 +399,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuTwo}
@@ -417,11 +407,11 @@ export default function Page() {
                         Child Health Problem &raquo;
                       </a>
                       {isSubMenuTwoOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -429,26 +419,15 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
                               Delay Speech
                             </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -456,7 +435,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -464,7 +443,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -472,7 +451,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -480,7 +459,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -488,7 +467,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -496,7 +475,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -510,7 +489,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuThree}
@@ -518,90 +497,39 @@ export default function Page() {
                         Chronic Diseases &raquo;
                       </a>
                       {isSubMenuThreeOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Cholesterol
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
-                              Delay Speech
+                              Diabetic
                             </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
-                              Growth and Development Delay
+                              Obesity
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
-                              id="submenu-item-5"
+                              id="submenu-item-4"
                             >
-                              Hyperactivity
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Insomnia
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Learning Difficulties
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Running Nose
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Shortness of Breath
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Skin Rash
+                              Hypertension
                             </a>
                           </div>
                         </div>
@@ -611,7 +539,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuFour}
@@ -619,91 +547,65 @@ export default function Page() {
                         Gastrointestinal Problems &raquo;
                       </a>
                       {isSubMenuFourOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Bowel Diseases
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
-                              Delay Speech
+                              Bulging of Rectum
                             </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
-                              Growth and Development Delay
+                              Constipation
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
-                              id="submenu-item-5"
+                              id="submenu-item-4"
                             >
-                              Hyperactivity
+                              Distension of Abdomen
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Insomnia
+                              Flatulance
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Learning Difficulties
+                              Nausea
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Running Nose
+                              Stomac Pain
                             </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Shortness of Breath
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Skin Rash
-                            </a>
+                            
                           </div>
                         </div>
                       )}
@@ -712,7 +614,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuFive}
@@ -720,90 +622,47 @@ export default function Page() {
                         Hair Care Diseases Related to Hair &raquo;
                       </a>
                       {isSubMenuFiveOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Dandruff
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
-                              Delay Speech
+                              Hair Loss
                             </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
-                              Growth and Development Delay
+                              Headache
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
-                              id="submenu-item-5"
+                              id="submenu-item-4"
                             >
-                              Hyperactivity
+                              Immature Gray Hair
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Insomnia
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Learning Difficulties
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Running Nose
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Shortness of Breath
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Skin Rash
+                              Scalp Scaling
                             </a>
                           </div>
                         </div>
@@ -813,7 +672,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuSix}
@@ -821,91 +680,32 @@ export default function Page() {
                         Mental Health Concern &raquo;
                       </a>
                       {isSubMenuSixOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Depression
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
-                            >
-                              Delay Speech
-                            </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-4"
-                            >
-                              Growth and Development Delay
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Hyperactivity
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
                             >
                               Insomnia
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
-                              id="submenu-item-5"
+                              id="submenu-item-4"
                             >
-                              Learning Difficulties
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Running Nose
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Shortness of Breath
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Skin Rash
-                            </a>
+                              Stress
+                            </a> 
                           </div>
                         </div>
                       )}
@@ -914,7 +714,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuSeven}
@@ -922,90 +722,55 @@ export default function Page() {
                         Pains &raquo;
                       </a>
                       {isSubMenuSevenOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Back Pain
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
-                              Delay Speech
+                              Chest Pain
                             </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
-                              Growth and Development Delay
+                              Elbow Pain
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Hyperactivity
+                              Heel Pain
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Insomnia
+                              Stomac Pain
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Learning Difficulties
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Running Nose
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Shortness of Breath
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Skin Rash
+                              Wrist Pain
                             </a>
                           </div>
                         </div>
@@ -1015,7 +780,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuEight}
@@ -1023,90 +788,39 @@ export default function Page() {
                         Respiratory Issues &raquo;
                       </a>
                       {isSubMenuEightOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
-                              Cerebral Palsy
+                              Cough
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
-                            >
-                              Delay Speech
-                            </a>
-                            <div className="relative">
-                              <a
-                                href="#"
-                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                                role="menuitem"
-                                id="submenu-item-3"
-                                onClick={toggleSubMenuTwo}
-                              >
-                                Frequent Infection
-                              </a>
-                            </div>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-4"
-                            >
-                              Growth and Development Delay
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Hyperactivity
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Insomnia
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
-                            >
-                              Learning Difficulties
-                            </a>
-                            <a
-                              href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
-                              role="menuitem"
-                              id="submenu-item-5"
                             >
                               Running Nose
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
-                              id="submenu-item-5"
+                              id="submenu-item-4"
                             >
                               Shortness of Breath
                             </a>
                             <a
                               href="#"
-                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
-                              Skin Rash
+                              Sore Throat
                             </a>
                           </div>
                         </div>
@@ -1136,16 +850,16 @@ export default function Page() {
             <div className="font-semibold font-sans text-base px-4 py-2">
               Our Services &raquo;
             </div>
-            <ul className="absolute hidden group-hover:block p-3 bg-white bg-opacity-30 text-green-700 rounded shadow-lg w-60">
+            <ul className="absolute hidden group-hover:block  bg-white bg-opacity-30 w-max text-green-700 rounded shadow-lg ">
               {services.map((service) => (
-                <li key={service.id}>
+                <li key={service.id} className="py-2">
                   <a
-                    className="text-green-700 no-underline"
+                    className="text-green-700 no-underline px-2  my-1 hover:bg-gray-200"
                     href={service.href}
                   >
                     {service.name}
                   </a>
-                  <hr />
+                  {/* <hr /> */}
                 </li>
               ))}
             </ul>
@@ -1227,7 +941,7 @@ export default function Page() {
               Diseases
             </button>
             <div className="absolute bg-white text-green-700 rounded shadow-lg">
-              {diseases.map((disease) => (
+              {diseases.map((disease:any) => (
                 <Link legacyBehavior key={disease.id} href={disease.href}>
                   <a
                     className={`${
