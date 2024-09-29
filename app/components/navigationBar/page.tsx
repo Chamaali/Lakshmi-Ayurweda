@@ -9,53 +9,6 @@ import { usePathname } from "next/navigation";
 import SignUpForm from "../SignUpForm";
 import { getUserRole } from "@/app/serverComponents/users/getUserRole";
 
-const diseases = [
-  {
-    id: 1,
-    name: "Back Pain",
-    href: "/diseases/BackPain",
-  },
-  {
-    id: 2,
-    name: "Bulging of Rectum",
-    href: "/diseases/BulgingOfRectum",
-  },
-  {
-    id: 3,
-    name: "Endocrine",
-    href: "/diseases/endocrine",
-  },
-  {
-    id: 4,
-    name: "Central nerves system",
-    href: "/diseases/centralNervesSystem",
-  },
-  {
-    id: 5,
-    name: "Blood circulatory system",
-    href: "/diseases/bloodCirculatorySystem",
-  },
-  {
-    id: 6,
-    name: "Urinary system",
-    href: "/diseases/urinarySystem",
-  },
-  {
-    id: 7,
-    name: "Hair & skin",
-    href: "/diseases/hairSkin",
-  },
-  {
-    id: 8,
-    name: "Reproductive system",
-    href: "/diseases/reproductiveSystem",
-  },
-  {
-    id: 9,
-    name: "Liver disease",
-    href: "/diseases/liverDisease",
-  },
-];
 
 const services = [
   {
@@ -183,6 +136,13 @@ export default function Page() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isSubMenuTwoOpen, setIsSubMenuTwoOpen] = useState(false);
+  const [isSubMenuThreeOpen, setIsSubMenuThreeOpen] = useState(false);
+  const [isSubMenuFourOpen, setIsSubMenuFourOpen] = useState(false);
+  const [isSubMenuFiveOpen, setIsSubMenuFiveOpen] = useState(false);
+  const [isSubMenuSixOpen, setIsSubMenuSixOpen] = useState(false);
+  const [isSubMenuSevenOpen, setIsSubMenuSevenOpen] = useState(false);
+  const [isSubMenuEightOpen, setIsSubMenuEightOpen] = useState(false);
+
 
   const dropdownRef = useRef(null);
 
@@ -190,19 +150,112 @@ export default function Page() {
     setIsDropdownOpen(!isDropdownOpen);
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
   };
 
   const toggleSubmenu = (e:any) => {
     e.stopPropagation();
     setIsSubmenuOpen(!isSubmenuOpen);
     setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
   };
 
   const toggleSubMenuTwo = (e:any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(!isSubMenuTwoOpen);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
   };
+
+  const toggleSubMenuThree = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(!isSubMenuThreeOpen);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
+  };
+
+  const toggleSubMenuFour = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(!isSubMenuFourOpen);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
+  };
+
+  const toggleSubMenuFive = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(!isSubMenuFiveOpen);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
+  };
+
+  const toggleSubMenuSix = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(!isSubMenuSixOpen);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(false);
+  };
+
+  const toggleSubMenuSeven = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(!isSubMenuSevenOpen);
+    setIsSubMenuEightOpen(false);
+  };
+
+  const toggleSubMenuEight = (e:any) => {
+    e.stopPropagation();
+    setIsSubmenuOpen(false);
+    setIsSubMenuTwoOpen(false);
+    setIsSubMenuThreeOpen(false);
+    setIsSubMenuFourOpen(false);
+    setIsSubMenuFiveOpen(false);
+    setIsSubMenuSixOpen(false);
+    setIsSubMenuSevenOpen(false);
+    setIsSubMenuEightOpen(!isSubMenuEightOpen);
+  };
+
+
+
 
   const handleClickOutside = (event:any) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -268,7 +321,7 @@ export default function Page() {
 
               {isDropdownOpen && (
                 <div
-                  className="origin-top-left absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                  className="origin-top-left absolute left-0 mt-2 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
@@ -285,7 +338,7 @@ export default function Page() {
                         Cardiovascular Symptoms &raquo;
                       </a>
                       {isSubmenuOpen && (
-                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
                               href="./../../diseases/ChestPain"
@@ -364,6 +417,612 @@ export default function Page() {
                         Child Health Problem &raquo;
                       </a>
                       {isSubMenuTwoOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuThree}
+                      >
+                        Chronic Diseases &raquo;
+                      </a>
+                      {isSubMenuThreeOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuFour}
+                      >
+                        Gastrointestinal Problems &raquo;
+                      </a>
+                      {isSubMenuFourOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuFive}
+                      >
+                        Hair Care Diseases Related to Hair &raquo;
+                      </a>
+                      {isSubMenuFiveOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuSix}
+                      >
+                        Mental Health Concern &raquo;
+                      </a>
+                      {isSubMenuSixOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuSeven}
+                      >
+                        Pains &raquo;
+                      </a>
+                      {isSubMenuSevenOpen && (
+                        <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                          <div className="py-1" role="none">
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-1"
+                            >
+                              Cerebral Palsy
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-2"
+                            >
+                              Delay Speech
+                            </a>
+                            <div className="relative">
+                              <a
+                                href="#"
+                                className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                                role="menuitem"
+                                id="submenu-item-3"
+                                onClick={toggleSubMenuTwo}
+                              >
+                                Frequent Infection
+                              </a>
+                            </div>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Growth and Development Delay
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Hyperactivity
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Insomnia
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Learning Difficulties
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Running Nose
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Shortness of Breath
+                            </a>
+                            <a
+                              href="#"
+                              className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                              role="menuitem"
+                              id="submenu-item-5"
+                            >
+                              Skin Rash
+                            </a>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="relative">
+                      <a
+                        href="#"
+                        className="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-100"
+                        role="menuitem"
+                        id="menu-item-2"
+                        onClick={toggleSubMenuEight}
+                      >
+                        Respiratory Issues &raquo;
+                      </a>
+                      {isSubMenuEightOpen && (
                         <div className="origin-top-left absolute left-full top-0 mt-0 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
