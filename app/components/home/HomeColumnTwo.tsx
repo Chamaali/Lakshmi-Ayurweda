@@ -11,7 +11,7 @@ const HomeColumnTwo = () => {
   const sliderRef = useRef(null);
 
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 300,
     slidesToShow: 4,
@@ -40,9 +40,9 @@ const HomeColumnTwo = () => {
 
   return (
     <div>
-      <div className="bg-green-900 mb-12 p-4 sm:p-6 md:p-8">
+      <div className="bg-teal-900  p-4 sm:p-6 md:p-8">
         <div className="text-center">
-          <p className="text-white font-sans font-bold text-xl md:text-3xl lg:text-4xl mb-4 sm:mb-6 antialiased">
+          <p className="text-white font-sans font-bold text-xl md:text-xl lg:text-2xl my-4 sm:mb-6 antialiased">
             Ayurvedic Diseases & Conditions We Treat
           </p>
         </div>

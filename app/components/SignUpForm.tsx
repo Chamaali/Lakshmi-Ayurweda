@@ -82,9 +82,9 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
 
     return (
         <form onSubmit={handleSubmit} className="fixed bottom-0 left-0 w-full h-full bg-opacity-20 flex justify-center items-center shadow-lg">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
+            <div className="bg-white p-8 rounded-lg shadow-lg border-teal-800">
                 <div className="flex flex-row justify-between pb-3">
-                    <p className="text-green-800 text-2xl font-bold">Sign Up</p>
+                    <p className="text-teal-800 text-2xl font-bold">Sign Up</p>
                     <button type="button" className="text-gray-400 self-auto" onClick={onClose}>
                         <FaRegWindowClose size={30} className="text-gray-400" />
                     </button>
@@ -96,7 +96,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setFirstNameInput(e.target.value)}
                         type="text"
                         placeholder="First Name"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
@@ -104,7 +104,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setLastNameInput(e.target.value)}
                         type="text"
                         placeholder="Last Name"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
@@ -112,7 +112,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setPhoneInput(e.target.value)}
                         type="tel"
                         placeholder="Phone"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
@@ -120,7 +120,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setEmailInput(e.target.value)}
                         type="email"
                         placeholder="Email"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
@@ -128,7 +128,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setPasswordInput(e.target.value)}
                         type="password"
                         placeholder="Password"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
@@ -136,12 +136,12 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         onChange={(e) => setConfirmPasswordInput(e.target.value)}
                         type="password"
                         placeholder="Confirm Password"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     {passwordError && <p className="text-red-500 mb-4">{passwordError}</p>}
                     
-                    <button type="submit" className="text-white rounded-md bg-green-800 px-3 py-2 mb-4 w-96">
+                    <button type="submit" className="text-white rounded-md bg-teal-800 px-3 py-2 mb-4 w-96">
                         Sign Up
                     </button>
 
@@ -150,7 +150,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                         <button 
                             type="button"
                             onClick={switchToSignIn} 
-                            className="text-green-800 font-semibold no-underline hover:underline"
+                            className="text-teal-800 font-semibold no-underline hover:underline"
                         >
                             Sign In
                         </button>

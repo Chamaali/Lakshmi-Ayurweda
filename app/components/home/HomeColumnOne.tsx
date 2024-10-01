@@ -14,7 +14,7 @@ const HomeColumnOne = () => {
         }}
       >
         <div className="container justify-center justify-items-center py-4 grid grid-cols-2  lg:grid-cols-4 gap-4 sm:gap-2">
-            <a href=""  className="no-underline ">
+            {/* <a href=""  className="no-underline ">
               <div className="flex-column bg-white  rounded-xl  w-48 h-48 mx-3 p-3 content-center hover:scale-105 hover:bg-gray-100 transition duration-300 ease-in-out">
                 <div className="grid justify-items-center gap-4 ">
                   <Image
@@ -23,12 +23,12 @@ const HomeColumnOne = () => {
                     src={require("@/public/icons/Book Icon.png")}
                     width={50}
                   />
-                  <p className="text-green-700 font-serif text-lg text-center">
+                  <p className="text-teal-700 font-serif text-lg text-center">
                     Book an Appointment
                   </p>
                 </div>
               </div>
-            </a>
+            </a> */}
             <a href="../../pages/locateClinic" className="no-underline ">
               <div className="flex-column bg-white  rounded-xl  w-48 h-48 mx-3 p-3 content-center hover:scale-105 hover:bg-gray-100 transition duration-300 ease-in-out">
                 <div className="grid justify-items-center gap-4 ">
@@ -38,7 +38,7 @@ const HomeColumnOne = () => {
                     src={require("../../../public/icons/Locate Icon.png")}
                     width={80}
                   />
-                  <p className="text-green-700 font-serif  text-lg text-center">
+                  <p className="text-teal-700 font-serif  text-lg text-center">
                     Locate Clinic
                   </p>
                 </div>
@@ -53,23 +53,23 @@ const HomeColumnOne = () => {
                     src={require("../../../public/icons/Wellness Icon.png")}
                     width={60}
                   />
-                  <p className="text-green-700 font-serif  text-lg text-center">
+                  <p className="text-teal-700 font-serif  text-lg text-center">
                     Panchakarma Therapy
                   </p>
                 </div>
               </div>
             </a>
-            <a href="./../services/buyOnlineProducts" className="no-underline ">
+            <a href="./../../services/findPrakurthiAndBodyConsultation" className="no-underline ">
               <div className="flex-column bg-white  rounded-xl  w-48 h-48 mx-3 p-3 content-center hover:scale-105 hover:bg-gray-100 transition duration-300 ease-in-out">
                 <div className="grid justify-items-center gap-4 ">
                   <Image
                     className=""
                     alt=""
-                    src={require("../../../public/icons/Buy Icon.png")}
+                    src={require("../../../public/icons/Wellness Icon.png")}
                     width={70}
                   />
-                  <p className="text-green-700 font-serif  text-lg text-center ">
-                    Buy Products
+                  <p className="text-teal-700 font-serif  text-lg text-center ">
+                  Find Prakurthi
                   </p>
                 </div>
               </div>

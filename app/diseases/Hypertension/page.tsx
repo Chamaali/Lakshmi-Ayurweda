@@ -122,7 +122,7 @@ export default function page() {
                   <h5 className="pb-3 font-bold">Ayurvedic Management Approach
                   </h5>
 
-                  <ol className="list-decimal"> <b>1.	Dietary Adjustments:  </b> Emphasize a balanced diet that pacifies Vata and Pitta, avoiding salty, spicy, and sour foods, and incorporating cooling and calming foods like cucumber, coconut water, and leafy greens.</ol>
+                  <ol className="list-decimal"> <b>1.	Dietary Adjustments:  </b> Emphasize a balanced diet that pacifies Vata and Pitta, avoiding salty, spicy, and sour foods, and incorporating cooling and calming foods like cucumber, coconut water, and leafy teals.</ol>
                   <ol className="list-decimal"> <b>2.	Regular Exercise:  </b> Engage in moderate physical activities like walking, yoga, and specific asanas to improve circulation and balance doshas.</ol>
                   <ol className="list-decimal"> <b>3.	Stress Management:  </b> Practice meditation, pranayama (breathing exercises), and relaxation techniques to reduce stress and anxiety.</ol>
                   <ol className="list-decimal"> <b>4.	Routine and Discipline	 </b>Follow a consistent daily routine (Dinacharya) and seasonal regimen (Ritucharya) to maintain doshic balance.</ol>

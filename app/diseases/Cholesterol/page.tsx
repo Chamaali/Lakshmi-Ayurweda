@@ -124,7 +124,7 @@ export default function page() {
                   <b>Include: </b>
                         <ul>
                             <li className="pb-3">
-                            <b>Vegetables:</b> Leafy greens, cruciferous vegetables.
+                            <b>Vegetables:</b> Leafy teals, cruciferous vegetables.
                             </li>
         
                             <li className="pb-3">

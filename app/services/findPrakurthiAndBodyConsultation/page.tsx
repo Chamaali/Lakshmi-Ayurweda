@@ -510,14 +510,14 @@ export default function Page() {
   return (
     <div className="container p-5  text-white min-h-screen rounded-lg shadow-lg">
       <div>
-        <h1 className="font-extrabold text-3xl text-center text-green-800 mb-4  ">
+        <h1 className="font-extrabold text-3xl text-center text-teal-800 mb-4  ">
           Ayurveda Body Constitution
         </h1>
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {Object.keys(options).map((key) => (
-            <div key={key} className="bg-green-900 p-4 rounded-lg shadow-md">
+            <div key={key} className="bg-teal-900 p-4 rounded-lg shadow-md">
               <p className="font-semibold text-lg mb-2">
                 {key
                   .replace(/([A-Z])/g, " $1")
@@ -547,7 +547,7 @@ export default function Page() {
         </div>
         <button
           type="submit"
-          className="px-4 py-2 my-4 bg-green-900  text-white rounded hover:bg-green-800 transition duration-300"
+          className="px-4 py-2 my-4 bg-teal-900  text-white rounded hover:bg-teal-800 transition duration-300"
         >
           Submit
         </button>

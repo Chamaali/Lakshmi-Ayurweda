@@ -45,7 +45,7 @@
 //       <button
 //         onClick={togglePopup}
 //         type="button"
-//         className="rounded-xl py-2 px-3 justify-self-end text-white font-bold bg-green-700 hover:bg-green-800"
+//         className="rounded-xl py-2 px-3 justify-self-end text-white font-bold bg-teal-700 hover:bg-teal-800"
 //       >
 //         Add to Cart
 //       </button>
@@ -93,13 +93,13 @@
 //             <div className="basis-2/16 pt-4 grid grid-cols-2 gap-4 place-content-around">
 //               <button
 //                 onClick={togglePopup}
-//                 className="bg-green-700 text-white px-4 py-2 rounded-md"
+//                 className="bg-teal-700 text-white px-4 py-2 rounded-md"
 //               >
 //                 Goto Cart
 //               </button>
 //               <button
 //                 onClick={togglePopup}
-//                 className="bg-green-700 text-white px-4 py-2 rounded-md"
+//                 className="bg-teal-700 text-white px-4 py-2 rounded-md"
 //               >
 //                 Checkout
 //               </button>

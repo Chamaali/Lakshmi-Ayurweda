@@ -14,14 +14,14 @@ const HomeColumnThree = () => {
   return (
     <section className="py-12 bg-gray-50">
       <div className="container mx-auto px-4">
-        <p className="text-center text-3xl md:text-4xl font-bold mb-8 text-gray-800 antialiased">
+        <p className="text-center text-xl md:text-2xl font-bold mb-8 text-gray-800 antialiased">
           Why Choose Lakshmi Ayurveda?
         </p>
         <div className="bg-white shadow-lg rounded-lg p-6 md:p-8">
           <ul className="space-y-4">
             {reasons.map((reason, index) => (
               <li key={index} className="flex items-start">
-                <svg className="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <svg className="w-6 h-6 text-teal-700 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
                 <span className="text-gray-700 text-base md:text-lg lg:text-xl ">{reason}</span>

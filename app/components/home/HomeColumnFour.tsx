@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export default function HomeColumnFour() {
   return (
-    <section className="bg-green-900 p-4 sm:p-6 md:p-8">
+    <section className="bg-teal-900 p-4 sm:p-6 md:p-8">
         <div className="">
-        <h2 className="text-white text-center font-sans font-semibold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6">
+        <h2 className="text-white text-center font-sans font-semibold text-xl sm:text-xl md:text-2xl my-4 sm:mb-6">
           Ayurvedic for Wellness
         </h2>
         </div>

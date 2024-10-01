@@ -56,9 +56,9 @@ export default function SignInForm({ onLogin, onClose }: SignInFormProps) {
 
     return (
         <form onSubmit={handleSubmit} className="fixed bottom-0 left-0 w-full h-full bg-opacity-20 flex justify-center items-center shadow-lg">
-            <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
+            <div className="bg-white p-8 rounded-lg shadow-lg border-teal-800">
                 <div className="flex flex-row justify-between pb-3">
-                    <p className="text-green-800 text-2xl font-bold">Sign In</p>
+                    <p className="text-teal-800 text-2xl font-bold">Sign In</p>
                     <button type="button" className="text-gray-400 self-auto" onClick={onClose}>
                         <FaRegWindowClose size={30} className="text-gray-400" />
                     </button>
@@ -70,17 +70,17 @@ export default function SignInForm({ onLogin, onClose }: SignInFormProps) {
                         onChange={(e) => setEmailInput(e.target.value)}
                         type="email"
                         placeholder="Email"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                     />
                     <input
                         value={passwordInput}
                         onChange={(e) => setPasswordInput(e.target.value)}
                         type="password"
                         placeholder="Password"
-                        className="text-black border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                        className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                     />
                     
-                    <button type="submit" className="text-white rounded-md bg-green-800 px-3 py-2 mb-4 w-96">
+                    <button type="submit" className="text-white rounded-md bg-teal-800 px-3 py-2 mb-4 w-96">
                         Sign In
                     </button>
 
@@ -89,7 +89,7 @@ export default function SignInForm({ onLogin, onClose }: SignInFormProps) {
                         <button 
                             type="button"
                             onClick={switchToSignUp} 
-                            className="text-green-800 font-semibold no-underline hover:underline"
+                            className="text-teal-800 font-semibold no-underline hover:underline"
                         >
                             Sign Up
                         </button>

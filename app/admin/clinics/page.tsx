@@ -24,7 +24,7 @@ if (!clinics) {
         <div className="grid basis-1/4">
           <Link
             href="/admin/addNewClinic"
-            className="justify-self-end py-2 px-3 font-medium bg-green-800 no-underline rounded shadow-sm text-white hover:bg-green-900"
+            className="justify-self-end py-2 px-3 font-medium bg-teal-800 no-underline rounded shadow-sm text-white hover:bg-teal-900"
           >
             Add New Clinic
           </Link>

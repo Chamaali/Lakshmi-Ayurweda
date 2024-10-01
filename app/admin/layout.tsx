@@ -6,7 +6,7 @@ import AdminNav from "./adminNavigationBar/AdminNav";
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-green-100">
+    <div className="bg-teal-100">
       <AdminNav />
       {children}
     </div>

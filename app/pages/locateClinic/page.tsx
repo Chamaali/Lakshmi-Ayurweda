@@ -106,7 +106,7 @@ const DropdownSelect: React.FC = () => {
               placeholder="Filter by District"
               value={filter}
               onChange={handleFilterChange}
-              className="border border-green-800 rounded-md px-3 w-screen"
+              className="border border-teal-800 rounded-md px-3 w-screen"
             />
           </div>
         </div>
@@ -120,17 +120,17 @@ const DropdownSelect: React.FC = () => {
                 <Image src={clinic.image} alt={clinic.name} className="rounded-t-xl" width={500} height={300} />
               </div>
               <div className="px-3 pb-3">
-                <p className="text-green-700 text-2xl font-bold pt-2 ">
+                <p className="text-teal-700 text-2xl font-bold pt-2 ">
                   {clinic.name}
                 </p>
-                <p className="text-green-700 text-base pb-3">{clinic.address}</p>
-                <p className="text-green-700 text-base pb-3">{clinic.district}</p>
-                <p className="text-green-700 text-lg font-medium">{clinic.doctor}</p>
-                <p className="text-green-700 text-base">Call: {clinic.phone}</p>
-                <p className="text-green-700 text-base">Email: {clinic.email}</p>
+                <p className="text-teal-700 text-base pb-3">{clinic.address}</p>
+                <p className="text-teal-700 text-base pb-3">{clinic.district}</p>
+                <p className="text-teal-700 text-lg font-medium">{clinic.doctor}</p>
+                <p className="text-teal-700 text-base">Call: {clinic.phone}</p>
+                <p className="text-teal-700 text-base">Email: {clinic.email}</p>
                 <div className="flex flex-row gap-1">
-                  <CalendarDaysIcon className="text-green-800 w-6 " />
-                  <span className="text-green-700 text-sm py-2">
+                  <CalendarDaysIcon className="text-teal-800 w-6 " />
+                  <span className="text-teal-700 text-sm py-2">
                     {clinic.openDays}
                   </span>
                 </div>
@@ -138,7 +138,7 @@ const DropdownSelect: React.FC = () => {
                   <div className="align-middle py-2 ">
                     <a href={clinic.location}>
                       <div className="">
-                        <MapPin className="text-green-800 " />
+                        <MapPin className="text-teal-800 " />
                       </div>
                     </a>
                   </div>
@@ -146,14 +146,14 @@ const DropdownSelect: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => togglePopup(clinic)}
-                      className="rounded-xl py-2 px-3 text-white font-bold bg-green-700 hover:bg-green-800"
+                      className="rounded-xl py-2 px-3 text-white font-bold bg-teal-700 hover:bg-teal-800"
                     >
                       Book Now
                     </button>
                     {isOpen && selectedClinic?.id === clinic.id && (
                       <div className="fixed bottom-0 left-0 w-full h-full bg-opacity-20 flex justify-center items-center shadow-lg">
-                        <div className="bg-white p-8 rounded-lg shadow-lg border-green-800">
-                          <p className="text-green-700 text-2xl font-bold pb-2 ">
+                        <div className="bg-white p-8 rounded-lg shadow-lg border-teal-800">
+                          <p className="text-teal-700 text-2xl font-bold pb-2 ">
                             Book Appointment for {clinic.name}
                           </p>
                           <form
@@ -165,35 +165,35 @@ const DropdownSelect: React.FC = () => {
                               value={patientName}
                               type="text"
                               placeholder="Name"
-                              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                              className="border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                             />
                             <input
                               onChange={(e) => setPatientAddress(e.target.value)}
                               value={patientAddress}
                               type="text"
                               placeholder="Address"
-                              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                              className="border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                             />
                             <input
                               onChange={(e) => setPatientAge(e.target.value)}
                               value={patientAge}
                               type="number"
                               placeholder="Age"
-                              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                              className="border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                             />
                             <input
                               onChange={(e) => setPatientPhone(e.target.value)}
                               value={patientPhone}
                               type="text"
                               placeholder="Phone"
-                              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                              className="border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                             />
                             <input
                               onChange={(e) => setPatientEmail(e.target.value)}
                               value={patientEmail}
                               type="email"
                               placeholder="Email"
-                              className="border-2 rounded-md border-green-800 px-3 py-2 mb-4 w-96"
+                              className="border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                             />
                             <div className="flex flex-row place-content-around">
                               <button
@@ -205,7 +205,7 @@ const DropdownSelect: React.FC = () => {
                               </button>
                               <button
                                 type="submit"
-                                className="rounded-xl py-2 px-3 text-white font-bold bg-green-700 hover:bg-green-800"
+                                className="rounded-xl py-2 px-3 text-white font-bold bg-teal-700 hover:bg-teal-800"
                               >
                                 Submit
                               </button>

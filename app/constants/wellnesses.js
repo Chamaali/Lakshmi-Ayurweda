@@ -1,9 +1,9 @@
 // items.js
 const wellnesses = [
-    { image: 'https://via.placeholder.com/300x150', title: 'Card 1' },
-    { image: 'https://via.placeholder.com/300x150', title: 'Card 2' },
-    { image: 'https://via.placeholder.com/300x150', title: 'Card 3' },
-    { image: 'https://via.placeholder.com/300x150', title: 'Card 4' },
+    { image: require("/public/images/1_Facial.jpg"), title: 'Facial Care' },
+    { image: require("/public/images/2_Hair.jpg"), title: 'Hair Care' },
+    { image: require("/public/images/3_Body.jpg"), title: 'Body Massage' },
+    { image: require("/public/images/4_FootMassage.jpg"), title: 'Foot Massage' },
   ];
   
   export default wellnesses

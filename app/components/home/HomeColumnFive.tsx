@@ -23,7 +23,7 @@
 //   }, []);
 
 //   return (
-//     <div className="bg-green-900 p-8">
+//     <div className="bg-teal-900 p-8">
 //       <div className="">
 //         <p className="text-white text-center font-sans font-semibold text-xl">
 //           Ayurvedic for Wellness
@@ -68,7 +68,7 @@ export const HomeColumnFive = async () => {
   }
 
   return (
-    <section className="bg-green-900 p-4 sm:p-6 md:p-8">
+    <section className="bg-teal-900 p-4 sm:p-6 md:p-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-white text-center font-sans font-semibold text-xl sm:text-2xl md:text-3xl mb-4 sm:mb-6">
           Ayurvedic for Wellness

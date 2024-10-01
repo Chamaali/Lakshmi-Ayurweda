@@ -105,7 +105,7 @@ export default function Page() {
       
       
       <div>
-        <button className=' my-4 bg-green-800 text-white py-2 px-3 rounded'  type="submit">Submit</button>
+        <button className=' my-4 bg-teal-800 text-white py-2 px-3 rounded'  type="submit">Submit</button>
       </div>
     </form>
   );

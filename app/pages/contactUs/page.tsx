@@ -184,7 +184,7 @@ export default function page() {
                 </Form.Group>
 
                 <div className='p-5 text-end'>
-                <button type='button' className="rounded-xl py-2 px-3 text-white font-bold bg-green-700 hover:bg-green-800" >Submit</button>
+                <button type='button' className="rounded-xl py-2 px-3 text-white font-bold bg-teal-700 hover:bg-teal-800" >Submit</button>
 
                 </div>
                 </Form>

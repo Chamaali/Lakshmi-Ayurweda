@@ -117,9 +117,9 @@ export default function page() {
                     <div className='p-5 basis-1/3 bg-white rounded-lg shadow-lg'>
                         <h3>Steps</h3>
                         <ol>
-                            <li className='my-4'><div className='bg-green-200 p-2 rounded shadow-sm'>1.Find Your Nearest Clinic</div></li>
-                            <li className='my-4'><div className='bg-green-200 p-2 rounded shadow-sm'>2.Book your Appointment</div></li>
-                            <li className='my-4'><div className='bg-green-200 p-2 rounded shadow-sm'>3.You will recieve a call</div></li>
+                            <li className='my-4'><div className='bg-teal-200 p-2 rounded shadow-sm'>1.Find Your Nearest Clinic</div></li>
+                            <li className='my-4'><div className='bg-teal-200 p-2 rounded shadow-sm'>2.Book your Appointment</div></li>
+                            <li className='my-4'><div className='bg-teal-200 p-2 rounded shadow-sm'>3.You will recieve a call</div></li>
                         </ol>
                     </div>
                     
@@ -133,7 +133,7 @@ export default function page() {
                     <h3 className='p-3'>Find Your Nearest Clinic</h3>
                     <div className='p-1'>
                         
-                        <div className="bg-green-700 p-3 flex flex-row">
+                        <div className="bg-teal-700 p-3 flex flex-row">
                             
                             <Form.Group className="w-10/12" controlId="formGridAddress2">
                                 <Form.Select aria-label="Default select example">

@@ -14,7 +14,7 @@ const HomePage= () => {
         <HomeColumnTwo />
         <HomeColumnThree />
         <HomeColumnFour />
-        <HomeColumnFive />
+        {/* <HomeColumnFive /> */}
        
         {/* <HomeColumnSeven />     */}
     </div>

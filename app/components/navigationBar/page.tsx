@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 import SignUpForm from "../SignUpForm";
 import { getUserRole } from "@/app/serverComponents/users/getUserRole";
 
-
 const services = [
   {
     id: 1,
@@ -26,11 +25,11 @@ const services = [
     name: "Clinic Consultation",
     href: "/services/clinicConsultation",
   },
-  {
-    id: 4,
-    name: "Buy Online Products",
-    href: "/services/buyOnlineProducts",
-  },
+//   {
+//     id: 4,
+//     name: "Buy Online Products",
+//     href: "/services/buyOnlineProducts",
+//   },
   {
     id: 5,
     name: "Ayurweda for Wellness",
@@ -58,38 +57,7 @@ const services = [
   },
 ];
 
-const hs = [
-  {
-    id: "Back Pain",
-    name: "facebook",
-    href: "facebook.com/",
-  },
-  {
-    id: "Back Pain",
-    name: "instagram",
-    href: "instagram.com/",
-  },
-  {
-    id: "Back Pain",
-    name: "linkedin",
-    href: "linkedin.com",
-  },
-];
 
-const data = [
-  {
-    name: "A",
-    subItems: ["1", "2", "3"],
-  },
-  {
-    name: "B",
-    subItems: ["20", "30"],
-  },
-  {
-    name: "C",
-    subItems: ["900", "800"],
-  },
-];
 
 export default function Page() {
   const pathname = usePathname();
@@ -98,10 +66,6 @@ export default function Page() {
   const [userRole, setUserRole] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [userEmail, setUserEmail] = useState(null);
-
-  
-
-
 
   useEffect(() => {
     async function fetchUserRole() {
@@ -131,8 +95,6 @@ export default function Page() {
     setUserEmail(email);
   };
 
-  //   g-gradient-to-b from-yellow-300 to-yellow-900 bg-clip-text text-transparent
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [isSubMenuTwoOpen, setIsSubMenuTwoOpen] = useState(false);
@@ -142,7 +104,6 @@ export default function Page() {
   const [isSubMenuSixOpen, setIsSubMenuSixOpen] = useState(false);
   const [isSubMenuSevenOpen, setIsSubMenuSevenOpen] = useState(false);
   const [isSubMenuEightOpen, setIsSubMenuEightOpen] = useState(false);
-
 
   const dropdownRef = useRef(null);
 
@@ -158,7 +119,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubmenu = (e:any) => {
+  const toggleSubmenu = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(!isSubmenuOpen);
     setIsSubMenuTwoOpen(false);
@@ -170,7 +131,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuTwo = (e:any) => {
+  const toggleSubMenuTwo = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(!isSubMenuTwoOpen);
@@ -182,7 +143,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuThree = (e:any) => {
+  const toggleSubMenuThree = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -194,7 +155,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuFour = (e:any) => {
+  const toggleSubMenuFour = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -206,7 +167,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuFive = (e:any) => {
+  const toggleSubMenuFive = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -218,7 +179,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuSix = (e:any) => {
+  const toggleSubMenuSix = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -230,7 +191,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuSeven = (e:any) => {
+  const toggleSubMenuSeven = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -242,7 +203,7 @@ export default function Page() {
     setIsSubMenuEightOpen(false);
   };
 
-  const toggleSubMenuEight = (e:any) => {
+  const toggleSubMenuEight = (e: any) => {
     e.stopPropagation();
     setIsSubmenuOpen(false);
     setIsSubMenuTwoOpen(false);
@@ -254,10 +215,7 @@ export default function Page() {
     setIsSubMenuEightOpen(!isSubMenuEightOpen);
   };
 
-
-
-
-  const handleClickOutside = (event:any) => {
+  const handleClickOutside = (event: any) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsDropdownOpen(false);
       setIsSubmenuOpen(false);
@@ -273,7 +231,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="text-white sticky top-0 right-0 left-0 bg-green-900  py-2 px-5 z-10">
+    <div className="text-white sticky top-0 right-0 left-0 bg-teal-900  py-2 px-5 z-10">
       <nav className="flex items-center justify-between py-4 ">
         <div className="pl-3">
           <Link href="/">
@@ -285,25 +243,6 @@ export default function Page() {
           </Link>
         </div>
         <div className="hidden md:flex items-center space-x-4">
-          {/* <div className="relative group">
-  <button className="font-semibold font-sans bold text-base px-4 py-2">Diseases</button>
-  <ul className="absolute hidden group-hover:block p-3 bg-white bg-opacity-30 text-green-700 rounded shadow-lg w-60">
-    {diseases.map((diseases) => (
-      <li key={diseases.id}>
-        <button className="font-semibold font-sans bold text-base px-4 py-2">{diseases.name}</button>
-        <ul className=" bg-white bg-opacity-30 text-green-700 rounded shadow-lg w-60">
-            {hs.map((h:any) => (
-               <li key={diseases.name}>
-                <a href={h.href}>{h.name}</a>
-               </li> 
-            ))}
-        </ul>
-        <hr />
-      </li>
-    ))}
-  </ul>
-</div> */}
-
           <div className="flex justify-center">
             <div className="relative inline-block text-left" ref={dropdownRef}>
               <div>
@@ -330,7 +269,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubmenu}
@@ -342,7 +281,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="./../../diseases/ChestPain"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -350,16 +289,16 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/Cholesterol"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
                               Cholesterol
                             </a>
-                            
+
                             <a
                               href="./../../diseases/Hypertension"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -367,7 +306,7 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/Palpitation"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -375,7 +314,7 @@ export default function Page() {
                             </a>
                             <a
                               href="./../../diseases/ShortnessOfBreath"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -383,7 +322,7 @@ export default function Page() {
                             </a>
                             <a
                               href="Swelling"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -394,12 +333,10 @@ export default function Page() {
                       )}
                     </div>
 
-
-
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuTwo}
@@ -411,7 +348,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -419,7 +356,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -427,7 +364,15 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              role="menuitem"
+                              id="submenu-item-4"
+                            >
+                              Frequent Infection
+                            </a>
+                            <a
+                              href="#"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -435,7 +380,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -443,7 +388,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -451,7 +396,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -459,7 +404,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -467,7 +412,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -475,7 +420,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -489,7 +434,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuThree}
@@ -501,7 +446,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -509,7 +454,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -517,7 +462,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -525,7 +470,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -539,7 +484,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuFour}
@@ -551,7 +496,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -559,7 +504,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -567,7 +512,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -575,7 +520,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -583,7 +528,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -591,7 +536,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -599,13 +544,12 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
                               Stomac Pain
                             </a>
-                            
                           </div>
                         </div>
                       )}
@@ -614,7 +558,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuFive}
@@ -626,7 +570,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -634,7 +578,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -642,7 +586,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -650,7 +594,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -658,7 +602,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -672,7 +616,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuSix}
@@ -684,7 +628,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -692,7 +636,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -700,12 +644,12 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
                               Stress
-                            </a> 
+                            </a>
                           </div>
                         </div>
                       )}
@@ -714,7 +658,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuSeven}
@@ -726,7 +670,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -734,7 +678,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -742,7 +686,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -750,7 +694,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -758,7 +702,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -766,7 +710,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -780,7 +724,7 @@ export default function Page() {
                     <div className="relative">
                       <a
                         href="#"
-                        className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                        className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                         role="menuitem"
                         id="menu-item-2"
                         onClick={toggleSubMenuEight}
@@ -792,7 +736,7 @@ export default function Page() {
                           <div className="py-1" role="none">
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
                             >
@@ -800,7 +744,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"
                             >
@@ -808,7 +752,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-4"
                             >
@@ -816,7 +760,7 @@ export default function Page() {
                             </a>
                             <a
                               href="#"
-                              className="text-green-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
+                              className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-5"
                             >
@@ -826,9 +770,6 @@ export default function Page() {
                         </div>
                       )}
                     </div>
-
-
-
                   </div>
                 </div>
               )}
@@ -850,11 +791,11 @@ export default function Page() {
             <div className="font-semibold font-sans text-base px-4 py-2">
               Our Services &raquo;
             </div>
-            <ul className="absolute hidden group-hover:block  bg-white bg-opacity-30 w-max text-green-700 rounded shadow-lg ">
+            <ul className="absolute hidden group-hover:block  bg-white bg-opacity-30 w-max text-teal-700 rounded shadow-lg ">
               {services.map((service) => (
                 <li key={service.id} className="py-2">
                   <a
-                    className="text-green-700 no-underline px-2  my-1 hover:bg-gray-200"
+                    className="text-teal-700 no-underline px-2  my-1 hover:bg-gray-200"
                     href={service.href}
                   >
                     {service.name}
@@ -877,7 +818,7 @@ export default function Page() {
         <div className="flex items-center  gap-x-9">
           <Link
             href="/bookAppointment"
-            className="py-2 px-3  bg-slate-100 text-green-700 font-bold rounded shadow hover:bg-slate-200"
+            className="py-2 px-3  bg-slate-100 text-teal-700 font-bold rounded shadow hover:bg-slate-200"
           >
             <button>Book Appointment</button>
           </Link>
@@ -934,70 +875,7 @@ export default function Page() {
           </button>
         </div>
       </nav>
-      {menuOpen && (
-        <div className="md:hidden bg-green-900 text-white space-y-4 py-4">
-          <div className="relative group">
-            <button className="block w-full text-left px-4 py-2">
-              Diseases
-            </button>
-            <div className="absolute bg-white text-green-700 rounded shadow-lg">
-              {diseases.map((disease:any) => (
-                <Link legacyBehavior key={disease.id} href={disease.href}>
-                  <a
-                    className={`${
-                      pathname === "{disease.href}"
-                        ? "text-blue-500"
-                        : "text-black"
-                    } font-bold no-underline`}
-                  >
-                    {disease.name}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <Link legacyBehavior href="/whyLakshmiAyurweda">
-            <a
-              className={`${
-                pathname === "/whyLakshmiAyurweda"
-                  ? "text-blue-500"
-                  : "text-black"
-              } font-bold no-underline`}
-            >
-              Why Lakshmi Ayurweda
-            </a>
-          </Link>
-          <div className="relative group">
-            <button className="block w-full text-left px-4 py-2">
-              Our Services
-            </button>
-            <div className="absolute bg-white text-green-700 rounded shadow-lg">
-              {services.map((service) => (
-                <Link legacyBehavior key={service.id} href={service.href}>
-                  <a
-                    className={`${
-                      pathname === "{service.href}"
-                        ? "text-blue-500"
-                        : "text-black"
-                    } font-bold no-underline`}
-                  >
-                    {service.name}
-                  </a>
-                </Link>
-              ))}
-            </div>
-          </div>
-          <Link legacyBehavior href="/contactUs">
-            <a
-              className={`${
-                pathname === "/contactUs" ? "text-blue-500" : "text-black"
-              } font-bold no-underline`}
-            >
-              Contact Us
-            </a>
-          </Link>
-        </div>
-      )}
+
     </div>
   );
 }

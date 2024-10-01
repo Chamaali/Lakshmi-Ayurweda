@@ -20,9 +20,9 @@ export default function page() {
                 </div>
             </div>
         </Container>
-        <div className="bg-green-200 py-8">
+        <div className="bg-teal-200 py-8">
             <Container>
-            <p className='text-green-700 text-lg font-serif text-center pb-2 pt-4'>Blood Circulatory System</p>
+            <p className='text-teal-700 text-lg font-serif text-center pb-2 pt-4'>Blood Circulatory System</p>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt animi provident, modi, laudantium incidunt aut nobis voluptate nisi autem dignissimos quae dolor reiciendis iste eum asperiores suscipit dolorum magni blanditiis.</p>
             </Container>
