@@ -14,13 +14,13 @@ const AdminNav = () => {
       href: "/admin/products",
     },
     {
-      title: "Clinics",
+      title: "Clinics & Doctors",
       href: "/admin/clinics",
     },
-    {
-      title: "Doctors",
-      href: "/admin/doctors",
-    },
+    // {
+    //   title: "Doctors",
+    //   href: "/admin/doctors",
+    // },
     {
         title: "Bookings",
         href: "/admin/bookings",

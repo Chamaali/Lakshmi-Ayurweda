@@ -18,31 +18,31 @@ const DiseaseNavigationBar = () => {
       href: "./../../../admin/diseases/chestPain",
     },
     {
-      title: "Clinics",
+      title: "Cholestrol",
       href: "/admin/clinics",
     },
     {
-      title: "Doctors",
+      title: "Diabetic",
       href: "/admin/doctors",
     },
     {
-        title: "Bookings",
+        title: "Hypertension",
         href: "/admin/bookings",
       },
       {
-        title: "Diseases",
+        title: "Palpitation",
         href: "/admin/diseases",
       },
       {
-        title: "Doctors",
+        title: "Shortness of Breath",
         href: "/admin/doctors",
       },
       {
-          title: "Bookings",
+          title: "Swelling in leg or anckles",
           href: "/admin/bookings",
         },
         {
-          title: "Diseases",
+          title: "Cerebral plasy",
           href: "/admin/diseases",
         },
 
