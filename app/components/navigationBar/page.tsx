@@ -8,6 +8,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import SignUpForm from "../SignUpForm";
 import { getUserRole } from "@/app/serverComponents/users/getUserRole";
+import BookAppointmentModal from "../BookAppointmentModal";
+
 
 const services = [
   {
@@ -104,7 +106,15 @@ export default function Page() {
   const [isSubMenuSixOpen, setIsSubMenuSixOpen] = useState(false);
   const [isSubMenuSevenOpen, setIsSubMenuSevenOpen] = useState(false);
   const [isSubMenuEightOpen, setIsSubMenuEightOpen] = useState(false);
+  const [showBookAppointmentModal, setShowBookAppointmentModal] = useState(false);
 
+  const openBookAppointmentModal = () => {
+    setShowBookAppointmentModal(true);
+  };
+
+  const closeBookAppointmentModal = () => {
+    setShowBookAppointmentModal(false);
+  };
   const dropdownRef = useRef(null);
 
   const toggleDropdown = () => {
@@ -816,12 +826,17 @@ export default function Page() {
           </Link>
         </div>
         <div className="flex items-center  gap-x-9">
-          <Link
-            href="/bookAppointment"
-            className="py-2 px-3  bg-slate-100 text-teal-700 font-bold rounded shadow hover:bg-slate-200"
-          >
-            <button>Book Appointment</button>
-          </Link>
+        <button
+        onClick={openBookAppointmentModal}
+        className="py-2 px-3 bg-slate-100 text-teal-700 font-bold rounded shadow hover:bg-slate-200"
+      >
+        Book Appointment
+      </button>
+
+      {/* Modal for the popup form */}
+      {showBookAppointmentModal && (
+        <BookAppointmentModal closeBookAppointmentModal={closeBookAppointmentModal} />
+      )}
 
           {!userRole && (
             <button type="button" onClick={togglePopup}>

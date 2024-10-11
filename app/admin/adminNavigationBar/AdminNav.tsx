@@ -22,8 +22,8 @@ const AdminNav = () => {
     //   href: "/admin/doctors",
     // },
     {
-        title: "Bookings",
-        href: "/admin/bookings",
+        title: "Appointments",
+        href: "/admin/appointments",
       },
       {
         title: "Diseases",
