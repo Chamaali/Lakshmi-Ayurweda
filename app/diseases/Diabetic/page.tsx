@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useState } from 'react';
 import { Container } from "react-bootstrap";
 import ImageContainer from "../diseases_components/ImageContainer";
-import DiseasForm from "../diseases_components/DiseasForm";
+import DiseaseForm from "../diseases_components/DiseaseForm";
 
 const labels: { [key: string]: string } = {
   qh1: "Name",
@@ -44,11 +44,15 @@ export default function page (){
   return(
 
         <Container   className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased" >
-            <ImageContainer topic="Diabetes" first_image="/images/Diabetes_1.png" second_image="/images/Diabetes_2.png"/>
+            <ImageContainer
+        topic="Cholesterol"
+        first_image="/images/ChestPain_1.png"
+        second_image="/images/ChestPain_2.png"
+      />
             {/*Introduction*/}
             
             <p className="pb-3 font-bold">
-              In Ayurveda, diabetes (referred to as "Madhumeha") is understood to be caused by a combination of dietary, lifestyle, genetic, and environmental factors, which lead to an imbalance in the body's doshas (Vata, Pitta, and Kapha) and the accumulation of toxins (Ama). Here are the detailed causes from the Ayurvedic perspective:
+              In Ayurveda, diabetes (referred to as &quot;Madhumeha&quot;) is understood to be caused by a combination of dietary, lifestyle, genetic, and environmental factors, which lead to an imbalance in the body&apos;s doshas (Vata, Pitta, and Kapha) and the accumulation of toxins (Ama). Here are the detailed causes from the Ayurvedic perspective:
             </p>
 
             {/* Dietary Causes */}
@@ -122,7 +126,7 @@ export default function page (){
             </p>
 
             {/*form */}
-            <DiseasForm  initialFormData={initialFormData} labels={labels}/>             
+            <DiseaseForm  initialFormData={initialFormData} labels={labels} disease="diabetics"/>             
         </Container>
     )
 

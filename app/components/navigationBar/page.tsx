@@ -115,7 +115,7 @@ export default function Page() {
   const closeBookAppointmentModal = () => {
     setShowBookAppointmentModal(false);
   };
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -226,7 +226,7 @@ export default function Page() {
   };
 
   const handleClickOutside = (event: any) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
       setIsDropdownOpen(false);
       setIsSubmenuOpen(false);
       setIsSubMenuTwoOpen(false);
@@ -290,7 +290,7 @@ export default function Page() {
                         <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
-                              href="./../../diseases/ChestPain"
+                              href="./../../diseases/Chestpain"
                               className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
@@ -314,7 +314,7 @@ export default function Page() {
                             >
                               Hypertension
                             </a>
-                            <a
+                            {/* <a
                               href="./../../diseases/Palpitation"
                               className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
@@ -337,7 +337,7 @@ export default function Page() {
                               id="submenu-item-5"
                             >
                               Swelling in leg or Anckles
-                            </a>
+                            </a> */}
                           </div>
                         </div>
                       )}
@@ -455,7 +455,7 @@ export default function Page() {
                         <div className="origin-top-left absolute left-full top-0 mt-0 w-max rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <div className="py-1" role="none">
                             <a
-                              href="#"
+                              href="./../../diseases/Cholesterol"
                               className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-1"
@@ -463,7 +463,7 @@ export default function Page() {
                               Cholesterol
                             </a>
                             <a
-                              href="#"
+                              href="./../../diseases/Diabetic"
                               className="text-teal-700 no-underline  block px-4 py-2 text-base hover:bg-gray-200"
                               role="menuitem"
                               id="submenu-item-2"

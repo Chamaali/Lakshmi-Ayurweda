@@ -1,40 +1,29 @@
 import connectMongoDB from "@/libs/mongodb";
-import Cholesterol from "@/models/cholesterol";
+import Cholesterol from "./../../../models/cholesterol"; 
 import { NextResponse } from "next/server";
 
-//post cholesterol
+//post cholesterols
 export async function POST(request) {
-    const { 
-        qc1, qc2, qc3, qc4, qc5, qc6, qc7, qc8, qc9, qc10, 
-        qc11, qc12, qc13, qc14, qc15, qc16, qc17, qc18, qc19, qc20, 
-        qc21, qc22, qc23, qc24, qc25, qc26, qc27, qc28, qc29, qc30, qc31 
-      } = await request.json();
-
-
+    const {qh1, qh2, qh3, qh4, qh5, qh6, qh7, qh8, qh9, qh10, qh11, qh12, qh13, qh14, qh15, qh16, qh17, qh18, qh19, qh20, qh21}=await request.json();
     try {
-      await connectMongoDB();
-      await Cholesterol.create({ 
-        qc1, qc2, qc3, qc4, qc5, qc6, qc7, qc8, qc9, qc10, 
-        qc11, qc12, qc13, qc14, qc15, qc16, qc17, qc18, qc19, qc20, 
-        qc21, qc22, qc23, qc24, qc25, qc26, qc27, qc28, qc29, qc30, qc31 
-      });
-
-      return NextResponse.json(
-        { message: "Cholesterol was created successfully" },
-        { status: 201 }
-      );
+        await connectMongoDB();
+        await Cholesterol.create({qh1, qh2, qh3, qh4, qh5, qh6, qh7, qh8, qh9, qh10, qh11, qh12, qh13, qh14, qh15, qh16, qh17, qh18, qh19, qh20, qh21});
+        return NextResponse.json(
+            { message: "Cholesterol was created successfully" },
+            { status: 201 }
+          );
     } catch (error) {
-      return NextResponse.json({ error, message: "Something went wrong" });
-    }
-  }
+        return NextResponse.json({ error, message: "Something went wrong" });
+      }
+}
 
-  //get all cholesterol
-  export async function GET(request) {
-    try {
-      await connectMongoDB();
-      const cholesterol = await Cholesterol.find();
-      return NextResponse.json({ cholesterol });
-    } catch (error) {
-      return NextResponse.json({ message: "Cholesterol was not found" });
-    }
+//  get all cholesterols
+export async function GET(request){
+  try{
+    await connectMongoDB();
+    const cholesterols= await Cholesterol.find();
+    return NextResponse.json({cholesterols});
+  }catch (error) {
+    return NextResponse.json({message : "Cholesterol was not found"});
   }
+}

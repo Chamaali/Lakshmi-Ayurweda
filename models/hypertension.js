@@ -23,6 +23,7 @@ const hypertensionSchema=new Schema(
         qh18: String,
         qh19: String,
         qh20: String,
+        
     },
 
     {

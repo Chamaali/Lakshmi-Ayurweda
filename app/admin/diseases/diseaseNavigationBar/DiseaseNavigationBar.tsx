@@ -15,36 +15,36 @@ const DiseaseNavigationBar = () => {
       },
     {
       title: "Chest Pain",
-      href: "./../../../admin/diseases/chestPain",
+      href: "./../../../admin/diseases/chestpain",
     },
     {
       title: "Cholestrol",
-      href: "/admin/clinics",
+      href: "./../../../admin/diseases/cholesterol",
     },
     {
       title: "Diabetic",
-      href: "/admin/doctors",
+      href: "./../../../admin/diseases/diabetic",
     },
     {
         title: "Hypertension",
-        href: "/admin/bookings",
+        href: "./../../../admin/diseases/hypertension",
       },
-      {
-        title: "Palpitation",
-        href: "/admin/diseases",
-      },
-      {
-        title: "Shortness of Breath",
-        href: "/admin/doctors",
-      },
-      {
-          title: "Swelling in leg or anckles",
-          href: "/admin/bookings",
-        },
-        {
-          title: "Cerebral plasy",
-          href: "/admin/diseases",
-        },
+    //   {
+    //     title: "Palpitation",
+    //     href: "./../../../admin/diseases/palpitation",
+    //   },
+    //   {
+    //     title: "Shortness of Breath",
+    //     href: "./../../../admin/diseases/shortnessofbreath",
+    //   },
+    //   {
+    //       title: "Swelling in leg or anckles",
+    //       href: "./../../../admin/diseases/swelling",
+    //     },
+    //     {
+    //       title: "Cerebral plasy",
+    //       href: "./../../../admin/diseases/cerebralplasy",
+    //     },
 
   ];
 

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
-import DiseasForm from "../diseases_components/DiseasForm";
+import DiseaseForm from "../diseases_components/DiseaseForm";
 
 const labels: { [key: string]: string } = {
   qh1: "Name",
@@ -39,7 +39,7 @@ const initialFormData: DiseaseFormData = {
   qh21: '', qh22: '', qh23: '', qh24: ''
 };
 
-export default function Page() {
+export default function page() {
 
   return (
     <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased">
@@ -141,10 +141,9 @@ export default function Page() {
       </ol>
       <p>It&apos;s important to note that while Ayurvedic approaches can be beneficial for managing mild to moderate chest pain associated with digestive disturbances or stress, individuals experiencing severe or persistent chest pain should seek immediate medical attention to rule out serious medical conditions such as heart disease or other cardiac issues. Ayurvedic treatments can complement conventional medical care as part of a comprehensive approach to chest pain management.</p>
 
-      <div className="max-w-4xl mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Chest Pain Assessment Form</h1>
-        <DiseasForm initialFormData={initialFormData} labels={labels}/>
-      </div>
+
+        <DiseaseForm initialFormData={initialFormData} labels={labels} disease="chestpains"/>
+
     </Container>
   );
 }

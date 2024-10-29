@@ -2,8 +2,6 @@ import connectMongoDB from "@/libs/mongodb";
 import Hypertension from "@/models/hypertension";
 import { NextResponse } from "next/server";
 
-
-
 //post hypertensions
 
 export async function POST(request) {
@@ -21,7 +19,6 @@ export async function POST(request) {
       }
 
 }
-
 
 //  get all hypertensions
 

@@ -4,11 +4,11 @@ import { NextResponse } from "next/server";
 
 //post chestpains
 export async function POST(request) {
-    const { q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24 } = await request.json();
+    const { qh1, qh2, qh3, qh4, qh5, qh6, qh7, qh8, qh9, qh10, qh11, qh12, qh13, qh14, qh15, qh16, qh17, qh18, qh19, qh20, qh21, qh22, qh23, qh24 } = await request.json();
   
     try {
       await connectMongoDB();
-      await Chestpain.create({ q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24 });
+      await Chestpain.create({  qh1, qh2, qh3, qh4, qh5, qh6, qh7, qh8, qh9, qh10, qh11, qh12, qh13, qh14, qh15, qh16, qh17, qh18, qh19, qh20, qh21, qh22, qh23, qh24 });
       return NextResponse.json(
         { message: "Chestpain was created successfully" },
         { status: 201 }

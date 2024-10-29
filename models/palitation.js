@@ -2,34 +2,33 @@ import mongoose, { Schema } from "mongoose";
 
 const palitationSchema = new Schema(
   {
-    qp1: String,
-    qp2: String,
-    qp3: String,
-    qp4: String,
-    qp5: String,
-    qp6: String,
-    qp7: String,
-    qp8: String,
-    qp9: String,
-    qp10: String,
-    qp11: String,
-    qp12: String,
-    qp13: String,
-    qp14: String,
-    qp15: String,
-    qp16: String,
-    qp17: String,
-    qp18: String,
-    qp19: String,
-    qp20: String,
+    qh1: String,
+    qh2: String,
+    qh3: String,
+    qh4: String,
+    qh5: String,
+    qh6: String,
+    qh7: String,
+    qh8: String,
+    qh9: String,
+    qh10: String,
+    qh11: String,
+    qh12: String,
+    qh13: String,
+    qh14: String,
+    qh15: String,
+    qh16: String,
+    qh17: String,
+    qh18: String,
+    qh19: String,
+    qh20: String,
   },
   {
     timestamps: true,
   }
 );
 
-const Palitation =
-  mongoose.models.Palitation || mongoose.model("Palitation", palitationSchema);
+const Palitation = mongoose.models.Palitation || mongoose.model("Palitation", palitationSchema);
 
 export default Palitation;
 

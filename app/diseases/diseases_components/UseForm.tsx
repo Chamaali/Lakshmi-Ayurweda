@@ -1,21 +1,21 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react'
+import React, { ChangeEvent, FormEvent, useState } from 'react';
 
-export function UseForm<T> (initialState: T) {
-    const [formData, setFormData] = useState<T>(initialState)
+export function UseForm<T> (initialState: T, disease: string) { // Added `disease` parameter
+    const [formData, setFormData] = useState<T>(initialState);
 
-    const handleChange=(e:ChangeEvent<HTMLInputElement>)=>{
-        const {name, value} = e.target
-        setFormData(prev=>({
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
             ...prev,
-            [name]: value
-        }))
-    }
+            [name]: value,
+        }));
+    };
 
-    const handleSubmit=async (e:FormEvent)=>{
-        e.preventDefault()
-        console.log(formData)
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        console.log(formData);
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/hypertensions`, {
+            const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/${disease}`, { // Updated URL
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -29,11 +29,10 @@ export function UseForm<T> (initialState: T) {
                 throw new Error("Failed to submit form.");
             }
         } catch (error) {
-            console.error('Error submitting hypertension form', error);
+            console.error(`Error submitting ${disease} form`, error);
             alert(`Error submitting form`);
         }
-    }
+    };
 
-    return {formData, handleChange, handleSubmit}
+    return { formData, handleChange, handleSubmit };
 }
-

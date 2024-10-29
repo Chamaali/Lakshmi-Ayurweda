@@ -2,40 +2,39 @@ import mongoose, { Schema } from "mongoose";
 
 const swellingSchema = new Schema(
   {
-    qsw1: String,
-    qsw2: String,
-    qsw3: String,
-    qsw4: String,
-    qsw5: String,
-    qsw6: String,
-    qsw7: String,
-    qsw8: String,
-    qsw9: String,
-    qsw10: String,
-    qsw11: String,
-    qsw12: String,
-    qsw13: String,
-    qsw14: String,
-    qsw15: String,
-    qsw16: String,
-    qsw17: String,
-    qsw18: String,
-    qsw19: String,
-    qsw20: String,
-    qsw21: String,
-    qsw22: String,
-    qsw23: String,
-    qsw24: String,
-    qsw25: String,
-    qsw26: String,
-    qsw27: String,
+    qh1: String,
+    qh2: String,
+    qh3: String,
+    qh4: String,
+    qh5: String,
+    qh6: String,
+    qh7: String,
+    qh8: String,
+    qh9: String,
+    qh10: String,
+    qh11: String,
+    qh12: String,
+    qh13: String,
+    qh14: String,
+    qh15: String,
+    qh16: String,
+    qh17: String,
+    qh18: String,
+    qh19: String,
+    qh20: String,
+    qh21: String,
+    qh22: String,
+    qh23: String,
+    qh24: String,
+    qh25: String,
+    qh26: String,
+    qh27: String,
   },
   {
     timestamps: true,
   }
 );
 
-const Swelling =
-  mongoose.models.Swelling || mongoose.model("Swelling", swellingSchema);
+const Swelling = mongoose.models.Swelling || mongoose.model("Swelling", swellingSchema);
 
 export default Swelling;
