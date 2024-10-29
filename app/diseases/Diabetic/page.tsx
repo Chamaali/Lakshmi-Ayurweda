@@ -1,6 +1,7 @@
-'use client'
+"use client";
+
 import Image from "next/image";
-import React  from 'react';
+import React  from "react";
 import { Container } from "react-bootstrap";
 import ImageContainer from "../diseases_components/ImageContainer";
 import DiseaseForm from "../diseases_components/DiseaseForm";
@@ -35,8 +36,28 @@ type DiseaseFormData = {
 };
 
 const initialFormData: DiseaseFormData = {
-  qh1: '', qh2: '', qh3: '', qh4: '', qh5: '', qh6: '', qh7: '', qh8: '', qh9: '', qh10: '',
-  qh11: '', qh12: '', qh13: '', qh14: '', qh15: '', qh16: '', qh17: '', qh18: '', qh19: '', qh20: '',qh21: '', qh22: ''
+  qh1: "",
+  qh2: "",
+  qh3: "",
+  qh4: "",
+  qh5: "",
+  qh6: "",
+  qh7: "",
+  qh8: "",
+  qh9: "",
+  qh10: "",
+  qh11: "",
+  qh12: "",
+  qh13: "",
+  qh14: "",
+  qh15: "",
+  qh16: "",
+  qh17: "",
+  qh18: "",
+  qh19: "",
+  qh20: "",
+  qh21: "",
+  qh22: "",
 };
 
 

@@ -1,12 +1,13 @@
-import React from 'react';
-import { UseForm } from './UseForm';
+import { useForm } from "./UseForm";
+
+
 
 type DiseaseFormData = {
     [key: string]: string;
 };
 
 export default function DiseaseForm({ initialFormData, labels, disease }: { initialFormData: DiseaseFormData; labels: DiseaseFormData; disease: string }) { // Added `disease` prop
-    const { formData, handleChange, handleSubmit } = UseForm(initialFormData, disease);
+    const { formData, handleChange, handleSubmit } = useForm(initialFormData, disease);
   
     return (
         <form action="" className="p-4 bg-gray-50 rounded border shadow" onSubmit={handleSubmit}>

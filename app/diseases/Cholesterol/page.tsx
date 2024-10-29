@@ -68,10 +68,7 @@ export default function Page() {
       />
 
       <p className="pb-3 font-bold">
-        Hypercholesterolemia, or high cholesterol, is addressed in Ayurveda by
-        focusing on balancing the body&apos;s doshas, particularly Kapha, and
-        improving the functioning of the digestive system (Agni). Here&apos;s a
-        detailed look at how Ayurveda approaches hypercholesterolemia:
+        Hypercholesterolemia, or high cholesterol, is addressed in Ayurveda by focusing on balancing the body&apos;s doshas, particularly Kapha, and improving the functioning of the digestive system (Agni). Here&apos;s a detailed look at how Ayurveda approaches hypercholesterolemia:
       </p>
       <h5 className="pb-3 font-bold">
         Ayurvedic Perspective on Hypercholesterolemia
@@ -82,15 +79,10 @@ export default function Page() {
         </li>
         <ul>
           <li className="pb-3">
-            <b>Kapha Dosha:</b> High cholesterol is primarily linked to an
-            imbalance in Kapha dosha, which governs the structure, lubrication,
-            and stability in the body. Excess Kapha leads to the accumulation of
-            fatty tissues and blockages in the body&apos;s channels (srotas).
+            <b>Kapha Dosha:</b> High cholesterol is primarily linked to an imbalance in Kapha dosha, which governs the structure, lubrication, and stability in the body. Excess Kapha leads to the accumulation of fatty tissues and blockages in the body&apos;s channels (srotas).
           </li>
           <li className="pb-3">
-            <b>Medas Dhatu: </b>Cholesterol corresponds to Medas dhatu (fat
-            tissue) in Ayurveda. Excessive Medas leads to imbalances and health
-            issues.
+            <b>Medas Dhatu: </b>Cholesterol corresponds to Medas dhatu (fat tissue) in Ayurveda. Excessive Medas leads to imbalances and health issues.
           </li>
         </ul>
 
@@ -99,17 +91,13 @@ export default function Page() {
         </li>
         <ul>
           <li className="pb-3">
-            <b>Diet:</b> Consumption of heavy, oily, sweet, and dense foods that
-            increase Kapha, such as dairy products, fatty meats, and sugary
-            items.
+            <b>Diet:</b> Consumption of heavy, oily, sweet, and dense foods that increase Kapha, such as dairy products, fatty meats, and sugary items.
           </li>
           <li className="pb-3">
-            <b>Lifestyle:</b> Sedentary lifestyle, lack of physical activity,
-            and high-stress levels.
+            <b>Lifestyle:</b> Sedentary lifestyle, lack of physical activity, and high-stress levels.
           </li>
           <li className="pb-3">
-            <b>Digestive Issues:</b> Weak digestive fire (Agni) leading to
-            improper metabolism and accumulation of Ama (toxins).
+            <b>Digestive Issues:</b> Weak digestive fire (Agni) leading to improper metabolism and accumulation of Ama (toxins).
           </li>
         </ul>
 
@@ -136,13 +124,10 @@ export default function Page() {
             digestible foods.
           </li>
           <li className="pb-3">
-            <b>Avoid:</b> Heavy, oily, and greasy foods; dairy products; sweets;
-            red meat; processed foods.
+            <b>Avoid:</b> Heavy, oily, and greasy foods; dairy products; sweets; red meat; processed foods.
           </li>
           <li className="pb-3">
-            <b>Include:</b> Vegetables like leafy greens and cruciferous
-            vegetables, fruits such as apples and pomegranates, grains like
-            barley, legumes, and spices like turmeric, ginger, and black pepper.
+            <b>Include:</b> Vegetables like leafy greens and cruciferous vegetables, fruits such as apples and pomegranates, grains like barley, legumes, and spices like turmeric, ginger, and black pepper.
           </li>
         </ul>
 
@@ -151,18 +136,13 @@ export default function Page() {
         </li>
         <ul>
           <li className="pb-3">
-            <b>Regular Exercise:</b> Engage in physical activities like brisk
-            walking, yoga, and aerobic exercises to balance Kapha and improve
-            circulation.
+            <b>Regular Exercise:</b> Engage in physical activities like brisk walking, yoga, and aerobic exercises to balance Kapha and improve circulation.
           </li>
           <li className="pb-3">
-            <b>Stress Management:</b> Practices like meditation, pranayama
-            (breathing exercises), and ensuring adequate sleep.
+            <b>Stress Management:</b> Practices like meditation, pranayama (breathing exercises), and ensuring adequate sleep.
           </li>
           <li className="pb-3">
-            <b>Daily Routine (Dinacharya):</b> Establish a consistent daily
-            routine including waking up early, tongue scraping, oil pulling, and
-            maintaining regular meal times.
+            <b>Daily Routine (Dinacharya):</b> Establish a consistent daily routine including waking up early, tongue scraping, oil pulling, and maintaining regular meal times.
           </li>
         </ul>
 
@@ -171,16 +151,13 @@ export default function Page() {
         </li>
         <ul>
           <li className="pb-3">
-            <b>Virechana:</b> Therapeutic purgation to eliminate toxins and
-            balance doshas.
+            <b>Virechana:</b> Therapeutic purgation to eliminate toxins and balance doshas.
           </li>
           <li className="pb-3">
-            <b>Basti:</b> Medicated enemas to cleanse the colon and improve
-            overall health.
+            <b>Basti:</b> Medicated enemas to cleanse the colon and improve overall health.
           </li>
           <li className="pb-3">
-            <b>Udvarthana:</b> Herbal powder massage to reduce excess fat and
-            improve skin tone.
+            <b>Udvarthana:</b> Herbal powder massage to reduce excess fat and improve skin tone.
           </li>
         </ul>
 
@@ -189,24 +166,16 @@ export default function Page() {
         </li>
         <ul>
           <li className="pb-3">
-            <b>Lepam:</b> Application of herbal pastes on specific areas to
-            reduce localized fat and improve skin health.
+            <b>Lepam:</b> Application of herbal pastes on specific areas to reduce localized fat and improve skin health.
           </li>
           <li className="pb-3">
-            <b>Nasya:</b> Administration of medicated oils through the nasal
-            passages to enhance overall health.
+            <b>Nasya:</b> Administration of medicated oils through the nasal passages to enhance overall health.
           </li>
         </ul>
       </ol>
 
       <p className="pb-3">
-        Ayurvedic management of hypercholesterolemia involves a holistic
-        approach aimed at balancing the body&apos;s doshas, particularly Kapha,
-        improving digestive fire (Agni), and eliminating toxins (Ama). This
-        approach includes dietary modifications, herbal remedies, lifestyle
-        changes, and detoxification therapies. Regular consultation with an
-        Ayurvedic practitioner is essential to tailor treatments to individual
-        needs and ensure effective management of high cholesterol.
+        Ayurvedic management of hypercholesterolemia involves a holistic approach aimed at balancing the body&apos;s doshas, particularly Kapha, improving digestive fire (Agni), and eliminating toxins (Ama). This approach includes dietary modifications, herbal remedies, lifestyle changes, and detoxification therapies. Regular consultation with an Ayurvedic practitioner is essential to tailor treatments to individual needs and ensure effective management of high cholesterol.
       </p>
 
       <DiseaseForm
