@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import React, { useState } from 'react';
+import React  from 'react';
 import { Container } from "react-bootstrap";
 import ImageContainer from "../diseases_components/ImageContainer";
 import DiseaseForm from "../diseases_components/DiseaseForm";
