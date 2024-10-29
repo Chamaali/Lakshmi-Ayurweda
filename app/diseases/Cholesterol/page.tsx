@@ -58,7 +58,7 @@ const initialFormData: DiseaseFormData = {
   };
   
 
-export default function page() {
+export default function Page() {
   return (
     <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased">
       <ImageContainer

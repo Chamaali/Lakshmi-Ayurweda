@@ -55,7 +55,7 @@ const initialFormData: DiseaseFormData = {
   qh20: "",
 };
 
-export default function page() {
+export default function Page() {
   return (
     <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased">
       <ImageContainer
@@ -66,11 +66,7 @@ export default function page() {
       {/*Introduction*/}
       <div>
         <p className="pb-3 font-bold">
-          In Ayurveda, hypertension, also known as Rakta Chapa or Uccha
-          Raktachapa, is considered a condition resulting from an imbalance of
-          the doshas, primarily Vata and Pitta, and the accumulation of Ama
-          (toxins) in the body. Here are the detailed causes of hypertension
-          from the Ayurvedic perspective:
+          In Ayurveda, hypertension, also known as Rakta Chapa or Uccha Raktachapa, is considered a condition resulting from an imbalance of the doshas, primarily Vata and Pitta, and the accumulation of Ama (toxins) in the body. Here are the detailed causes of hypertension from the Ayurvedic perspective:
         </p>
 
         {/* Dietary Causes  */}
@@ -79,28 +75,23 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Excessive Sweet Intake:</b> High consumption of salty foods
-          aggravates Pitta dosha, leading to increased blood pressure.
+          <b>1. Excessive Sweet Intake:</b> High consumption of salty foods aggravates Pitta dosha, leading to increased blood pressure.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Spicy and Sour Foods: </b> These foods can also disturb Pitta,
-          causing heat and inflammation in the body.
+          <b>2. Spicy and Sour Foods: </b> These foods can also disturb Pitta, causing heat and inflammation in the body.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>3. Heavy and Oily Foods: </b> Such foods increase Kapha dosha,
-          contributing to blockages in the circulatory system.
+          <b>3. Heavy and Oily Foods: </b> Such foods increase Kapha dosha, contributing to blockages in the circulatory system.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>4. Processed and Junk Foods: </b>These foods create Ama and disturb
-          the balance of the doshas, especially Pitta and Vata.
+          <b>4. Processed and Junk Foods: </b>These foods create Ama and disturb the balance of the doshas, especially Pitta and Vata.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>5. Overeating:</b>Consuming large quantities of food can overload
-          the digestive system and lead to the formation of Ama.
+          <b>5. Overeating:</b>Consuming large quantities of food can overload the digestive system and lead to the formation of Ama.
         </ol>
 
         {/* Lifestyle Causes  */}
@@ -109,23 +100,19 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Sedentary Lifestyle: </b> Lack of physical activity leads to
-          poor circulation and Kapha accumulation.
+          <b>1. Sedentary Lifestyle: </b> Lack of physical activity leads to poor circulation and Kapha accumulation.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Stress and Anxiety: </b> High levels of mental stress and
-          anxiety aggravate Vata dosha and can raise blood pressure.
+          <b>2. Stress and Anxiety: </b> High levels of mental stress and anxiety aggravate Vata dosha and can raise blood pressure.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>3. Irregular Sleep Patterns: </b> Both insufficient and excessive
-          sleep can disturb Vata and Pitta doshas.
+          <b>3. Irregular Sleep Patterns: </b> Both insufficient and excessive sleep can disturb Vata and Pitta doshas.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b> 4. Lack of Routine: </b>Inconsistent daily habits disrupt doshic
-          balance and contribute to stress and anxiety.
+          <b> 4. Lack of Routine: </b>Inconsistent daily habits disrupt doshic balance and contribute to stress and anxiety.
         </ol>
 
         {/* Psychological Factors  */}
@@ -134,14 +121,11 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Emotional Stress: </b> Chronic stress, worry, anger, and other
-          negative emotions can disturb the balance of Vata and Pitta, leading
-          to hypertension.
+          <b>1. Emotional Stress: </b> Chronic stress, worry, anger, and other negative emotions can disturb the balance of Vata and Pitta, leading to hypertension.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Mental Strain: </b> Continuous mental exertion and stress impact
-          the cardiovascular system.
+          <b>2. Mental Strain: </b> Continuous mental exertion and stress impact the cardiovascular system.
         </ol>
 
         {/*Genetic and Hereditary Factors */}
@@ -150,14 +134,11 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Family History: </b> A genetic predisposition to hypertension is
-          acknowledged in Ayurveda, with hereditary factors influencing doshic
-          balance.
+          <b>1. Family History: </b> A genetic predisposition to hypertension is acknowledged in Ayurveda, with hereditary factors influencing doshic balance.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Prakriti (Constitutional Type): </b> Individuals with a Vata or
-          Pitta-dominant constitution may be more prone to hypertension.
+          <b>2. Prakriti (Constitutional Type): </b> Individuals with a Vata or Pitta-dominant constitution may be more prone to hypertension.
         </ol>
 
         {/* Environmental Factors  */}
@@ -166,13 +147,11 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Climate and Seasonal Changes: </b> : Extreme weather conditions,
-          particularly hot weather, can aggravate Pitta dosha.
+          <b>1. Climate and Seasonal Changes: </b> : Extreme weather conditions, particularly hot weather, can aggravate Pitta dosha.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Pollutants and Toxins: </b> Exposure to environmental toxins can
-          impair bodily functions and contribute to the formation of Ama.
+          <b>2. Pollutants and Toxins: </b> Exposure to environmental toxins can impair bodily functions and contribute to the formation of Ama.
         </ol>
 
         {/*Other Contributing Factors */}
@@ -181,14 +160,11 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Poor Digestion (Agni): </b> Weak digestive fire (Agni) leads to
-          incomplete digestion, resulting in the accumulation of Ama, which
-          obstructs channels (srotas) and disrupts normal blood flow.
+          <b>1. Poor Digestion (Agni): </b> Weak digestive fire (Agni) leads to incomplete digestion, resulting in the accumulation of Ama, which obstructs channels (srotas) and disrupts normal blood flow.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Obesity: </b> Excess body weight is associated with Kapha
-          imbalance and can lead to hypertension.
+          <b>2. Obesity: </b> Excess body weight is associated with Kapha imbalance and can lead to hypertension.
         </ol>
 
         {/*Pathogenesis in Ayurveda */}
@@ -197,19 +173,15 @@ export default function page() {
 
         <ul className="list-decimal">
           {" "}
-          <b>• Vata Imbalance </b> Aggravated Vata causes irregularity and
-          instability in blood flow, leading to increased pressure in the
-          arteries.
+          <b>• Vata Imbalance </b> Aggravated Vata causes irregularity and instability in blood flow, leading to increased pressure in the arteries.
         </ul>
         <ul className="list-decimal">
           {" "}
-          <b>• Pitta Imbalance: </b> Increased Pitta causes heat and
-          inflammation in the blood vessels, contributing to hypertension.
+          <b>• Pitta Imbalance: </b> Increased Pitta causes heat and inflammation in the blood vessels, contributing to hypertension.
         </ul>
         <ul className="list-decimal">
           {" "}
-          <b>• Ama Accumulation: </b> Toxins obstruct the channels (srotas),
-          leading to poor circulation and increased blood pressure.
+          <b>• Ama Accumulation: </b> Toxins obstruct the channels (srotas), leading to poor circulation and increased blood pressure.
         </ul>
 
         {/* Ayurvedic Management Approach  */}
@@ -218,33 +190,23 @@ export default function page() {
 
         <ol className="list-decimal">
           {" "}
-          <b>1. Dietary Adjustments: </b> Emphasize a balanced diet that
-          pacifies Vata and Pitta, avoiding salty, spicy, and sour foods, and
-          incorporating cooling and calming foods like cucumber, coconut water,
-          and leafy teals.
+          <b>1. Dietary Adjustments: </b> Emphasize a balanced diet that pacifies Vata and Pitta, avoiding salty, spicy, and sour foods, and incorporating cooling and calming foods like cucumber, coconut water, and leafy teals.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>2. Regular Exercise: </b> Engage in moderate physical activities
-          like walking, yoga, and specific asanas to improve circulation and
-          balance doshas.
+          <b>2. Regular Exercise: </b> Engage in moderate physical activities like walking, yoga, and specific asanas to improve circulation and balance doshas.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>3. Stress Management: </b> Practice meditation, pranayama
-          (breathing exercises), and relaxation techniques to reduce stress and
-          anxiety.
+          <b>3. Stress Management: </b> Practice meditation, pranayama (breathing exercises), and relaxation techniques to reduce stress and anxiety.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>4. Routine and Discipline </b>Follow a consistent daily routine
-          (Dinacharya) and seasonal regimen (Ritucharya) to maintain doshic
-          balance.
+          <b>4. Routine and Discipline </b>Follow a consistent daily routine (Dinacharya) and seasonal regimen (Ritucharya) to maintain doshic balance.
         </ol>
         <ol className="list-decimal">
           {" "}
-          <b>5. Detoxification: </b>Regular detox practices (Panchakarma) to
-          eliminate accumulated toxins and improve digestive fire.
+          <b>5. Detoxification: </b>Regular detox practices (Panchakarma) to eliminate accumulated toxins and improve digestive fire.
         </ol>
 
         <h5 className="pb-3 font-bold text-base/4">
@@ -252,27 +214,17 @@ export default function page() {
         </h5>
         <ul className="list-decimal">
           {" "}
-          <b>o Abhyanga (Oil Massage): </b> Practice meditation, pranayama
-          (breathing exercises), and relaxation techniques to reduce stress and
-          anxietRegular self-massage with calming oils like sesame or coconut
-          oil to balance Vata and Pittay.
+          <b>o Abhyanga (Oil Massage): </b> Practice meditation, pranayama (breathing exercises), and relaxation techniques to reduce stress and anxietRegular self-massage with calming oils like sesame or coconut oil to balance Vata and Pittay.
         </ul>
         <ul className="list-decimal">
           {" "}
-          <b>o Shirodhara: </b> A therapy involving the pouring of warm oil on
-          the forehead, which helps in reducing stress and calming the mind.
+          <b>o Shirodhara: </b> A therapy involving the pouring of warm oil on the forehead, which helps in reducing stress and calming the mind.
         </ul>
 
         <h5 className="pb-3 font-bold">Conclusion</h5>
 
         <p className="pb-3 font-bold">
-          From the Ayurvedic perspective, hypertension is caused by a
-          combination of dietary habits, lifestyle choices, emotional
-          well-being, genetic predispositions, and environmental exposures,
-          leading to the imbalance of Vata and Pitta doshas and the accumulation
-          of toxins. Managing these causes holistically through diet, lifestyle
-          modifications, stress management, and detoxification can help in
-          effectively preventing and treating hypertension.
+          From the Ayurvedic perspective, hypertension is caused by a combination of dietary habits, lifestyle choices, emotional well-being, genetic predispositions, and environmental exposures, leading to the imbalance of Vata and Pitta doshas and the accumulation of toxins. Managing these causes holistically through diet, lifestyle modifications, stress management, and detoxification can help in effectively preventing and treating hypertension.
         </p>
       </div>
       {/*form */}

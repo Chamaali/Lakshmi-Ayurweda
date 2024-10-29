@@ -18,7 +18,7 @@ export async function POST(request) {
     }
   }
   
-  //get all chestpains
+  //get all appointments
   export async function GET(request) {
     try {
       await connectMongoDB();

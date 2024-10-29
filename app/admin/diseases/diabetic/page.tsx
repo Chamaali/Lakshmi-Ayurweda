@@ -1,6 +1,6 @@
 import DynamicConditionPage from "../DynamicConditionPage";
 
-const DiabeticPage = () => {
+const Page = () => {
   // Define the headers for chest pain data
   const headers = {
     qh1: "Name",
@@ -30,4 +30,4 @@ const DiabeticPage = () => {
   return <DynamicConditionPage condition="diabetics" headers={headers} />;
 };
 
-export default DiabeticPage;
+export default Page;

@@ -21,6 +21,7 @@ export function UseForm<T> (initialState: T, disease: string) { // Added `diseas
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(formData),
+                cache: "no-cache"
             });
             if (res.ok) {
                 alert("Form was successfully submitted.");
