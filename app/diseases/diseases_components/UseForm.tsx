@@ -38,7 +38,7 @@
 //     return { formData, handleChange, handleSubmit };
 // }
 
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 
 export function useForm<T>(initialState: T, disease: string) { // Lowercased `U` to `u`
     const [formData, setFormData] = useState<T>(initialState);
