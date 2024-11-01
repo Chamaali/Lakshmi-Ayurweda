@@ -22,7 +22,8 @@ const cholesterolSchema=new Schema(
         qh18: String,
         qh19: String,
         qh20: String,
-        qh21: String,   
+        qh21: String, 
+        checked: { type: Boolean, default: false },  
     },
     {
         timestamps:true,

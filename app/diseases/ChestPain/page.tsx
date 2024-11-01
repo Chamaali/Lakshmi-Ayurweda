@@ -1,7 +1,6 @@
-'use client'
+"use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import DiseaseForm from "../diseases_components/DiseaseForm";
 
@@ -26,7 +25,7 @@ const labels: { [key: string]: string } = {
   qh18: "Do you have a history of heart disease, hypertension, diabetes, or high cholesterol?",
   qh19: "Have you experienced similar pain before?",
   qh23: "Are you taking any medications, including over-the-counter drugs and supplements?",
-  qh24: "Do you have any known allergies, especially to medications?"
+  qh24: "Do you have any known allergies, especially to medications?",
 };
 
 type DiseaseFormData = {
@@ -34,13 +33,33 @@ type DiseaseFormData = {
 };
 
 const initialFormData: DiseaseFormData = {
-  qh1: '', qh2: '', qh3: '', qh4: '', qh5: '', qh6: '', qh7: '', qh8: '', qh9: '', qh10: '',
-  qh11: '', qh12: '', qh13: '', qh14: '', qh15: '', qh16: '', qh17: '', qh18: '', qh19: '', qh20: '',
-  qh21: '', qh22: '', qh23: '', qh24: ''
+  qh1: "",
+  qh2: "",
+  qh3: "",
+  qh4: "",
+  qh5: "",
+  qh6: "",
+  qh7: "",
+  qh8: "",
+  qh9: "",
+  qh10: "",
+  qh11: "",
+  qh12: "",
+  qh13: "",
+  qh14: "",
+  qh15: "",
+  qh16: "",
+  qh17: "",
+  qh18: "",
+  qh19: "",
+  qh20: "",
+  qh21: "",
+  qh22: "",
+  qh23: "",
+  qh24: "",
 };
 
-export default function page() {
-
+export default function Page() {
   return (
     <Container className="text-justify py-4 justify-center items-center text-base lg:text-xl antialiased">
       <h2 className="font-bold text-2xl sm:text-2xl">Chest Pain</h2>
@@ -67,10 +86,7 @@ export default function page() {
       </div>
 
       <p>
-        In Ayurveda, chest pain can be attributed to various imbalances in the
-        body&apos;s doshas (biological energies), dhatus (tissues), and malas (waste
-        products). While chest pain can have multiple causes, Ayurveda considers
-        the following factors from its perspective:
+        In Ayurveda, chest pain can be attributed to various imbalances in the body&apos;s doshas (biological energies), dhatus (tissues), and malas (waste products). While chest pain can have multiple causes, Ayurveda considers the following factors from its perspective:
       </p>
       <ol className="list-decimal">
         <li className="pb-3">
@@ -104,46 +120,64 @@ export default function page() {
         </li>
       </ol>
 
-      <p>Ayurvedic management of chest pain involves identifying the underlying doshic imbalance and addressing it through a combination of dietary modifications, lifestyle adjustments, herbal remedies, detoxification therapies, stress management techniques, and supportive therapies tailored to the individual&apos;s constitution and specific imbalances. It&apos;s essential for individuals experiencing chest pain to seek medical evaluation to rule out serious medical conditions and to integrate Ayurvedic approaches as part of a comprehensive treatment plan under the guidance of qualified healthcare practitioners.</p>
+      <p> Ayurvedic management of chest pain involves identifying the underlying doshic imbalance and addressing it through a combination of dietary modifications, lifestyle adjustments, herbal remedies, detoxification therapies, stress management techniques, and supportive therapies tailored to the individual&apos;s constitution and specific imbalances. It&apos;s essential for individuals experiencing chest pain to seek medical evaluation to rule out serious medical conditions and to integrate Ayurvedic approaches as part of a comprehensive treatment plan under the guidance of qualified healthcare practitioners.
+      </p>
 
       <p className="text-2xl font-semibold ">Treatments</p>
 
-      <p>Ayurveda offers a holistic approach to managing chest pain by addressing the underlying imbalances in the body&apos;s doshas (biological energies), promoting digestive health, and supporting overall well-being. The treatment of chest pain in Ayurveda typically involves a combination of dietary modifications, lifestyle adjustments, herbal remedies, and supportive therapies. Here are some Ayurvedic treatments and recommendations for chest pain:</p>
+      <p> Ayurveda offers a holistic approach to managing chest pain by addressing the underlying imbalances in the body&apos;s doshas (biological energies), promoting digestive health, and supporting overall well-being. The treatment of chest pain in Ayurveda typically involves a combination of dietary modifications, lifestyle adjustments, herbal remedies, and supportive therapies. Here are some Ayurvedic treatments and recommendations for chest pain:
+      </p>
 
-      <ol  className="list-decimal">
+      <ol className="list-decimal">
         <li className="text-xl font-bold pb-3">Dietary Modifications:</li>
         <ul className="list-disc">
-            <li className="pb-3">Follow a balanced diet that includes fresh, whole foods and avoids processed, heavy, or difficult-to-digest foods.</li>
-            <li className="pb-3">Include warm, cooked meals that are easy on the digestive system, such as soups, steamed vegetables, whole grains, and herbal teas.</li>
-            <li className="pb-3">Reduce intake of spicy, oily, and fried foods, as well as excessive caffeine and alcohol, which can aggravate Pitta dosha and contribute to chest discomfort.</li>
+          <li className="pb-3"> Follow a balanced diet that includes fresh, whole foods and avoids processed, heavy, or difficult-to-digest foods.
+          </li>
+          <li className="pb-3"> Include warm, cooked meals that are easy on the digestive system, such as soups, steamed vegetables, whole grains, and herbal teas.
+          </li>
+          <li className="pb-3"> Reduce intake of spicy, oily, and fried foods, as well as excessive caffeine and alcohol, which can aggravate Pitta dosha and contribute to chest discomfort.
+          </li>
         </ul>
         <li className="text-xl font-bold pb-3">Herbal Remedies:</li>
         <ul className="list-disc">
-            <li className="pb-3">Ayurvedic herbs with digestive and carminative properties can help alleviate chest pain associated with digestive disturbances. Examples include ginger, fennel, cumin, coriander, and cardamom.</li>
-            <li className="pb-3">Herbal formulations may be prescribed for cardiovascular support and to maintain heart health.</li>
+          <li className="pb-3"> Ayurvedic herbs with digestive and carminative properties can help alleviate chest pain associated with digestive disturbances. Examples include ginger, fennel, cumin, coriander, and cardamom.
+          </li>
+          <li className="pb-3"> Herbal formulations may be prescribed for cardiovascular support and to maintain heart health.
+          </li>
         </ul>
         <li className="text-xl font-bold pb-3">Lifestyle Adjustments:</li>
         <ul className="list-disc">
-            <li className="pb-3">Practice regular physical activity, such as walking, yoga, or gentle exercises, to improve circulation, digestion, and overall health.</li>
-            <li className="pb-3">Incorporate stress-reducing practices like meditation, deep breathing exercises (pranayama), or aromatherapy to promote relaxation and emotional well-being.</li>
-            <li className="pb-3">Maintain a regular daily routine with adequate rest and sleep to support the body&apos;s natural rhythms and balance the doshas.</li>
+          <li className="pb-3"> Practice regular physical activity, such as walking, yoga, or gentle exercises, to improve circulation, digestion, and overall health.
+          </li>
+          <li className="pb-3"> Incorporate stress-reducing practices like meditation, deep breathing exercises (pranayama), or aromatherapy to promote relaxation and emotional well-being.
+          </li>
+          <li className="pb-3"> Maintain a regular daily routine with adequate rest and sleep to support the body&apos;s natural rhythms and balance the doshas.
+          </li>
         </ul>
         <li className="text-xl font-bold pb-3">Detoxification Therapies:</li>
         <ul className="list-disc">
-            <li className="pb-3">Panchakarma therapies, including Virechana (therapeutic purgation) or Basti (medicated enema), may be recommended to eliminate toxins (ama) from the body and restore doshic balance.</li>
-            <li className="pb-3">External therapies such as herbal oil massage (Abhyanga) or herbal steam therapy (Swedana) can help improve circulation, relieve muscle tension, and promote relaxation.</li>
+          <li className="pb-3"> Panchakarma therapies, including Virechana (therapeutic purgation) or Basti (medicated enema), may be recommended to eliminate toxins (ama) from the body and restore doshic balance.
+          </li>
+          <li className="pb-3"> External therapies such as herbal oil massage (Abhyanga) or herbal steam therapy (Swedana) can help improve circulation, relieve muscle tension, and promote relaxation.
+          </li>
         </ul>
-        <li className="text-xl font-bold pb-3">Consultation with an Ayurvedic Practitioner:</li>
+        <li className="text-xl font-bold pb-3"> Consultation with an Ayurvedic Practitioner:
+        </li>
         <ul className="list-disc">
-            <li className="pb-3">Since Ayurveda is highly individualized, it&apos;s important to consult with a qualified Ayurvedic practitioner who can assess your unique constitution, doshic imbalances, and specific symptoms of chest pain.</li>
-            <li className="pb-3">The practitioner can then create a personalized treatment plan incorporating dietary recommendations, herbal remedies, lifestyle adjustments, and supportive therapies tailored to your needs and imbalances.</li>
+          <li className="pb-3"> Since Ayurveda is highly individualized, it&apos;s important to consult with a qualified Ayurvedic practitioner who can assess your unique constitution, doshic imbalances, and specific symptoms of chest pain.
+          </li>
+          <li className="pb-3"> The practitioner can then create a personalized treatment plan incorporating dietary recommendations, herbal remedies, lifestyle adjustments, and supportive therapies tailored to your needs and imbalances.
+          </li>
         </ul>
       </ol>
-      <p>It&apos;s important to note that while Ayurvedic approaches can be beneficial for managing mild to moderate chest pain associated with digestive disturbances or stress, individuals experiencing severe or persistent chest pain should seek immediate medical attention to rule out serious medical conditions such as heart disease or other cardiac issues. Ayurvedic treatments can complement conventional medical care as part of a comprehensive approach to chest pain management.</p>
+    <p> It&apos;s important to note that while Ayurvedic approaches can be beneficial for managing mild to moderate chest pain associated with digestive disturbances or stress, individuals experiencing severe or persistent chest pain should seek immediate medical attention to rule out serious medical conditions such as heart disease or other cardiac issues. Ayurvedic treatments can complement conventional medical care as part of a comprehensive approach to chest pain management.
+      </p>
 
-
-        <DiseaseForm initialFormData={initialFormData} labels={labels} disease="chestpains"/>
-
+      <DiseaseForm
+        initialFormData={initialFormData}
+        labels={labels}
+        disease="chestpains"
+      />
     </Container>
   );
 }
