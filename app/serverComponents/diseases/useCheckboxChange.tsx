@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-export const useCheckboxChange = (diseases: any[]) => {
-  const [checkedItems, setCheckedItems] = useState<boolean[]>(diseases.map((disease) => disease.checked || false));
+export const useCheckboxChange = (diseases: any[], collectionName: string) => {
+  const [checkedItems, setCheckedItems] = useState<boolean[]>(Array(diseases.length).fill(false));
 
   const handleCheckboxChange = async (index: number, diseaseId: string) => {
     const updatedCheckedItems = [...checkedItems];
@@ -9,7 +9,7 @@ export const useCheckboxChange = (diseases: any[]) => {
     setCheckedItems(updatedCheckedItems);
 
     try {
-      const response = await fetch(`/api/cholesterols/${diseaseId}`, {
+      const response = await fetch(`/api/${collectionName}/${diseaseId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -17,15 +17,11 @@ export const useCheckboxChange = (diseases: any[]) => {
         body: JSON.stringify({ checked: updatedCheckedItems[index] }),
       });
 
-      if (response.ok) {
-        console.log(`Record with ID ${diseaseId} updated successfully.`);
-        alert(`Record with ID ${diseaseId} updated successfully.`);
-      } else {
-        throw new Error(`Failed to update record with ID ${diseaseId}.`);
+      if (!response.ok) {
+        throw new Error("Failed to update the checked state in the database");
       }
     } catch (error) {
       console.error("Error updating checked state:", error);
-      alert("An error occurred while updating the record.");
     }
   };
 

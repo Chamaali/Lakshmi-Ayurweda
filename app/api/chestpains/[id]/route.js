@@ -1,5 +1,5 @@
 import connectMongoDB from "@/libs/mongodb";
-import Cholesterol from "../../../../models/cholesterol";
+import Chestpain from "../../../../models/chestpain";
 
 // PATCH request handler
 export async function PATCH(req, { params }) {
@@ -8,8 +8,8 @@ export async function PATCH(req, { params }) {
 
   try {
     const { checked } = await req.json();
-    const updatedCholesterol = await Cholesterol.findByIdAndUpdate(id, { checked }, { new: true });
-    return new Response(JSON.stringify(updatedCholesterol), { status: 200 });
+    const updatedChestpain = await Chestpain.findByIdAndUpdate(id, { checked }, { new: true });
+    return new Response(JSON.stringify(updatedChestpain), { status: 200 });
   } catch (error) {
     console.error("Database update error:", error);
     return new Response(JSON.stringify({ message: "Failed to update checked state", error }), { status: 400 });

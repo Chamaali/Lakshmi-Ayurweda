@@ -49,7 +49,7 @@ const DiseaseNavigationBar = () => {
   ];
 
   return (
-    <div className="p-3">
+    <div className="py-3">
      
         <div className="flex flex-col text-base font-bold text-teal-700 space-y-2 h-96 overflow-y-auto">
           {items.map(({ title, href }) => (

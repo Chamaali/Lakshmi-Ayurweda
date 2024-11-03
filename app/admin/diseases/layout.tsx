@@ -8,7 +8,7 @@ import { Container } from "react-bootstrap";
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     
-    <Container className="">
+    <div className="mx-2">
         
         <div className="flex flex-row">
             <div className="flex-2 "><DiseaseNavigationBar/></div>
@@ -16,7 +16,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
       </div> 
        
       
-    </Container>
+    </div>
  
   );
 };

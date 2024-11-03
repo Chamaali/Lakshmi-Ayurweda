@@ -27,6 +27,7 @@ const chestpainSchema=new Schema(
         qh22: String,
         qh23: String,
         qh24: String,
+        checked: { type: Boolean, default: false },  
     },
 
     {
