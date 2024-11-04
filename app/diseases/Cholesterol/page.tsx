@@ -3,7 +3,8 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import ImageContainer from "../diseases_components/ImageContainer";
-import DiseaseForm from "../diseases_components/DiseaseForm";
+// import DiseaseForm from "../diseases_components/DiseaseForm";
+import FormComponent from "../diseases_components/FormComponent";
 
 const labels: { [key: string]: string } = {
   qh1: "Name",
@@ -29,34 +30,51 @@ const labels: { [key: string]: string } = {
   qh21: "Are you aware of the lifestyle changes that can help manage cholesterol levels, such as dietary modifications, increased physical activity, and smoking cessation?",
 };
 
-type DiseaseFormData = {
-  [key: string]: string;
-};
+const fields = [
+    { id: 'qh1', type: 'text' },
+    { id: 'qh2', type: 'text' },
+    { id: 'qh3', type: 'text' },
+    { id: 'qh4', type: 'text' },
+    { id: 'qh5', type: 'text' },
+    { id: 'qh6', type: 'text' },
+    { id: 'qh7', type: 'text' },
+    { id: 'qh8', type: 'text' },
+    { id: 'qh9', type: 'text' },
+    { id: 'qh10', type: 'text' },
+    { id: 'qh11', type: 'text' },
+    { id: 'qh12', type: 'text' },
+    { id: 'qh13', type: 'text' },
+    { id: 'qh14', type: 'text' },
+    { id: 'qh15', type: 'text' },
+    { id: 'qh16', type: 'text' },
+    { id: 'qh17', type: 'text' },
+    { id: 'qh18', type: 'text' },
+    { id: 'qh19', type: 'text' },
+    { id: 'qh20', type: 'text' },
+    { id: 'qh21', type: 'text' }
+];
 
-const initialFormData: DiseaseFormData = {
-    qh1: "",
-    qh2: "",
-    qh3: "",
-    qh4: "",
-    qh5: "",
-    qh6: "",
-    qh7: "",
-    qh8: "",
-    qh9: "",
-    qh10: "",
-    qh11: "",
-    qh12: "",
-    qh13: "",
-    qh14: "",
-    qh15: "",
-    qh16: "",
-    qh17: "",
-    qh18: "",
-    qh19: "",
-    qh20: "",
-    qh21: "",
+
+  const handleFormSubmit = async (data: { [key: string]: string }) => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cholesterols`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) {
+        throw new Error('Failed to update Product');
+      }
+
+      alert('Product updated successfully');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to update Product');
+    }
   };
-  
 
 export default function Page() {
   return (
@@ -178,11 +196,7 @@ export default function Page() {
         Ayurvedic management of hypercholesterolemia involves a holistic approach aimed at balancing the body&apos;s doshas, particularly Kapha, improving digestive fire (Agni), and eliminating toxins (Ama). This approach includes dietary modifications, herbal remedies, lifestyle changes, and detoxification therapies. Regular consultation with an Ayurvedic practitioner is essential to tailor treatments to individual needs and ensure effective management of high cholesterol.
       </p>
 
-      <DiseaseForm
-        initialFormData={initialFormData}
-        labels={labels}
-        disease="cholesterols"
-      />
+      <FormComponent fields={fields} labels={labels} onSubmit={handleFormSubmit}  />
     </Container>
   );
 }
