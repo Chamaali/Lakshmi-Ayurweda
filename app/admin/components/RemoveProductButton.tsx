@@ -42,6 +42,7 @@ export default function RemoveProductButton({ id }: RemoveProductButtonProps) {
 
   return (
     <button
+    type="button"
       onClick={removeProduct}
       className="text-red-400 px-3"
       aria-label="Delete product"

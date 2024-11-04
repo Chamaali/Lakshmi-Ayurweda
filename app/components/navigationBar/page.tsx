@@ -827,6 +827,7 @@ export default function Page() {
         </div>
         <div className="flex items-center  gap-x-9">
         <button
+        type="button"
         onClick={openBookAppointmentModal}
         className="py-2 px-3 bg-slate-100 text-teal-700 font-bold rounded shadow hover:bg-slate-200"
       >
@@ -872,7 +873,7 @@ export default function Page() {
             />
           )}
 
-          <button className="md:hidden text-white" onClick={toggleMenu}>
+          <button type="button" className="md:hidden text-white" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"

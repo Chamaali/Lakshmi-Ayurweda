@@ -583,6 +583,7 @@ export default function Page() {
               </div>
               <div className="mt-5 sm:mt-6 ">
                 <button
+                type="button"
                   onClick={closeModal}
                   className="inline-flex  justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-teal-800 text-base font-medium text-white hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-800 sm:text-sm transition duration-300"
                 >

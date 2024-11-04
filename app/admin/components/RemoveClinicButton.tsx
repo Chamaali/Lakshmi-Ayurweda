@@ -42,6 +42,7 @@ export default function RemoveClinicButton({ id }: RemoveClinicButtonProps) {
 
   return (
     <button
+    type="button"
       onClick={removeClinic}
       className="text-red-400 px-3"
       aria-label="Delete clinic"
