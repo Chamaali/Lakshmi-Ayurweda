@@ -57,7 +57,7 @@ const fields = [
 
   const handleFormSubmit = async (data: { [key: string]: string }) => {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/cholesterols`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}api/cholesterols`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
