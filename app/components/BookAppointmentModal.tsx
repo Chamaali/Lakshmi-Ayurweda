@@ -15,6 +15,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
 }) => {
   const [step, setStep] = useState(1); // 1: BookAppointment, 2: UploadReceipt
 
+
   const [consultation, setConsultation] = useState(""); // phone, video, clinic
   const [plan, setPlan] = useState(""); // mini, pro
   const [name, setName] = useState("");
@@ -30,6 +31,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
   const [receiptUrl, setReceiptUrl] = useState<string | null>(null);
   const [uploading, setUploading] = useState(false);
   const [imageExtension, setImageExtension] = useState<string | null>(null);
+  
 
   const handleFileUpload = async (file: File) => {
     if (!file) return;
@@ -75,24 +77,18 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/appointments`,
         {
+          // cache: "force-cache"
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            consultation,
-            plan,
-            name,
-            age,
-            gender,
-            phone,
-            email,
-            total,
+            name, age, gender, phone, email, typeOfConsultation:consultation, typeofPackage:plan, totalAmount:total, url:receiptUrl
             // , paymentMethod, cardNumber, cardExpire, cvv
           }),
         }
       );
-
+      console.log(res)
       if (!res.ok) {
         throw new Error("Failed to book appointment");
       }
@@ -206,11 +202,10 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                       Cancel
                     </button>
                     <button
-                      type="submit"
                       className="px-4 py-2 bg-blue-500 text-white rounded-lg"
                       onClick={() => handleNextStep()}
                     >
-                      Payment
+                      Next
                     </button>
                   </div>
                 </form>

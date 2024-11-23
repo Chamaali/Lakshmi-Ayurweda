@@ -4,14 +4,14 @@ const appointmentSchema = new Schema(
     {
         name: String,
         age: Number,
-        Gender: String,
+        gender: String,
         phone: String,
         email: String,
         typeOfConsultation: String,
-        typeofPackage: Boolean,
+        typeofPackage: String,
         totalAmount: String,
         url: String,
-        checked: { type: Boolean, default: false },
+        checked: { type: Boolean, default: false }
     },
     {
         timestamps: true,
