@@ -18,7 +18,7 @@ export default function Page() {
   const handleSubmit = async (e:any) => {
     e.preventDefault(); // Prevents the default form submission
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/clinics`, {
         // cache: "force-cache",
         method: "POST",
         headers: {
@@ -30,15 +30,15 @@ export default function Page() {
       });
 
       if (!res.ok) {
-        throw new Error("Failed to update Product");
+        throw new Error("Failed to update Clinic");
       }
 
-      alert("Product updated successfully");
+      alert("Clinic updated successfully");
       router.push("/admin/clinics");
       router.refresh();
     } catch (error) {
       console.error(error);
-      alert("Failed to update Product");
+      alert("Failed to update Clinic");
     }
   };
 

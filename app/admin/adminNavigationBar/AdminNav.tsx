@@ -21,10 +21,10 @@ const AdminNav = () => {
     //   title: "Doctors",
     //   href: "/admin/doctors",
     // },
-    // {
-    //     title: "Appointments",
-    //     href: "/admin/appointments",
-    //   },
+    {
+        title: "Appointments",
+        href: "/admin/appointments",
+      },
       {
         title: "Diseases",
         href: "/admin/diseases",
