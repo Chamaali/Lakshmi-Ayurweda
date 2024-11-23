@@ -5,6 +5,7 @@ import { useState } from "react";
 import CalculateTotal from "../constants/CalculateTotal"; // Adjust the path as necessary
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { storage } from "../firebase"; // Adjust the path based on your project structure
+import Image from "next/image";
 
 interface BookAppointmentModalProps {
   closeBookAppointmentModal: () => void; // Define the type for the prop
@@ -321,7 +322,7 @@ const BookAppointmentModal: React.FC<BookAppointmentModalProps> = ({
                                   View Uploaded PDF
                                 </a>
                               ) : (
-                                <img
+                                <Image
                                   style={{
                                     maxWidth: "200px",
                                     width: "100%",

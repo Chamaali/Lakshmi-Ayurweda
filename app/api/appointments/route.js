@@ -17,3 +17,27 @@ export async function POST(request) {
       return NextResponse.json({ error, message: "Something went wrong" });
     }
   }
+
+  export async function GET(request) {
+    try {
+      await connectMongoDB();
+      const appointments = await Appointment.find();
+      return NextResponse.json({ appointments });
+    } catch (error) {
+      return NextResponse.json({ message: "Appointment was not found" });
+    }
+  } 
+
+  export async function DELETE(request) {
+    try {
+      const id = request.nextUrl.searchParams.get("id");
+      await connectMongoDB();
+      await Appointment.findByIdAndDelete(id);
+      return NextResponse.json(
+        { message: "Appointment was deleted successfully" },
+        { status: 200 }
+      );
+    } catch (error) {
+      return NextResponse.json({ message: "Appointment was not deleted." });
+    }
+  }
