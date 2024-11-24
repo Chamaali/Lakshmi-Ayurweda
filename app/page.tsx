@@ -4,6 +4,8 @@ import HomeColumnThree from './components/home/HomeColumnThree'
 import HomeColumnSeven from './components/home/HomeColumnSeven'
 import HomeColumnOne from './components/home/HomeColumnOne'
 import { HomeColumnFive } from './components/home/HomeColumnFive'
+import Profile from './profile/page'
+
 
 
 
@@ -14,6 +16,7 @@ const HomePage= () => {
         <HomeColumnTwo />
         <HomeColumnThree />
         <HomeColumnFour />
+        {/* <Profile/> */}
         {/* <HomeColumnFive /> */}
        
         {/* <HomeColumnSeven />     */}

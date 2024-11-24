@@ -11,7 +11,7 @@ export const getUserRole = async (email: string) => {
         return data.user.role;
         
 
-       
+      
          
       } else {
         return null; // User not found
