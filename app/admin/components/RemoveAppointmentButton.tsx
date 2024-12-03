@@ -1,15 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 import { HiOutlineTrash } from "react-icons/hi";
 import { useRouter } from "next/navigation";
-
+import { UserContext } from "../../context/userContext"; // Import the user context
 interface RemoveAppointmentButtonProps {
   id: string;
 }
 
 export default function RemoveAppointmentButton({ id }: RemoveAppointmentButtonProps) {
   const router = useRouter();
+  const { user, token, logout } = useContext(UserContext);
 
   const removeAppointment = async () => {
     const confirmed = window.confirm(
@@ -22,6 +23,9 @@ export default function RemoveAppointmentButton({ id }: RemoveAppointmentButtonP
           `${process.env.NEXT_PUBLIC_BASE_URL}/api/appointments?id=${id}`,
           {
             method: "DELETE",
+            headers: {
+              'authorization': `Bearer ${token}`,
+            },
           }
         );
 

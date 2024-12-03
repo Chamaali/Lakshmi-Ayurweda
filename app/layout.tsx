@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import NavigationBar from './components/navigationBar/page'
 import Footer from './components/footer/page'
+import { UserProvider } from "./context/userContext"; // Import the provider
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,9 +23,12 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={inter.className}>
+      <UserProvider>
         <NavigationBar />
-        {children}
-        <Footer />
+          {children}
+          <Footer />
+      </UserProvider>
+        
         
         </body>
     </html>

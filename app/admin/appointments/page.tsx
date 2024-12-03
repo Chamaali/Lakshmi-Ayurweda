@@ -1,21 +1,22 @@
 'use client';
 
 import { getAppointments } from '@/app/serverComponents/appointment/getAppointment';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { useRouter } from 'next/navigation';
 import RemoveAppointmentButton from '../components/RemoveAppointmentButton';
+import { UserContext } from "../../context/userContext"; // Import the user context
 
 export default function Page() {
   const router = useRouter();
   const [appointments, setAppointments] = useState([]);
   const [checkedItems, setCheckedItems] = useState<boolean[]>([]); 
-
+  const { user, token, logout } = useContext(UserContext);
   // Fetch appointments on component mount
   useEffect(() => {
     async function fetchAppointments() {
       try {
-        const data = await getAppointments();
+        const data = await getAppointments(token);
         setAppointments(data);
         setCheckedItems(data.map((appointment: any) => appointment.checked || false));
       } catch (error) {
@@ -23,7 +24,7 @@ export default function Page() {
       }
     }
     fetchAppointments();
-  }, []);
+  }, [token]);
 
   const handleCheckboxChange = (index: number) => {
     const updatedCheckedItems = [...checkedItems];
@@ -39,14 +40,15 @@ export default function Page() {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-
     try {
+      
       const updateResults = await Promise.all(
         appointments.map((appointment: { _id: string }, index: number) =>
           fetch(`/api/appointments/${appointment._id}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
+              'authorization': `${token}`
             },
             body: JSON.stringify({
               checked: checkedItems[index],
@@ -69,7 +71,7 @@ export default function Page() {
     }
   };
 
-  if (!appointments.length) {
+  if (!Array.isArray(appointments) || !appointments.length) {
     return <div>Loading appointments...</div>;
   }
 
