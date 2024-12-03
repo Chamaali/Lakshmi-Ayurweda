@@ -1,6 +1,7 @@
 import connectMongoDB from "@/libs/mongodb";
 import Appointment from "./../../../models/appointment"
 import { NextResponse } from "next/server";
+import authMiddleware from "../middleware";
 
 //post appointments
 export async function POST(request) {
@@ -19,6 +20,14 @@ export async function POST(request) {
   }
 
   export async function GET(request) {
+    // Authenticate the request
+    const authResult = await authMiddleware(request);
+    // console.log(request.headers.get("authorization"))
+
+    // If the middleware returns an error (e.g., unauthorized), respond with it
+    if (authResult instanceof NextResponse) {
+      return authResult;
+    }
     try {
       await connectMongoDB();
       const appointments = await Appointment.find();
@@ -29,6 +38,14 @@ export async function POST(request) {
   } 
 
   export async function DELETE(request) {
+    // Authenticate the request
+    const authResult = await authMiddleware(request);
+    console.log(request.headers.get("authorization"))
+
+    // If the middleware returns an error (e.g., unauthorized), respond with it
+    if (authResult instanceof NextResponse) {
+      return authResult;
+    }
     try {
       const id = request.nextUrl.searchParams.get("id");
       await connectMongoDB();

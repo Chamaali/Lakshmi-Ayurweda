@@ -4,7 +4,8 @@ import jwt from "jsonwebtoken";
 const JWT_SECRET = process.env.JWT_SECRET;
 
 export default async function authMiddleware(request) {
-  const authHeader = request.headers.get("Authorization");
+  // console.log(request.headers.get("authorization"))
+  const authHeader = request.headers.get("authorization");
 
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
