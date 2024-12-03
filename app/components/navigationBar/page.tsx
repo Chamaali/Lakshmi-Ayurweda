@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import SignInForm from "../SignInForm";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import SignUpForm from "../SignUpForm";
 import { getUserRole } from "@/app/serverComponents/users/getUserRole";
 import BookAppointmentModal from "../BookAppointmentModal";
-
+import { UserContext } from "../../context/userContext";
 
 const services = [
   {
@@ -68,23 +68,24 @@ export default function Page() {
   const [userRole, setUserRole] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [userEmail, setUserEmail] = useState(null);
+  const { user, token, logout } = useContext(UserContext);
+  // console.log(user)
+  // useEffect(() => {
+  //   async function fetchUserRole() {
+  //     setIsLoading(true);
+  //     if (userEmail) {
+  //       try {
+  //         const role = user.role;
+  //         setUserRole(role);
+  //       } catch (error) {
+  //         console.error("Failed to fetch user role:", error);
+  //       }
+  //     }
+  //     setIsLoading(false);
+  //   }
 
-  useEffect(() => {
-    async function fetchUserRole() {
-      setIsLoading(true);
-      if (userEmail) {
-        try {
-          const role = await getUserRole(userEmail);
-          setUserRole(role);
-        } catch (error) {
-          console.error("Failed to fetch user role:", error);
-        }
-      }
-      setIsLoading(false);
-    }
-
-    fetchUserRole();
-  }, [userEmail]);
+  //   fetchUserRole();
+  // }, [userEmail]);
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -839,36 +840,47 @@ export default function Page() {
         <BookAppointmentModal closeBookAppointmentModal={closeBookAppointmentModal} />
       )}
 
-          {!userRole && (
-            <button type="button" onClick={togglePopup}>
-              <FaUser size={23} />
-            </button>
-          )}
+        {!user ? (
+          <button type="button" onClick={togglePopup}>
+            <FaUser size={23} />
+          </button>
+        ) : (
+          <>
+          <button
+            type="button"
+            className="bg-white  text-teal-700 px-3 py-2 font-bold rounded transition duration-200"
+            onClick={() => (window.location.href = "/profile")}
+          >
+            {user.name}
+          </button>
+            {/* {user.role === "patient" && ( */}
+              {/* <Link
+                href="/profile"
+                className="bg-white text-black px-3 py-2 font-bold rounded"
+              >
+                {user.name}
+              </Link> */}
+            {/* )} */}
+            {/* {user.role === "admin" && (
+              <Link
+                href="/admin"
+                className="bg-white text-black px-3 py-2 font-bold rounded"
+              >
+                Dashboard
+              </Link>
+            )} */}
+          </>
+        )}
 
-          {userRole === "patient" && (
-            <Link
-              href="/profile"
-              className="bg-white text-black px-3 py-2 font-bold rounded"
-            >
-              Hi, Patient
-            </Link>
-          )}
 
-          {userRole === "admin" && (
-            <Link
-              href="/admin"
-              className="bg-white text-black px-3 py-2 font-bold rounded"
-            >
-              Dashboard
-            </Link>
-          )}
+          
 
           {isOpen && (
             <SignInForm
-              onLogin={(email: any) => {
-                handleLogin(email);
-                setIsOpen(false);
-              }}
+              // onLogin={(email: any) => {
+              //   handleLogin(email);
+              //   setIsOpen(false);
+              // }}
               onClose={() => setIsOpen(false)}
             />
           )}

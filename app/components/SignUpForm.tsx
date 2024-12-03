@@ -13,8 +13,8 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
     const [emailInput, setEmailInput] = useState("");
     const [passwordInput, setPasswordInput] = useState("");
     const [confirmPasswordInput, setConfirmPasswordInput] = useState("");
-    const [firstNameInput, setFirstNameInput] = useState("");
-    const [lastNameInput, setLastNameInput] = useState("");
+    const [nameInput, setnameInput] = useState("");
+    const [addressInput, setAddressInput] = useState("");
     const [phoneInput, setPhoneInput] = useState("");
     const [passwordError, setPasswordError] = useState("");
     const [showSignIn, setShowSignIn] = useState(false);
@@ -22,7 +22,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
     
-        if (!firstNameInput || !emailInput || !passwordInput) {
+        if (!nameInput || !emailInput || !passwordInput) {
             alert("Please fill in all required fields");
             return;
         }
@@ -52,8 +52,8 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
                 },
                 body: JSON.stringify({
                     role: 'patient',
-                    firstName: firstNameInput,
-                    lastName: lastNameInput,
+                    name: nameInput,
+                    address: addressInput,
                     email: emailInput,
                     phone: phoneInput,
                     password: passwordInput
@@ -77,7 +77,7 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
     };
 
     if (showSignIn) {
-        return <SignInForm onLogin={onLogin} onClose={onClose} />;
+        return <SignInForm onClose={onClose} />;
     }
 
     return (
@@ -92,18 +92,18 @@ export default function SignUpForm({ onLogin, onClose }: SignUpFormProps) {
 
                 <div className="flex flex-col">
                     <input
-                        value={firstNameInput}
-                        onChange={(e) => setFirstNameInput(e.target.value)}
+                        value={nameInput}
+                        onChange={(e) => setnameInput(e.target.value)}
                         type="text"
                         placeholder="First Name"
                         className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
                     <input
-                        value={lastNameInput}
-                        onChange={(e) => setLastNameInput(e.target.value)}
+                        value={addressInput}
+                        onChange={(e) => setAddressInput(e.target.value)}
                         type="text"
-                        placeholder="Last Name"
+                        placeholder="Address"
                         className="text-black border-2 rounded-md border-teal-800 px-3 py-2 mb-4 w-96"
                         required
                     />
