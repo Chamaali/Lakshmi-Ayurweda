@@ -1,79 +1,98 @@
 "use client"
 
-import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link';
-import { FaFacebook, FaLinkedin, FaPhone, FaYoutube } from "react-icons/fa";
+import { 
+  FaFacebook, 
+  FaLinkedin, 
+  FaYoutube, 
+  FaMapMarkerAlt, 
+  FaEnvelope, 
+  FaPhoneAlt 
+} from "react-icons/fa";
+import services from '../../../constants/footer';
 
-import diseases from '../../../constants/footer';
-import services  from '../../../constants/footer';
 
-interface Disease {
-    id: number; 
-    name: string;
-    href: string;
-}
-
-interface Service {
-    id: number; 
-    name: string;
-    href: string;
-}
-
-export default function page(){
+const Footer = () => {
   return (
-    <div className='bg-teal-100 text-gray-100 text-lg pt-8 pb-2 px-8 font-sans justify-center items-center'>
-        <div className="grid grid-cols-1 px-4 justify-center md:grid-cols-2 lg:grid-cols-4 ">
-            <div className="basis-1/4">
-                <ul>
-                    {diseases.diseases.map((disease:Disease) => (
-                        <li key={disease.id} className=' my-2'>
-                            <Link href={disease.href} className=' no-underline text-teal-500 hover:text-white hover:font-semibold'>{disease.name}</Link>
-                        </li>
-                        
-                    ))}
-                </ul>
+    <footer className="bg-gradient-to-br from-teal-50 to-teal-100 text-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          {/* Brand Section */}
+          <div className="md:col-span-1 lg:col-span-1">
+            <div className="flex items-center space-x-4 mb-6">
+              <h2 className="text-2xl font-bold text-teal-700">Lakshmi Ayurweda</h2>
+            </div>
+            <p className="text-gray-600 mb-4">
+              Holistic healing through traditional Ayurvedic practices, bringing wellness to your life.
+            </p>
+          </div>
+
+          {/* Services Section - Expanded */}
+          <div className="md:col-span-2 lg:col-span-2">
+            <h3 className="text-xl font-semibold text-teal-700 mb-4">Our Services</h3>
+            <div className="grid grid-cols-3 gap-3">
+              {services.services.map((service) => (
+                <Link 
+                  key={service.id} 
+                  href={service.href} 
+                  className="text-teal-600 hover:text-teal-800 no-underline transition-colors duration-300 ease-in-out"
+                  >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Section */}
+          <div>
+            <h3 className="text-xl font-semibold text-teal-700 mb-4">Contact Us</h3>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <FaPhoneAlt className="text-teal-600" />
+                <span className="text-gray-700">+91 011-22222225</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <FaEnvelope className="text-teal-600" />
+                <span className="text-gray-700">contact@lakshmiayurweda.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <FaMapMarkerAlt className="text-teal-600" />
+                <span className="text-gray-700">New Delhi, India</span>
+              </div>
             </div>
 
-            <div className="basis-1/4">
-                <ul>
-                    {services.services.map((service:Service) => (
-                        <li key={service.id} className=' my-2'>
-                        <Link href={service.href} className=' no-underline text-teal-500 hover:text-white hover:font-semibold'>{service.name}</Link>
-                        </li>
-                        
-                    ))}
-                </ul>
+            {/* Social Media Links */}
+            <div className="mt-6 flex space-x-4">
+              {[
+                { Icon: FaFacebook, href: "https://facebook.com/lakshmiayurweda" },
+                { Icon: FaLinkedin, href: "https://linkedin.com/company/lakshmiayurweda" },
+                { Icon: FaYoutube, href: "https://youtube.com/lakshmiayurweda" }
+              ].map(({ Icon, href }, index) => (
+                <Link 
+                  key={index} 
+                  href={href} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  aria-label={`Follow us on ${Icon.name}`}
+                  className="text-teal-600 hover:text-teal-800 transition-colors duration-300"
+                >
+                  <Icon size={24} />
+                </Link>
+              ))}
             </div>
-            <div className="basis-1/4">
-                <ul>
-                    <li className=' my-2'><a className=' no-underline text-teal-500 hover:text-white hover:font-semibold' href='./whyLakshmiAyurweda'>Why Lakshmi</a></li>
-                    <li className=' my-2'><a className=' no-underline text-teal-500 hover:text-white hover:font-semibold' href='./bookAppointment'>Book Appointment</a></li>
-                </ul>
-            </div>
-            <div className="basis-1/4">
-                <ul>
-                    <li className='my-2 no-underline text-teal-500 font-semibold'>Contact Us:</li>
-
-                    <li className=' my-2'><a href="#" className=' no-underline text-teal-500 hover:text-white hover:font-semibold'>011-22222222</a></li>
-                    <li className=' my-2'><a href="#" className=' no-underline text-teal-500 hover:text-white hover:font-semibold'>lakshmi@gmail.com</a></li>
-                    <li className=' my-2 no-underline text-teal-500 hover:text-white hover:font-semibold'>Follow us:</li>
-                </ul>
-                <div className='flex'>  
-                    <ul className='flex  flex-row'>
-                        <li className='ml-0 mr-2 no-underline text-teal-500  hover:text-white hover:font-semibold'><FaFacebook /></li>
-                        <li className=' ml-0 mr-2'><a href="#" className=' no-underline text-teal-500 hover:text-white hover:font-semibold'><FaYoutube/></a></li>
-                        <li className=' ml-0 mr-2' ><a href="#" className=' no-underline text-teal-500 hover:text-white hover:font-semibold'><FaLinkedin/></a></li>
-                    </ul>
-                </div>
-
-                
-            </div>
+          </div>
         </div>
-        <div className='flex  justify-center pt-4 text-teal-500'>
-            <p>Copyright © 2024 Lakshmi Ayurweda</p>
-        </div>
-    </div>
-  )
-}
 
+        {/* Footer Bottom */}
+        <div className="mt-12 pt-6 border-t border-teal-200 text-center">
+          <p className="text-gray-600">
+            © {new Date().getFullYear()} Lakshmi Ayurweda. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
